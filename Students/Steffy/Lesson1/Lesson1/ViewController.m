@@ -7,22 +7,53 @@
 //
 
 #import "ViewController.h"
+#import "ViewModel.h"
 
 @interface ViewController ()
+
+// MARK: - IBOutlets
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+// MARK: - Properties
+
+@property (strong, nonatomic) ViewModel* viewModel;
 
 @end
 
 @implementation ViewController
 
+// MARK: - View Flow
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.viewModel = [[ViewModel alloc] init];
+    [self setupTranslations];
 }
 
+// MARK: - Translations
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupTranslations {
+    _titleLabel.text = @"Ingrediënts";
+}
+
+// MARK: - TableView (delegates, datasource)
+
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    cell.textLabel.text = self.viewModel.ingredients[indexPath.row];
+    
+    return cell;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.viewModel.ingredients.count;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
