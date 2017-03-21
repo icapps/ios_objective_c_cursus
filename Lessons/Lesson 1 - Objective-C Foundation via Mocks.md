@@ -124,6 +124,10 @@ Uitbreiding:
 2. Maak een Mock van Faro
 3. Doe een `gemockte` service call
 
+# Links 
+* We hebben een account bij code-school: https://www.codeschool.com/courses/try-objective-c
+* We hebben een account op Ray Wenderlich: https://videos.raywenderlich.com 
+
 
 
 
