@@ -1,12 +1,21 @@
-# BLOCKS - VS Closures
-
+# Lesson 1- Objective-C Foundation via Mocks
+## Running into Objective-C from swift
+As a funny intro to Objective-C checkout the following website
 * http://fuckingblocksyntax.com
 * http://fuckingclosuresyntax.com
+
+We will now have a look at:
+* Functions (Methods) 
+* Pointers
+* Unit testing
+* Mocking
+* Runtime
+* Assigment
 
 ## ​Method structure
 ![](Lesson%201%20-%20Objective-C%20Foundation%20via%20Mocks/screenshot.png)
 
-![](Lesson%201%20-%20Objective-C%20Foundation%20via%20Mocks/screenshot%201.png)
+![](Lesson%201%20-%20Objective-C%20Foundation%20via%20Mocks/screenshot.png)
 
 
 ### Pointers VS Value type
@@ -57,7 +66,7 @@ NSArray <NSString *> * array = @[@"string"]
 Nu kan er in een array enkel een string *steken*
 
 ### Instantiation and now finally about pointers and value types
-![](Lesson%201%20-%20Objective-C%20Foundation%20via%20Mocks/screenshot%202.png)
+![](Lesson%201%20-%20Objective-C%20Foundation%20via%20Mocks/screenshot.png)
 
 Zoals gezegd is objective-C een oude taal. Dus gaat zij er vanuit dat je alles begrijpt over memory. 
 * Plaats maken voor iets = *alloceren*
@@ -83,9 +92,9 @@ Om iets aan te maken als `Foo` heb je dus twee stappen nodig
 @end
 ```
 
-![](Lesson%201%20-%20Objective-C%20Foundation%20via%20Mocks/screenshot%203.png)
+![](Lesson%201%20-%20Objective-C%20Foundation%20via%20Mocks/screenshot.png)
 
-![](Lesson%201%20-%20Objective-C%20Foundation%20via%20Mocks/screenshot%204.png)
+![](Lesson%201%20-%20Objective-C%20Foundation%20via%20Mocks/screenshot.png)
 
 Objective-C is veel dynamischer als Swift. Het heeft namelijk een runtime die bepaald hoe de code gaat werken. Dit is belangrijk voor Unit testing!!!
 
