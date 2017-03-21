@@ -15,7 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
-// MARK: - Properties
+// MARK: - ViewModel
 
 @property (strong, nonatomic) ViewModel* viewModel;
 
@@ -35,7 +35,7 @@
 // MARK: - Translations
 
 - (void)setupTranslations {
-    _titleLabel.text = @"Ingrediënts";
+    _titleLabel.text = self.viewModel.titleLabelText;
 }
 
 // MARK: - TableView (delegates, datasource)

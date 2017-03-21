@@ -151,8 +151,8 @@
 		6D79B8F31E81564C00796555 /* Lesson1Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6D79B9101E815A3B00796555 /* Modules */,
 				6D79B8F61E81564C00796555 /* Info.plist */,
+				6D79B9101E815A3B00796555 /* Modules */,
 			);
 			path = Lesson1Tests;
 			sourceTree = "<group>";

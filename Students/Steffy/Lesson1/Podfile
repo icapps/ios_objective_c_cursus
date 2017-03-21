@@ -10,7 +10,7 @@ target 'Lesson1' do
 
   target 'Lesson1Tests' do
     inherit! :search_paths
-    pod 'Quick', '~> 0.10'
+    pod 'Quick'
     pod 'Nimble', '~> 5.0'
     pod 'OCMock', '~> 3.4'
   end

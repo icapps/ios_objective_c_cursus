@@ -15,11 +15,10 @@
 
 @implementation ViewModel
 
-//NSArray <NSString*> *ingredients = [NSArray arrayWithObjects:@"Brood", @"Spek", @"Kaas", nil];
-
 -(id) init {
     self = [super init];
     self.ingredients = @[@"Brood", @"Spek", @"Kaas"];
+    self.titleLabelText = @"Ingrediënts";
     return self;
 }
 

@@ -8,7 +8,7 @@ DEPENDENCIES:
   - Faro (~> 1.0)
   - Nimble (~> 5.0)
   - OCMock (~> 3.4)
-  - Quick (~> 0.10)
+  - Quick
 
 SPEC CHECKSUMS:
   Faro: 4dae0ac87b9aed9ed7d03fa0f63a2ffcf48599b0
@@ -16,6 +16,6 @@ SPEC CHECKSUMS:
   OCMock: 35ae71d6a8fcc1b59434d561d1520b9dd4f15765
   Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
 
-PODFILE CHECKSUM: 4076d1ba5924e2b6ac0c1e8914f03fffb9c4ea80
+PODFILE CHECKSUM: 352042762262d86f096a41c82ee0bdfc1691710e
 
 COCOAPODS: 1.2.0

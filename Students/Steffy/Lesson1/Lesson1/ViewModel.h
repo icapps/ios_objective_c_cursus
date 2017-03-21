@@ -13,4 +13,8 @@
 
 @property (strong, nonatomic) NSArray* ingredients;
 
+// MARK: - Translations
+
+@property (strong, nonatomic) NSString* titleLabelText;
+
 @end

@@ -7,6 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
+#import "ViewModel.h"
+
+@import Quick;
+@import Nimble;
 
 @interface Lesson1Tests : XCTestCase
 
