@@ -1,4 +1,4 @@
-# ios_objective_c_course
+# Objective-C from a Swift Perspective
 
 Swifty introduction to Objective-C superpowers, pony's and rainbows included.
 
