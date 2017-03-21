@@ -112,7 +112,7 @@ Om dit beter te begrijpen is het gemakkelijkste dat we unit testen beginnen schr
 * `pod init`
 * voeg OCMock toe via `pod 'OCMock', '~> 3.4’`
 * voeg Quick en Nimble toe
-* doe pod project open en verander voor Quick en Nimble de `Us legacy Swift` naar YES
+* doe pod project open en verander voor Quick en Nimble de `Us legacy Swift` naar __NO__
 
 Wat ga je maken:
 1. TableView die labels vult vanaf een viewModel
