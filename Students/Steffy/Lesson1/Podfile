@@ -1,0 +1,31 @@
+# Uncomment the next line to define a global platform for your project
+
+# Support from iOS 9.
+platform :ios, '9.0'
+
+use_frameworks!
+
+target 'Lesson1' do
+  pod 'Faro', '~> 1.0'
+
+  target 'Lesson1Tests' do
+    inherit! :search_paths
+    pod 'Quick', '~> 0.10'
+    pod 'Nimble', '~> 5.0'
+    pod 'OCMock', '~> 3.4'
+  end
+
+  target 'Lesson1UITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  post_install do |installer|
+    # Setup the signing correctly for Swift 3.
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['SWIFT_VERSION'] = '3.0'
+      end
+    end
+  end
+end
