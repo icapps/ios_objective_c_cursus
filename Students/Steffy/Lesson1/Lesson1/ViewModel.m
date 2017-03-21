@@ -15,11 +15,28 @@
 
 @implementation ViewModel
 
--(id) init {
+// MARK: - Initializers
+
+-(id)initWithData: (NSArray*)data {
     self = [super init];
-    self.ingredients = @[@"Brood", @"Spek", @"Kaas"];
-    self.titleLabelText = @"Ingrediënts";
+    
+    if (data != nil) {
+        self.ingredients = data;
+    } else {
+        self.ingredients = @[@"Brood", @"Spek", @"Kaas"];
+    }
+    
     return self;
+}
+
+// MARK: - Configuration
+
+- (NSInteger)numberOfRows {
+    return self.ingredients.count;
+}
+
+- (NSString*)titleLabelText {
+    return @"Ingrediënts";
 }
 
 @end

@@ -14,7 +14,7 @@
 		6D79B8E51E81564B00796555 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D79B8E31E81564B00796555 /* Main.storyboard */; };
 		6D79B8E71E81564B00796555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D79B8E61E81564B00796555 /* Assets.xcassets */; };
 		6D79B8EA1E81564B00796555 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D79B8E81E81564B00796555 /* LaunchScreen.storyboard */; };
-		6D79B8F51E81564C00796555 /* Lesson1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D79B8F41E81564C00796555 /* Lesson1Tests.m */; };
+		6D79B8F51E81564C00796555 /* ViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D79B8F41E81564C00796555 /* ViewModelSpec.m */; };
 		6D79B9171E815FBC00796555 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D79B9161E815FBC00796555 /* ViewModel.m */; };
 		8055F2ACA93C5023A2EBD0C0 /* Pods_Lesson1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45110C30132701DFA37CD2BA /* Pods_Lesson1UITests.framework */; };
 		AB92BCE4FF471A0C3D5B0268 /* Pods_Lesson1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E8754483FBFED88132E3E64 /* Pods_Lesson1.framework */; };
@@ -55,7 +55,7 @@
 		6D79B8E91E81564B00796555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D79B8EB1E81564B00796555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D79B8F01E81564C00796555 /* Lesson1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lesson1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D79B8F41E81564C00796555 /* Lesson1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson1Tests.m; sourceTree = "<group>"; };
+		6D79B8F41E81564C00796555 /* ViewModelSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewModelSpec.m; sourceTree = "<group>"; };
 		6D79B8F61E81564C00796555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D79B8FB1E81564C00796555 /* Lesson1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lesson1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D79B9161E815FBC00796555 /* ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 		6D79B9111E815A4400796555 /* Main Screen */ = {
 			isa = PBXGroup;
 			children = (
-				6D79B8F41E81564C00796555 /* Lesson1Tests.m */,
+				6D79B8F41E81564C00796555 /* ViewModelSpec.m */,
 			);
 			name = "Main Screen";
 			sourceTree = "<group>";
@@ -506,7 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D79B8F51E81564C00796555 /* Lesson1Tests.m in Sources */,
+				6D79B8F51E81564C00796555 /* ViewModelSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

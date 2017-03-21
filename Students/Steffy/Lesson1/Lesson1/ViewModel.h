@@ -9,12 +9,19 @@
 #import <UIKit/UIKit.h>
 
 
-@interface ViewModel: NSObject
+@interface ViewModel: NSObject {
+    
+}
 
 @property (strong, nonatomic) NSArray* ingredients;
+@property (readonly) NSInteger numberOfRows;
+
+// MARK: - Init
+
+- (id)initWithData: (NSArray*)data;
 
 // MARK: - Translations
 
-@property (strong, nonatomic) NSString* titleLabelText;
+@property (readonly) NSString* titleLabelText;
 
 @end

@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.viewModel = [[ViewModel alloc] init];
+    self.viewModel = [[ViewModel alloc] initWithData: nil];
     [self setupTranslations];
 }
 
@@ -49,12 +49,11 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.viewModel.ingredients.count;
+    return self.viewModel.numberOfRows;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
 
 @end
