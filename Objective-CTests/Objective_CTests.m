@@ -9,8 +9,10 @@
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
 #import "ViewModel.h"
-#import <Quick/Quick.h>
-#import <Nimble/Nimble.h>
+
+@import Nimble;
+@import Quick;
+
 
 @interface Objective_CTests : QuickSpec
 
@@ -18,9 +20,20 @@
 
 @implementation Objective_CTests
 
+-(void)spec {
 
-- (void)testViewModelInstantiation {
-	ViewModel* viewModel = [[ViewModel alloc] init];
+	describe(@"ViewModel List helpers", ^{
+
+		it(@"instantiates from models", ^ {
+
+			id mockArray = OCMClassMock([NSArray class]);
+			[OCMStub([mockArray count]) andReturnValue: OCMOCK_VALUE(30)];
+
+			ViewModel* viewModel = [[ViewModel alloc] initWithModels:mockArray];
+
+			expect([viewModel numberOfModels]).to(equal(@30));
+		});
+	});
 
 }
 
