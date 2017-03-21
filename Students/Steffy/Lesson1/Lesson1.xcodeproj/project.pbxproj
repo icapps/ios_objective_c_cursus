@@ -109,11 +109,11 @@
 		6D79B8CE1E81564B00796555 = {
 			isa = PBXGroup;
 			children = (
+				E7BBAC51FD6480F0AEBB6FB6 /* Frameworks */,
 				6D79B8D91E81564B00796555 /* Lesson1 */,
 				6D79B8F31E81564C00796555 /* Lesson1Tests */,
-				6D79B8D81E81564B00796555 /* Products */,
 				3622C1C8A994B9A4203185D0 /* Pods */,
-				E7BBAC51FD6480F0AEBB6FB6 /* Frameworks */,
+				6D79B8D81E81564B00796555 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,10 +131,10 @@
 			isa = PBXGroup;
 			children = (
 				6D79B90D1E815A0000796555 /* Modules */,
+				6D79B8DA1E81564B00796555 /* Supporting Files */,
+				6D79B90F1E815A2600796555 /* UI */,
 				6D79B8DD1E81564B00796555 /* AppDelegate.h */,
 				6D79B8DE1E81564B00796555 /* AppDelegate.m */,
-				6D79B90F1E815A2600796555 /* UI */,
-				6D79B8DA1E81564B00796555 /* Supporting Files */,
 			);
 			path = Lesson1;
 			sourceTree = "<group>";
@@ -146,13 +146,14 @@
 				6D79B8DB1E81564B00796555 /* main.m */,
 			);
 			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		6D79B8F31E81564C00796555 /* Lesson1Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6D79B8F61E81564C00796555 /* Info.plist */,
 				6D79B9101E815A3B00796555 /* Modules */,
+				6D79B8F61E81564C00796555 /* Info.plist */,
 			);
 			path = Lesson1Tests;
 			sourceTree = "<group>";
@@ -163,18 +164,20 @@
 				6D79B90E1E815A0E00796555 /* Main screen */,
 			);
 			name = Modules;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		6D79B90E1E815A0E00796555 /* Main screen */ = {
 			isa = PBXGroup;
 			children = (
+				6D79B8E31E81564B00796555 /* Main.storyboard */,
 				6D79B8E01E81564B00796555 /* ViewController.h */,
 				6D79B8E11E81564B00796555 /* ViewController.m */,
-				6D79B8E31E81564B00796555 /* Main.storyboard */,
 				6D79B9181E81602300796555 /* ViewModel.h */,
 				6D79B9161E815FBC00796555 /* ViewModel.m */,
 			);
 			name = "Main screen";
+			path = "Main screen";
 			sourceTree = "<group>";
 		};
 		6D79B90F1E815A2600796555 /* UI */ = {
@@ -184,6 +187,7 @@
 				6D79B8E81E81564B00796555 /* LaunchScreen.storyboard */,
 			);
 			name = UI;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		6D79B9101E815A3B00796555 /* Modules */ = {
@@ -192,6 +196,7 @@
 				6D79B9111E815A4400796555 /* Main Screen */,
 			);
 			name = Modules;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		6D79B9111E815A4400796555 /* Main Screen */ = {
@@ -200,6 +205,7 @@
 				6D79B8F41E81564C00796555 /* ViewModelSpec.m */,
 			);
 			name = "Main Screen";
+			path = "Main Screen";
 			sourceTree = "<group>";
 		};
 		E7BBAC51FD6480F0AEBB6FB6 /* Frameworks */ = {
@@ -539,6 +545,7 @@
 				6D79B8E41E81564B00796555 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		6D79B8E81E81564B00796555 /* LaunchScreen.storyboard */ = {
@@ -547,6 +554,7 @@
 				6D79B8E91E81564B00796555 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -649,7 +657,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y698KDFKVQ;
-				INFOPLIST_FILE = Lesson1/Info.plist;
+				INFOPLIST_FILE = "Lesson1/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ASDevs.Lesson1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -663,7 +671,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y698KDFKVQ;
-				INFOPLIST_FILE = Lesson1/Info.plist;
+				INFOPLIST_FILE = "Lesson1/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ASDevs.Lesson1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
