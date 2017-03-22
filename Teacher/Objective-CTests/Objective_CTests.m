@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
 #import "ViewModel.h"
+#import "ViewModelService.h"
 
 @import Nimble;
 @import Quick;
@@ -35,17 +36,21 @@
 		});
 
 		it(@"load from service", ^ {
-
-			id postService = OCMClassMock([PostService class]);
-
 			NSArray<NSString *> *empty = @[@""];
 
 			ViewModel* viewModel = [[ViewModel alloc] initWithModels:empty];
 
+			id postService = OCMClassMock([ViewModelService class]);
+			viewModel.fakeService = postService;
+			
+			NSDictionary * dict = @{@"name": @"Stijn"};
+			[OCMStub([postService postDictionary]) andReturn: dict];
+
 			[viewModel load];
 
-			XCTAssertNotNil(viewModel.post);
+			expect(viewModel.name).to(equal(@"Stijn"));
 		});
+		
 	});
 
 }

@@ -22,6 +22,7 @@
 		C0F314961E82C4360094B4E5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F314951E82C4360094B4E5 /* Post.swift */; };
 		C0F314991E82C49C0094B4E5 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F314981E82C49C0094B4E5 /* PostService.swift */; };
 		C0F3149B1E82C6760094B4E5 /* BridgeCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F3149A1E82C6760094B4E5 /* BridgeCall.swift */; };
+		C0F3149E1E82D1460094B4E5 /* ViewModelService.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F3149D1E82D1460094B4E5 /* ViewModelService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		C0F314951E82C4360094B4E5 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Models/Post.swift; sourceTree = "<group>"; };
 		C0F314981E82C49C0094B4E5 /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		C0F3149A1E82C6760094B4E5 /* BridgeCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BridgeCall.swift; path = Faro/BridgeCall.swift; sourceTree = "<group>"; };
+		C0F3149C1E82D1460094B4E5 /* ViewModelService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModelService.h; sourceTree = "<group>"; };
+		C0F3149D1E82D1460094B4E5 /* ViewModelService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModelService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,8 @@
 				C0DA0AB31E81335E00A6E9F8 /* Supporting Files */,
 				C0DA0AB91E81335E00A6E9F8 /* ViewController.h */,
 				C0DA0ABA1E81335E00A6E9F8 /* ViewController.m */,
+				C0F3149C1E82D1460094B4E5 /* ViewModelService.h */,
+				C0F3149D1E82D1460094B4E5 /* ViewModelService.m */,
 				C0DA0AD81E8139C100A6E9F8 /* ViewModel.h */,
 				C0DA0AD91E8139C100A6E9F8 /* ViewModel.m */,
 			);
@@ -393,6 +398,7 @@
 				C0DA0AB51E81335E00A6E9F8 /* main.m in Sources */,
 				C0F314961E82C4360094B4E5 /* Post.swift in Sources */,
 				C0F314911E82B58A0094B4E5 /* Example.swift in Sources */,
+				C0F3149E1E82D1460094B4E5 /* ViewModelService.m in Sources */,
 				C0F3149B1E82C6760094B4E5 /* BridgeCall.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

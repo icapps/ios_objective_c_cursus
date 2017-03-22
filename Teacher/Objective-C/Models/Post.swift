@@ -10,8 +10,11 @@ import Faro
 
 class Post: NSObject, Deserializable {
 
+	var name: String?
+
 	required init?(from raw: Any) {
-		return nil
+		print(raw as? [String: String] ?? "wrong value");
+		name  = (raw as? [String: String])?["name"]
 	}
 	
 }
