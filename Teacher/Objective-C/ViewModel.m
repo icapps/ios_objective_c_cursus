@@ -20,6 +20,7 @@
 	self = [super init];
 	if (self) {
 		self.models = models;
+		self.service = [[PostService alloc] init];
 	}
 	return self;
 }
@@ -27,6 +28,16 @@
 - (NSNumber *)numberOfModels {
 	NSLog(@"%@", @(self.models.count));
 	return @(self.models.count);
+}
+
+#pragma MARK: - Service
+
+- (void) load {
+	[self.service post:1 post:^(Post * _Nonnull post) {
+		self.post = post;
+	} fail:^(NSString * _Nonnull fail) {
+		NSLog(@"%@", fail);
+	}];
 }
 
 @end

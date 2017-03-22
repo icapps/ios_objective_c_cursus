@@ -12,7 +12,7 @@
 
 @import Nimble;
 @import Quick;
-
+@import Faro;
 
 @interface Objective_CTests : QuickSpec
 
@@ -32,6 +32,19 @@
 			ViewModel* viewModel = [[ViewModel alloc] initWithModels:mockArray];
 
 			expect([viewModel numberOfModels]).to(equal(@30));
+		});
+
+		it(@"load from service", ^ {
+
+			id postService = OCMClassMock([PostService class]);
+
+			NSArray<NSString *> *empty = @[@""];
+
+			ViewModel* viewModel = [[ViewModel alloc] initWithModels:empty];
+
+			[viewModel load];
+
+			XCTAssertNotNil(viewModel.post);
 		});
 	});
 
