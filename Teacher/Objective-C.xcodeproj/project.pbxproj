@@ -18,6 +18,10 @@
 		C0DA0ACE1E81335E00A6E9F8 /* Objective_CTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DA0ACD1E81335E00A6E9F8 /* Objective_CTests.m */; };
 		C0DA0ADA1E8139C100A6E9F8 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DA0AD91E8139C100A6E9F8 /* ViewModel.m */; };
 		C0F314911E82B58A0094B4E5 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F314901E82B58A0094B4E5 /* Example.swift */; };
+		C0F314931E82C14D0094B4E5 /* BridgeFaroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F314921E82C14D0094B4E5 /* BridgeFaroService.swift */; };
+		C0F314961E82C4360094B4E5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F314951E82C4360094B4E5 /* Post.swift */; };
+		C0F314991E82C49C0094B4E5 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F314981E82C49C0094B4E5 /* PostService.swift */; };
+		C0F3149B1E82C6760094B4E5 /* BridgeCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F3149A1E82C6760094B4E5 /* BridgeCall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,10 @@
 		C0DA0AD91E8139C100A6E9F8 /* ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
 		C0F3148F1E82B58A0094B4E5 /* Objective-C-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objective-C-Bridging-Header.h"; sourceTree = "<group>"; };
 		C0F314901E82B58A0094B4E5 /* Example.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		C0F314921E82C14D0094B4E5 /* BridgeFaroService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BridgeFaroService.swift; path = Faro/BridgeFaroService.swift; sourceTree = "<group>"; };
+		C0F314951E82C4360094B4E5 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Models/Post.swift; sourceTree = "<group>"; };
+		C0F314981E82C49C0094B4E5 /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		C0F3149A1E82C6760094B4E5 /* BridgeCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BridgeCall.swift; path = Faro/BridgeCall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,17 +129,19 @@
 			children = (
 				C0DA0AB61E81335E00A6E9F8 /* AppDelegate.h */,
 				C0DA0AB71E81335E00A6E9F8 /* AppDelegate.m */,
+				C0DA0ABF1E81335E00A6E9F8 /* Assets.xcassets */,
 				C0F314901E82B58A0094B4E5 /* Example.swift */,
+				C0F314941E82C1510094B4E5 /* Faro */,
+				C0DA0AC41E81335E00A6E9F8 /* Info.plist */,
+				C0DA0AC11E81335E00A6E9F8 /* LaunchScreen.storyboard */,
+				C0DA0ABC1E81335E00A6E9F8 /* Main.storyboard */,
+				C0F314971E82C4440094B4E5 /* Models */,
+				C0F3148F1E82B58A0094B4E5 /* Objective-C-Bridging-Header.h */,
+				C0DA0AB31E81335E00A6E9F8 /* Supporting Files */,
 				C0DA0AB91E81335E00A6E9F8 /* ViewController.h */,
 				C0DA0ABA1E81335E00A6E9F8 /* ViewController.m */,
 				C0DA0AD81E8139C100A6E9F8 /* ViewModel.h */,
 				C0DA0AD91E8139C100A6E9F8 /* ViewModel.m */,
-				C0DA0ABC1E81335E00A6E9F8 /* Main.storyboard */,
-				C0DA0ABF1E81335E00A6E9F8 /* Assets.xcassets */,
-				C0DA0AC11E81335E00A6E9F8 /* LaunchScreen.storyboard */,
-				C0DA0AC41E81335E00A6E9F8 /* Info.plist */,
-				C0DA0AB31E81335E00A6E9F8 /* Supporting Files */,
-				C0F3148F1E82B58A0094B4E5 /* Objective-C-Bridging-Header.h */,
 			);
 			path = "Objective-C";
 			sourceTree = "<group>";
@@ -151,6 +161,24 @@
 				C0DA0ACF1E81335E00A6E9F8 /* Info.plist */,
 			);
 			path = "Objective-CTests";
+			sourceTree = "<group>";
+		};
+		C0F314941E82C1510094B4E5 /* Faro */ = {
+			isa = PBXGroup;
+			children = (
+				C0F314921E82C14D0094B4E5 /* BridgeFaroService.swift */,
+				C0F3149A1E82C6760094B4E5 /* BridgeCall.swift */,
+				C0F314981E82C49C0094B4E5 /* PostService.swift */,
+			);
+			name = Faro;
+			sourceTree = "<group>";
+		};
+		C0F314971E82C4440094B4E5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C0F314951E82C4360094B4E5 /* Post.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,11 +385,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F314931E82C14D0094B4E5 /* BridgeFaroService.swift in Sources */,
 				C0DA0ABB1E81335E00A6E9F8 /* ViewController.m in Sources */,
 				C0DA0AB81E81335E00A6E9F8 /* AppDelegate.m in Sources */,
+				C0F314991E82C49C0094B4E5 /* PostService.swift in Sources */,
 				C0DA0ADA1E8139C100A6E9F8 /* ViewModel.m in Sources */,
 				C0DA0AB51E81335E00A6E9F8 /* main.m in Sources */,
+				C0F314961E82C4360094B4E5 /* Post.swift in Sources */,
 				C0F314911E82B58A0094B4E5 /* Example.swift in Sources */,
+				C0F3149B1E82C6760094B4E5 /* BridgeCall.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

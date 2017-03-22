@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Objective_C-Swift.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Override point for customization after application launch.
+	PostService * postService = [[PostService alloc] init];
+
+	[postService post:1 post:^(Post * _Nonnull post) {
+		NSLog(@"%@", post);
+	} fail:^(NSString * _Nonnull fail) {
+		NSLog(@"%@", fail);
+	}];
+
 	return YES;
 }
 
