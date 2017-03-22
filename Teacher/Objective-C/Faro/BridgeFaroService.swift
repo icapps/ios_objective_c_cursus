@@ -9,7 +9,7 @@
 import Faro
 
 class BridgeFaroService: NSObject {
-	let service: Service
+	public let service: Service
 
 	override init() {
 		service = Service(configuration: Configuration(baseURL: "http://jsonplaceholder.typicode.com"))
