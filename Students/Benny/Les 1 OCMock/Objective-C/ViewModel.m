@@ -34,9 +34,11 @@
 
 #pragma MARK: - Service
 
-- (void) load {
+- (void) load:(void (^)(void))done {
+    self.service = [[PostService alloc] init];
    	[self.service post:1 post:^(Post * _Nonnull post) {
-        self.post = [[Post alloc] initFrom: post];
+        self.post = post;
+        done();
     } fail:^(NSString * _Nonnull fail) {
         NSLog(@"%@", fail);
     }];

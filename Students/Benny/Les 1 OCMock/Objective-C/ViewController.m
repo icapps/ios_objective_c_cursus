@@ -10,6 +10,7 @@
 #import "ViewModel.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property ViewModel *viewModel;
 @end
@@ -20,7 +21,11 @@
 	[super viewDidLoad];
     if (self) {
         _viewModel = [[ViewModel alloc] init];
-        [self.viewModel load];
+        [self.viewModel load:^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
+        }];
     }
 }
 

@@ -18,6 +18,6 @@
 
 - (NSNumber *) numberOfModels;
 
-- (void) load;
+- (void) load: (void (^)(void))done;
 
 @end
