@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E6A68F2875FFD7000CFBD3B /* Pods_Objective_C.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448F0579C3D01F05FB92C71B /* Pods_Objective_C.framework */; };
 		46929BEF2E048A1113335625 /* Pods_Objective_CTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A6D6506AF1FB6921C8A7D3 /* Pods_Objective_CTests.framework */; };
+		B56B82241E841DD100ECBEC0 /* PostDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B56B82231E841DD100ECBEC0 /* PostDetailViewModel.m */; };
 		B5B3315C1E83CC2C00A9E7EB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B3315B1E83CC2C00A9E7EB /* Post.swift */; };
 		B5B3315E1E83CC5500A9E7EB /* BridgeFaroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B3315D1E83CC5500A9E7EB /* BridgeFaroService.swift */; };
 		B5B331601E83CC6D00A9E7EB /* BridgeCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B3315F1E83CC6D00A9E7EB /* BridgeCall.swift */; };
@@ -41,6 +42,8 @@
 		6803A380D282E648E2D64DC3 /* Pods-Objective-CTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objective-CTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Objective-CTests/Pods-Objective-CTests.release.xcconfig"; sourceTree = "<group>"; };
 		73A6D6506AF1FB6921C8A7D3 /* Pods_Objective_CTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Objective_CTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A5D9CC53353FDF8E54BCC6 /* Pods-Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-Objective-C/Pods-Objective-C.release.xcconfig"; sourceTree = "<group>"; };
+		B56B82221E841DD100ECBEC0 /* PostDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostDetailViewModel.h; sourceTree = "<group>"; };
+		B56B82231E841DD100ECBEC0 /* PostDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDetailViewModel.m; sourceTree = "<group>"; };
 		B5B3315B1E83CC2C00A9E7EB /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B5B3315D1E83CC5500A9E7EB /* BridgeFaroService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeFaroService.swift; sourceTree = "<group>"; };
 		B5B3315F1E83CC6D00A9E7EB /* BridgeCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeCall.swift; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 				C0DA0ABA1E81335E00A6E9F8 /* ViewController.m */,
 				C0DA0AD81E8139C100A6E9F8 /* ViewModel.h */,
 				C0DA0AD91E8139C100A6E9F8 /* ViewModel.m */,
+				B56B82221E841DD100ECBEC0 /* PostDetailViewModel.h */,
+				B56B82231E841DD100ECBEC0 /* PostDetailViewModel.m */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
@@ -422,6 +427,7 @@
 				C0DA0AB81E81335E00A6E9F8 /* AppDelegate.m in Sources */,
 				C0DA0ADA1E8139C100A6E9F8 /* ViewModel.m in Sources */,
 				B5B331601E83CC6D00A9E7EB /* BridgeCall.swift in Sources */,
+				B56B82241E841DD100ECBEC0 /* PostDetailViewModel.m in Sources */,
 				B5B3315C1E83CC2C00A9E7EB /* Post.swift in Sources */,
 				C0DA0AB51E81335E00A6E9F8 /* main.m in Sources */,
 				B5B331621E83CC7F00A9E7EB /* PostService.swift in Sources */,

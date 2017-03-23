@@ -14,7 +14,5 @@ class BridgeFaroService: NSObject {
     override init() {
         service = Service(configuration: Configuration(baseURL: "http://jsonplaceholder.typicode.com"))
     }
-    
-    
-    
+
 }
