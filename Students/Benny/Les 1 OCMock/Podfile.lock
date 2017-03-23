@@ -1,18 +1,21 @@
 PODS:
+  - Faro (1.0.9)
   - Nimble (6.0.1)
   - OCMock (3.4)
   - Quick (1.1.0)
 
 DEPENDENCIES:
+  - Faro
   - Nimble
   - OCMock (~> 3.4)
   - Quick
 
 SPEC CHECKSUMS:
+  Faro: 62a1fedc46cee416e4eb9dddaff7fd4ed071834a
   Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
   OCMock: 35ae71d6a8fcc1b59434d561d1520b9dd4f15765
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
 
-PODFILE CHECKSUM: c4a786ebda1d220d1fd50337b8923e43f9e95957
+PODFILE CHECKSUM: b4f1f9fd02145326c8d1075e90b75b997c1e70a4
 
 COCOAPODS: 1.2.0

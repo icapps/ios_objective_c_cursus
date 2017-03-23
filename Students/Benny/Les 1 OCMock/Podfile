@@ -9,6 +9,8 @@ target 'Objective-C' do
 
   # Pods for Objective-C
 
+  pod 'Faro'
+
   target 'Objective-CTests' do
     inherit! :search_paths
     pod 'OCMock', '~> 3.4'
