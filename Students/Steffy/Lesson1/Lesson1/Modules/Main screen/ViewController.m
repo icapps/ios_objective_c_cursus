@@ -33,6 +33,14 @@
     PostService* service;
     
     self.viewModel = [[ViewModel alloc] initWithService:service];
+    
+    __weak ViewController
+    self.viewModel.updateHandler = ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    };
+    
     [self setupTranslations];
 }
 
@@ -44,11 +52,7 @@
 - (IBAction)fetchData:(id)sender {
 //    [self.viewModel fetchStaticData:nil];
 //    [self.viewModel fetchFaroData];
-    [self.viewModel fetchAllFaroData:^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
-        });
-    }];
+    [self.viewModel fetchAllFaroData];
 }
 
 #pragma mark - TableView (delegates, datasource)

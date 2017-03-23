@@ -12,24 +12,15 @@
 
 @interface ViewModel ()
 
+#pragma mark - Model data
+
+@property (strong, nonatomic) NSArray <Post*> *posts;
 
 @end
 
 @implementation ViewModel
 
-#pragma mark - Initializers
-
-//FaroSwiftService *service;
-
--(id)initWithData: (NSArray*)data {
-    self = [super init];
-    
-    [self fetchStaticData:data];
-    
-    return self;
-}
-
--(id)initWithService: (FaroSwiftService*)service {
+-(id)initWithService: (PostService*)service {
     self = [super init];
     self.service = service;
     return self;
@@ -38,7 +29,6 @@
 #pragma mark - Configuration
 
 - (NSInteger)numberOfRows {
-//    return self.ingredients.count;
     return self.posts.count;
 }
 
@@ -46,35 +36,17 @@
     return @"Ingrediënts";
 }
 
-#pragma mark - Fetch functions
+#pragma mark - Service
 
--(void)fetchFaroData {
-    PostService * postService = [[PostService alloc] init];
+-(void) fetchPosts {
     
-    [postService post:1 post:^(Post * _Nonnull post) {
-        NSLog(@"%@", post);
-    } fail:^(NSString * _Nonnull fail) {
-        NSLog(@"%@", fail);
-    }];
-}
-
--(void) fetchAllFaroData:(void (^)(void))completion {
-    PostService * postService = [[PostService alloc] init];
-    
-    [postService allPostsWithPost:^(NSArray<Post *> * _Nonnull posts) {
-        self.posts = posts;
-        completion();
+    __weak ViewModel* weakSelf = self;
+    [self.service allPostsWithPost:^(NSArray<Post *> * _Nonnull posts) {
+        weakSelf.posts = posts;
+        weakSelf.updateHandler();
     }fail:^(NSString * _Nonnull fail) {
         NSLog(@"%@", fail);
     }];
-}
-
--(void)fetchStaticData: (NSArray*)data {
-    if (data != nil) {
-        self.ingredients = data;
-    } else {
-        self.ingredients = @[@"Brood", @"Spek", @"Kaas"];
-    }
 }
 
 @end

@@ -11,31 +11,26 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ViewModel: NSObject 
+@interface ViewModel: NSObject
 
-@property (strong, nonatomic) NSArray* ingredients;
-@property (strong, nonatomic) NSArray <Post*> *posts;
-@property (readonly) NSInteger numberOfRows;
-@property (strong, nonatomic) FaroSwiftService* service;
+- (id)initWithService: (PostService*)service;
 
-#pragma mark - updateHandler
 
-@property (nonatomic, strong) void (^updateHandler) (void);
 
-#pragma mark - Init
-
-- (id)initWithData: (NSArray*)data;
-- (id)initWithService: (FaroSwiftService*)service;
-
-#pragma mark - Functions
-
-- (void)fetchStaticData: (NSArray*)data;
-- (void)fetchFaroData;
-- (void)fetchAllFaroData:(void (^)(void))completion;
-
-#pragma mark - Translations
+#pragma mark - Configuration
 
 @property (readonly) NSString* titleLabelText;
+
+@property (readonly) NSInteger numberOfRows;
+
+- (Post*)postAtIndexPath: (NSIndexPath*)indexPath;
+
+#pragma mark - Service
+
+@property (strong, nonatomic) PostService* service;
+@property (nonatomic, strong) void (^updateHandler) (void);
+
+- (void)fetchPosts;
 
 @end
 
