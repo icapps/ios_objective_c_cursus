@@ -7,16 +7,34 @@
 //
 
 #import "ViewController.h"
+#import "Objective_C-Swift.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) PostService * service;
+@property (nonatomic, strong) Post *post;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-	[super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+
+	__weak ViewController * weakSelf = self;
+	[self.service post:1 post:^(Post * _Nonnull post) {
+		weakSelf.post = post;
+	} fail:^(NSString * _Nonnull error) {
+		NSLog(@"%@", error);
+	}];
+
+	NSError *error;
+	NSData * data = [@"{\"bla\":\"value\"}" dataUsingEncoding: NSUTF8StringEncoding];
+
+	NSDictionary * dict = [NSJSONSerialization JSONObjectWithData:data
+														  options:NSJSONReadingAllowFragments
+															error:&error];
+	NSLog(@"%@", dict);
 }
 
 

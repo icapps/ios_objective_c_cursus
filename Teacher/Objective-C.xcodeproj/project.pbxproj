@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3E6A68F2875FFD7000CFBD3B /* Pods_Objective_C.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448F0579C3D01F05FB92C71B /* Pods_Objective_C.framework */; };
 		46929BEF2E048A1113335625 /* Pods_Objective_CTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A6D6506AF1FB6921C8A7D3 /* Pods_Objective_CTests.framework */; };
+		C04E8DF51E8400D500B8DA5E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C04E8DF41E8400D500B8DA5E /* RootViewController.m */; };
+		C04E8DF71E840F0700B8DA5E /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E8DF61E840F0700B8DA5E /* SwiftViewController.swift */; };
+		C04E8DFA1E84118500B8DA5E /* ObjViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C04E8DF91E84118500B8DA5E /* ObjViewController.m */; };
+		C04E8DFD1E84133E00B8DA5E /* ObjcUpdateHandlerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C04E8DFC1E84133E00B8DA5E /* ObjcUpdateHandlerViewModel.m */; };
 		C0DA0AB51E81335E00A6E9F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DA0AB41E81335E00A6E9F8 /* main.m */; };
 		C0DA0AB81E81335E00A6E9F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DA0AB71E81335E00A6E9F8 /* AppDelegate.m */; };
 		C0DA0ABB1E81335E00A6E9F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DA0ABA1E81335E00A6E9F8 /* ViewController.m */; };
@@ -18,6 +22,11 @@
 		C0DA0ACE1E81335E00A6E9F8 /* Objective_CTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DA0ACD1E81335E00A6E9F8 /* Objective_CTests.m */; };
 		C0DA0ADA1E8139C100A6E9F8 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DA0AD91E8139C100A6E9F8 /* ViewModel.m */; };
 		C0F314911E82B58A0094B4E5 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F314901E82B58A0094B4E5 /* Example.swift */; };
+		C0F314931E82C14D0094B4E5 /* BridgeFaroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F314921E82C14D0094B4E5 /* BridgeFaroService.swift */; };
+		C0F314961E82C4360094B4E5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F314951E82C4360094B4E5 /* Post.swift */; };
+		C0F314991E82C49C0094B4E5 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F314981E82C49C0094B4E5 /* PostService.swift */; };
+		C0F3149B1E82C6760094B4E5 /* BridgeCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F3149A1E82C6760094B4E5 /* BridgeCall.swift */; };
+		C0F3149E1E82D1460094B4E5 /* ViewModelService.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F3149D1E82D1460094B4E5 /* ViewModelService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +46,13 @@
 		6803A380D282E648E2D64DC3 /* Pods-Objective-CTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objective-CTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Objective-CTests/Pods-Objective-CTests.release.xcconfig"; sourceTree = "<group>"; };
 		73A6D6506AF1FB6921C8A7D3 /* Pods_Objective_CTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Objective_CTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A5D9CC53353FDF8E54BCC6 /* Pods-Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-Objective-C/Pods-Objective-C.release.xcconfig"; sourceTree = "<group>"; };
+		C04E8DF31E8400D500B8DA5E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		C04E8DF41E8400D500B8DA5E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		C04E8DF61E840F0700B8DA5E /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
+		C04E8DF81E84118500B8DA5E /* ObjViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjViewController.h; sourceTree = "<group>"; };
+		C04E8DF91E84118500B8DA5E /* ObjViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjViewController.m; sourceTree = "<group>"; };
+		C04E8DFB1E84133E00B8DA5E /* ObjcUpdateHandlerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcUpdateHandlerViewModel.h; sourceTree = "<group>"; };
+		C04E8DFC1E84133E00B8DA5E /* ObjcUpdateHandlerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcUpdateHandlerViewModel.m; sourceTree = "<group>"; };
 		C0DA0AB01E81335E00A6E9F8 /* Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0DA0AB41E81335E00A6E9F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C0DA0AB61E81335E00A6E9F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +70,12 @@
 		C0DA0AD91E8139C100A6E9F8 /* ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
 		C0F3148F1E82B58A0094B4E5 /* Objective-C-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objective-C-Bridging-Header.h"; sourceTree = "<group>"; };
 		C0F314901E82B58A0094B4E5 /* Example.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		C0F314921E82C14D0094B4E5 /* BridgeFaroService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BridgeFaroService.swift; path = Faro/BridgeFaroService.swift; sourceTree = "<group>"; };
+		C0F314951E82C4360094B4E5 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Models/Post.swift; sourceTree = "<group>"; };
+		C0F314981E82C49C0094B4E5 /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		C0F3149A1E82C6760094B4E5 /* BridgeCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BridgeCall.swift; path = Faro/BridgeCall.swift; sourceTree = "<group>"; };
+		C0F3149C1E82D1460094B4E5 /* ViewModelService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModelService.h; sourceTree = "<group>"; };
+		C0F3149D1E82D1460094B4E5 /* ViewModelService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModelService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,17 +143,28 @@
 			children = (
 				C0DA0AB61E81335E00A6E9F8 /* AppDelegate.h */,
 				C0DA0AB71E81335E00A6E9F8 /* AppDelegate.m */,
+				C0DA0ABF1E81335E00A6E9F8 /* Assets.xcassets */,
 				C0F314901E82B58A0094B4E5 /* Example.swift */,
+				C0F314941E82C1510094B4E5 /* Faro */,
+				C0DA0AC41E81335E00A6E9F8 /* Info.plist */,
+				C0DA0AC11E81335E00A6E9F8 /* LaunchScreen.storyboard */,
+				C0DA0ABC1E81335E00A6E9F8 /* Main.storyboard */,
+				C0F314971E82C4440094B4E5 /* Models */,
+				C04E8DFB1E84133E00B8DA5E /* ObjcUpdateHandlerViewModel.h */,
+				C04E8DFC1E84133E00B8DA5E /* ObjcUpdateHandlerViewModel.m */,
+				C0F3148F1E82B58A0094B4E5 /* Objective-C-Bridging-Header.h */,
+				C04E8DF81E84118500B8DA5E /* ObjViewController.h */,
+				C04E8DF91E84118500B8DA5E /* ObjViewController.m */,
+				C04E8DF31E8400D500B8DA5E /* RootViewController.h */,
+				C04E8DF41E8400D500B8DA5E /* RootViewController.m */,
+				C0DA0AB31E81335E00A6E9F8 /* Supporting Files */,
+				C04E8DF61E840F0700B8DA5E /* SwiftViewController.swift */,
 				C0DA0AB91E81335E00A6E9F8 /* ViewController.h */,
 				C0DA0ABA1E81335E00A6E9F8 /* ViewController.m */,
 				C0DA0AD81E8139C100A6E9F8 /* ViewModel.h */,
 				C0DA0AD91E8139C100A6E9F8 /* ViewModel.m */,
-				C0DA0ABC1E81335E00A6E9F8 /* Main.storyboard */,
-				C0DA0ABF1E81335E00A6E9F8 /* Assets.xcassets */,
-				C0DA0AC11E81335E00A6E9F8 /* LaunchScreen.storyboard */,
-				C0DA0AC41E81335E00A6E9F8 /* Info.plist */,
-				C0DA0AB31E81335E00A6E9F8 /* Supporting Files */,
-				C0F3148F1E82B58A0094B4E5 /* Objective-C-Bridging-Header.h */,
+				C0F3149C1E82D1460094B4E5 /* ViewModelService.h */,
+				C0F3149D1E82D1460094B4E5 /* ViewModelService.m */,
 			);
 			path = "Objective-C";
 			sourceTree = "<group>";
@@ -151,6 +184,24 @@
 				C0DA0ACF1E81335E00A6E9F8 /* Info.plist */,
 			);
 			path = "Objective-CTests";
+			sourceTree = "<group>";
+		};
+		C0F314941E82C1510094B4E5 /* Faro */ = {
+			isa = PBXGroup;
+			children = (
+				C0F314921E82C14D0094B4E5 /* BridgeFaroService.swift */,
+				C0F3149A1E82C6760094B4E5 /* BridgeCall.swift */,
+				C0F314981E82C49C0094B4E5 /* PostService.swift */,
+			);
+			name = Faro;
+			sourceTree = "<group>";
+		};
+		C0F314971E82C4440094B4E5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C0F314951E82C4360094B4E5 /* Post.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,11 +408,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C04E8DF71E840F0700B8DA5E /* SwiftViewController.swift in Sources */,
+				C0F314931E82C14D0094B4E5 /* BridgeFaroService.swift in Sources */,
 				C0DA0ABB1E81335E00A6E9F8 /* ViewController.m in Sources */,
 				C0DA0AB81E81335E00A6E9F8 /* AppDelegate.m in Sources */,
+				C0F314991E82C49C0094B4E5 /* PostService.swift in Sources */,
 				C0DA0ADA1E8139C100A6E9F8 /* ViewModel.m in Sources */,
 				C0DA0AB51E81335E00A6E9F8 /* main.m in Sources */,
+				C0F314961E82C4360094B4E5 /* Post.swift in Sources */,
+				C04E8DF51E8400D500B8DA5E /* RootViewController.m in Sources */,
+				C04E8DFA1E84118500B8DA5E /* ObjViewController.m in Sources */,
 				C0F314911E82B58A0094B4E5 /* Example.swift in Sources */,
+				C0F3149E1E82D1460094B4E5 /* ViewModelService.m in Sources */,
+				C04E8DFD1E84133E00B8DA5E /* ObjcUpdateHandlerViewModel.m in Sources */,
+				C0F3149B1E82C6760094B4E5 /* BridgeCall.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,10 +9,11 @@
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
 #import "ViewModel.h"
+#import "ViewModelService.h"
 
 @import Nimble;
 @import Quick;
-
+@import Faro;
 
 @interface Objective_CTests : QuickSpec
 
@@ -33,6 +34,23 @@
 
 			expect([viewModel numberOfModels]).to(equal(@30));
 		});
+
+		it(@"load from service", ^ {
+			NSArray<NSString *> *empty = @[@""];
+
+			ViewModel* viewModel = [[ViewModel alloc] initWithModels:empty];
+
+			id postService = OCMClassMock([ViewModelService class]);
+			viewModel.fakeService = postService;
+			
+			NSDictionary * dict = @{@"name": @"Stijn"};
+			[OCMStub([postService postDictionary]) andReturn: dict];
+
+			[viewModel load];
+
+			expect(viewModel.name).to(equal(@"Stijn"));
+		});
+		
 	});
 
 }
