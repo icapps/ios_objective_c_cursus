@@ -20,10 +20,10 @@ class Post: NSObject, Deserializable {
             return
         }
         
-        userId = json["userId"] as! NSNumber?
-        id = json["id"] as! NSNumber?
-        title = json["title"] as! String?
-        body = json["body"] as! String?
+        userId = json["userId"] as? NSNumber
+        id = json["id"] as? NSNumber
+        title <-> json["title"]
+        body <-> json["body"]
      }
     
 }
