@@ -107,8 +107,8 @@
 		B5D6B0C91E83BD34006564CC /* Faro */ = {
 			isa = PBXGroup;
 			children = (
-				B5D6B0C61E83BD34006564CC /* BridgeFaroService.swift */,
 				B5D6B0C71E83BD34006564CC /* BridgeCall.swift */,
+				B5D6B0C61E83BD34006564CC /* BridgeFaroService.swift */,
 				B5D6B0C81E83BD34006564CC /* PostService.swift */,
 			);
 			name = Faro;
@@ -137,9 +137,9 @@
 		B5D6B0D11E83BD88006564CC /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				C0DA0ABC1E81335E00A6E9F8 /* Main.storyboard */,
 				C0DA0AB61E81335E00A6E9F8 /* AppDelegate.h */,
 				C0DA0AB71E81335E00A6E9F8 /* AppDelegate.m */,
+				C0DA0ABC1E81335E00A6E9F8 /* Main.storyboard */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -147,11 +147,11 @@
 		B5D6B0D21E83BD9A006564CC /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				C0DA0AD91E8139C100A6E9F8 /* ViewModel.m */,
 				C0F314901E82B58A0094B4E5 /* Example.swift */,
 				C0DA0AB91E81335E00A6E9F8 /* ViewController.h */,
 				C0DA0ABA1E81335E00A6E9F8 /* ViewController.m */,
 				C0DA0AD81E8139C100A6E9F8 /* ViewModel.h */,
+				C0DA0AD91E8139C100A6E9F8 /* ViewModel.m */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
