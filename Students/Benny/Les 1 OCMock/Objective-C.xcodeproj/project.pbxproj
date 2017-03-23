@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3E6A68F2875FFD7000CFBD3B /* Pods_Objective_C.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448F0579C3D01F05FB92C71B /* Pods_Objective_C.framework */; };
 		46929BEF2E048A1113335625 /* Pods_Objective_CTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A6D6506AF1FB6921C8A7D3 /* Pods_Objective_CTests.framework */; };
+		B5D6B0CA1E83BD34006564CC /* BridgeFaroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6B0C61E83BD34006564CC /* BridgeFaroService.swift */; };
+		B5D6B0CB1E83BD34006564CC /* BridgeCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6B0C71E83BD34006564CC /* BridgeCall.swift */; };
+		B5D6B0CC1E83BD34006564CC /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6B0C81E83BD34006564CC /* PostService.swift */; };
+		B5D6B0CF1E83BD65006564CC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6B0CD1E83BD65006564CC /* Post.swift */; };
 		C0DA0AB51E81335E00A6E9F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DA0AB41E81335E00A6E9F8 /* main.m */; };
 		C0DA0AB81E81335E00A6E9F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DA0AB71E81335E00A6E9F8 /* AppDelegate.m */; };
 		C0DA0ABB1E81335E00A6E9F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DA0ABA1E81335E00A6E9F8 /* ViewController.m */; };
@@ -37,6 +41,10 @@
 		6803A380D282E648E2D64DC3 /* Pods-Objective-CTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objective-CTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Objective-CTests/Pods-Objective-CTests.release.xcconfig"; sourceTree = "<group>"; };
 		73A6D6506AF1FB6921C8A7D3 /* Pods_Objective_CTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Objective_CTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A5D9CC53353FDF8E54BCC6 /* Pods-Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-Objective-C/Pods-Objective-C.release.xcconfig"; sourceTree = "<group>"; };
+		B5D6B0C61E83BD34006564CC /* BridgeFaroService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BridgeFaroService.swift; path = Faro/BridgeFaroService.swift; sourceTree = "<group>"; };
+		B5D6B0C71E83BD34006564CC /* BridgeCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BridgeCall.swift; path = Faro/BridgeCall.swift; sourceTree = "<group>"; };
+		B5D6B0C81E83BD34006564CC /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		B5D6B0CD1E83BD65006564CC /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Models/Post.swift; sourceTree = "<group>"; };
 		C0DA0AB01E81335E00A6E9F8 /* Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0DA0AB41E81335E00A6E9F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C0DA0AB61E81335E00A6E9F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,6 +104,67 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B5D6B0C91E83BD34006564CC /* Faro */ = {
+			isa = PBXGroup;
+			children = (
+				B5D6B0C61E83BD34006564CC /* BridgeFaroService.swift */,
+				B5D6B0C71E83BD34006564CC /* BridgeCall.swift */,
+				B5D6B0C81E83BD34006564CC /* PostService.swift */,
+			);
+			name = Faro;
+			path = "../../../../Teacher/Objective-C";
+			sourceTree = "<group>";
+		};
+		B5D6B0CE1E83BD65006564CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B5D6B0CD1E83BD65006564CC /* Post.swift */,
+			);
+			name = Models;
+			path = "../../../../Teacher/Objective-C";
+			sourceTree = "<group>";
+		};
+		B5D6B0D01E83BD75006564CC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B5D6B0D11E83BD88006564CC /* Main */,
+				B5D6B0D21E83BD9A006564CC /* TableView */,
+				B5D6B0C91E83BD34006564CC /* Faro */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		B5D6B0D11E83BD88006564CC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C0DA0ABC1E81335E00A6E9F8 /* Main.storyboard */,
+				C0DA0AB61E81335E00A6E9F8 /* AppDelegate.h */,
+				C0DA0AB71E81335E00A6E9F8 /* AppDelegate.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		B5D6B0D21E83BD9A006564CC /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				C0DA0AD91E8139C100A6E9F8 /* ViewModel.m */,
+				C0F314901E82B58A0094B4E5 /* Example.swift */,
+				C0DA0AB91E81335E00A6E9F8 /* ViewController.h */,
+				C0DA0ABA1E81335E00A6E9F8 /* ViewController.m */,
+				C0DA0AD81E8139C100A6E9F8 /* ViewModel.h */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		B5D6B0D31E83BDB8006564CC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C0DA0ABF1E81335E00A6E9F8 /* Assets.xcassets */,
+				C0DA0AC11E81335E00A6E9F8 /* LaunchScreen.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		C0DA0AA71E81335E00A6E9F8 = {
 			isa = PBXGroup;
 			children = (
@@ -119,17 +188,9 @@
 		C0DA0AB21E81335E00A6E9F8 /* Objective-C */ = {
 			isa = PBXGroup;
 			children = (
-				C0DA0AB61E81335E00A6E9F8 /* AppDelegate.h */,
-				C0DA0AB71E81335E00A6E9F8 /* AppDelegate.m */,
-				C0F314901E82B58A0094B4E5 /* Example.swift */,
-				C0DA0AB91E81335E00A6E9F8 /* ViewController.h */,
-				C0DA0ABA1E81335E00A6E9F8 /* ViewController.m */,
-				C0DA0AD81E8139C100A6E9F8 /* ViewModel.h */,
-				C0DA0AD91E8139C100A6E9F8 /* ViewModel.m */,
-				C0DA0ABC1E81335E00A6E9F8 /* Main.storyboard */,
-				C0DA0ABF1E81335E00A6E9F8 /* Assets.xcassets */,
-				C0DA0AC11E81335E00A6E9F8 /* LaunchScreen.storyboard */,
-				C0DA0AC41E81335E00A6E9F8 /* Info.plist */,
+				B5D6B0CE1E83BD65006564CC /* Models */,
+				B5D6B0D01E83BD75006564CC /* Modules */,
+				B5D6B0D31E83BDB8006564CC /* UI */,
 				C0DA0AB31E81335E00A6E9F8 /* Supporting Files */,
 				C0F3148F1E82B58A0094B4E5 /* Objective-C-Bridging-Header.h */,
 			);
@@ -139,6 +200,7 @@
 		C0DA0AB31E81335E00A6E9F8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C0DA0AC41E81335E00A6E9F8 /* Info.plist */,
 				C0DA0AB41E81335E00A6E9F8 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -357,10 +419,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D6B0CA1E83BD34006564CC /* BridgeFaroService.swift in Sources */,
 				C0DA0ABB1E81335E00A6E9F8 /* ViewController.m in Sources */,
 				C0DA0AB81E81335E00A6E9F8 /* AppDelegate.m in Sources */,
+				B5D6B0CC1E83BD34006564CC /* PostService.swift in Sources */,
 				C0DA0ADA1E8139C100A6E9F8 /* ViewModel.m in Sources */,
 				C0DA0AB51E81335E00A6E9F8 /* main.m in Sources */,
+				B5D6B0CF1E83BD65006564CC /* Post.swift in Sources */,
+				B5D6B0CB1E83BD34006564CC /* BridgeCall.swift in Sources */,
 				C0F314911E82B58A0094B4E5 /* Example.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
