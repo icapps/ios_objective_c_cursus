@@ -11,16 +11,17 @@ import Faro
 
 class Post: NSObject, Deserializable {
     var title: String?
-    var userId: Int?
-    var id: Int?
+    var userId: NSNumber?
+    var id: NSNumber?
     var body: String?
     
     required init?(from raw: Any) {
         guard let json = raw as? [String: Any] else { return }
         title <-> json["title"]
-        userId <-> json["userId"]
-        id <-> json["id"]
+        userId = json["userId"] as! NSNumber?
+        id = json["id"] as! NSNumber?
         body <-> json["body"]
+        
         
         print("ID:", id ?? "no ID")
         print("USERID:", userId ?? "no userId")

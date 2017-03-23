@@ -13,6 +13,7 @@
 @interface ViewModel: NSObject 
 
 @property (strong, nonatomic) NSArray* ingredients;
+@property (strong, nonatomic) NSArray <Post*> *posts;
 @property (readonly) NSInteger numberOfRows;
 @property (strong, nonatomic) FaroSwiftService* service;
 
@@ -25,6 +26,7 @@
 
 - (void)fetchStaticData: (NSArray*)data;
 - (void)fetchFaroData;
+- (void)fetchAllFaroData;
 
 #pragma mark - Translations
 

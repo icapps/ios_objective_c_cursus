@@ -19,7 +19,7 @@
 
 #pragma mark - Initializers
 
-FaroSwiftService *service;
+//FaroSwiftService *service;
 
 -(id)initWithData: (NSArray*)data {
     self = [super init];
@@ -38,7 +38,8 @@ FaroSwiftService *service;
 #pragma mark - Configuration
 
 - (NSInteger)numberOfRows {
-    return self.ingredients.count;
+//    return self.ingredients.count;
+    return self.posts.count;
 }
 
 - (NSString*)titleLabelText {
@@ -53,6 +54,17 @@ FaroSwiftService *service;
     [postService post:1 post:^(Post * _Nonnull post) {
         NSLog(@"%@", post);
     } fail:^(NSString * _Nonnull fail) {
+        NSLog(@"%@", fail);
+    }];
+}
+
+-(void) fetchAllFaroData {
+    PostService * postService = [[PostService alloc] init];
+    
+    [postService allPostsWithPost:^(NSArray<Post *> * _Nonnull posts) {
+        NSLog(@"%@", posts);
+        self.posts = posts;
+    }fail:^(NSString * _Nonnull fail) {
         NSLog(@"%@", fail);
     }];
 }

@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    FaroSwiftService* service;
+    PostService* service;
     
     self.viewModel = [[ViewModel alloc] initWithService:service];
     [self setupTranslations];
@@ -43,8 +43,12 @@
 }
 - (IBAction)fetchData:(id)sender {
 //    [self.viewModel fetchStaticData:nil];
-    [self.viewModel fetchFaroData];
-    [self.tableView reloadData];
+//    [self.viewModel fetchFaroData];
+    [self.viewModel fetchAllFaroData];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
 }
 
 #pragma mark - TableView (delegates, datasource)
@@ -52,7 +56,8 @@
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.textLabel.text = self.viewModel.ingredients[indexPath.row];
+//    cell.textLabel.text = self.viewModel.ingredients[indexPath.row];
+    cell.textLabel.text = self.viewModel.posts[indexPath.row].id.stringValue;
     
     return cell;
 }
