@@ -30,6 +30,8 @@
     }
 }
 
+#pragma MARK: - UITableViewDataSource
+
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.viewModel.posts.count;
 }
@@ -38,7 +40,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"tableViewCell"];
     
     cell.textLabel.text = [self.viewModel.posts[indexPath.row].id stringValue];
-    cell.detailTextLabel.text = self.viewModel.posts[indexPath.row].title;
     
     return cell;
 }
