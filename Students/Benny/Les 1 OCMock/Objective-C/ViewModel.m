@@ -36,8 +36,9 @@
 
 - (void) load:(void (^)(void))done {
     self.service = [[PostService alloc] init];
+    __weak ViewModel *weakSelf = self;
     [self.service postWithPosts:^(NSArray<Post *> * _Nonnull posts) {
-        self.posts = posts;
+        weakSelf.posts = posts;
         done();
     } fail:^(NSString * _Nonnull fail) {
          NSLog(@"%@", fail);
