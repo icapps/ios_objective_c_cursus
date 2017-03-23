@@ -36,7 +36,7 @@
 
 - (void) load {
    	[self.service post:1 post:^(Post * _Nonnull post) {
-        self.post = post;
+        self.post = [[Post alloc] initFrom: post];
     } fail:^(NSString * _Nonnull fail) {
         NSLog(@"%@", fail);
     }];
