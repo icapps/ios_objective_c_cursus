@@ -27,5 +27,5 @@ NSLog(@"%@", aString) // prints: "Some text"
 ```
 
 ```Swift
-print(aString)
+print(aString) // prints: "Some text"
 ```
