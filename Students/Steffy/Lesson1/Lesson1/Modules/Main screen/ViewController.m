@@ -29,15 +29,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.viewModel = [[ViewModel alloc] initWithService: [[PostService alloc] init]];
     
-    PostService* service;
-    
-    self.viewModel = [[ViewModel alloc] initWithService:service];
-    
-    __weak ViewController
+	__weak ViewController *weakSelf = self;
     self.viewModel.updateHandler = ^{
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
+            [weakSelf.tableView reloadData];
         });
     };
     
@@ -52,7 +50,7 @@
 - (IBAction)fetchData:(id)sender {
 //    [self.viewModel fetchStaticData:nil];
 //    [self.viewModel fetchFaroData];
-    [self.viewModel fetchAllFaroData];
+    [self.viewModel fetchPosts];
 }
 
 #pragma mark - TableView (delegates, datasource)
@@ -60,8 +58,7 @@
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-//    cell.textLabel.text = self.viewModel.ingredients[indexPath.row];
-    cell.textLabel.text = self.viewModel.posts[indexPath.row].id.stringValue;
+    cell.textLabel.text = [self.viewModel postAtIndexPath:indexPath].title;
     
     return cell;
 }

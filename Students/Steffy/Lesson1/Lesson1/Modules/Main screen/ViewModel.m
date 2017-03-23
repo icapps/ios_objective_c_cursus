@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ViewModel.h"
 #import "Lesson1-Swift.h"
+#import "PostDetailViewModel.h"
 
 @interface ViewModel ()
 
@@ -34,6 +35,13 @@
 
 - (NSString*)titleLabelText {
     return @"Ingrediënts";
+}
+
+-(PostDetailViewModel *)postAtIndexPath:(NSIndexPath *)indexPath {
+	if (indexPath.row > self.posts.count) {
+		return  nil;
+	}
+	return  [[PostDetailViewModel alloc] initWithPost:self.posts[indexPath.row]];
 }
 
 #pragma mark - Service

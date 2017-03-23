@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Lesson1-Swift.h"
+#import "PostDetailViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,15 +16,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (id)initWithService: (PostService*)service;
 
-
-
 #pragma mark - Configuration
 
 @property (readonly) NSString* titleLabelText;
 
 @property (readonly) NSInteger numberOfRows;
 
-- (Post*)postAtIndexPath: (NSIndexPath*)indexPath;
+- (PostDetailViewModel*)postAtIndexPath: (NSIndexPath*)indexPath;
 
 #pragma mark - Service
 

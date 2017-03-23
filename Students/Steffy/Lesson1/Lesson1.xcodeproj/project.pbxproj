@@ -24,6 +24,7 @@
 		6DB621131E82C4A6000960D5 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB621121E82C4A6000960D5 /* PostService.swift */; };
 		8055F2ACA93C5023A2EBD0C0 /* Pods_Lesson1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45110C30132701DFA37CD2BA /* Pods_Lesson1UITests.framework */; };
 		AB92BCE4FF471A0C3D5B0268 /* Pods_Lesson1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E8754483FBFED88132E3E64 /* Pods_Lesson1.framework */; };
+		C04E8E041E841F5A00B8DA5E /* PostDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C04E8E031E841F5A00B8DA5E /* PostDetailViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		6DB621101E82C46C000960D5 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		6DB621121E82C4A6000960D5 /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		6E946B05BE6246427835E19D /* Pods-Lesson1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lesson1Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lesson1Tests/Pods-Lesson1Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C04E8E021E841F5A00B8DA5E /* PostDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostDetailViewModel.h; sourceTree = "<group>"; };
+		C04E8E031E841F5A00B8DA5E /* PostDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDetailViewModel.m; sourceTree = "<group>"; };
 		C3EA0C7BAACA29366F9A2BA4 /* Pods_Lesson1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lesson1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C53BA627EE7DB1B9667EF2D6 /* Pods-Lesson1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lesson1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lesson1/Pods-Lesson1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,6 +188,8 @@
 				6D79B8E31E81564B00796555 /* Main.storyboard */,
 				6D79B8E01E81564B00796555 /* ViewController.h */,
 				6D79B8E11E81564B00796555 /* ViewController.m */,
+				C04E8E021E841F5A00B8DA5E /* PostDetailViewModel.h */,
+				C04E8E031E841F5A00B8DA5E /* PostDetailViewModel.m */,
 				6D79B9181E81602300796555 /* ViewModel.h */,
 				6D79B9161E815FBC00796555 /* ViewModel.m */,
 			);
@@ -561,6 +566,7 @@
 				6DB621051E828D80000960D5 /* IngredientsResult.swift in Sources */,
 				6DB621031E828CBC000960D5 /* IngredientsRequest.swift in Sources */,
 				6DB621091E8293CB000960D5 /* FaroSwiftService.swift in Sources */,
+				C04E8E041E841F5A00B8DA5E /* PostDetailViewModel.m in Sources */,
 				6D79B8E21E81564B00796555 /* ViewController.m in Sources */,
 				6D79B8DF1E81564B00796555 /* AppDelegate.m in Sources */,
 				6D18DB681E83BEF200E4B60C /* FaroCall.swift in Sources */,
