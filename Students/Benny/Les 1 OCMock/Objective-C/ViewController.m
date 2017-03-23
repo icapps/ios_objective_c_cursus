@@ -7,22 +7,33 @@
 //
 
 #import "ViewController.h"
+#import "ViewModel.h"
 
 @interface ViewController ()
 
+@property ViewModel *viewModel;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    if (self) {
+        _viewModel = [[ViewModel alloc] init];
+        [self.viewModel load];
+    }
 }
 
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
 
-- (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning];
-	// Dispose of any resources that can be recreated.
+- (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"tableViewCell"];
+    
+    cell.textLabel.text = self.viewModel.post.title;
+    
+    return cell;
 }
 
 
