@@ -1,4 +1,4 @@
-# Objective-C VS Swift differences
+# Objective-C vs Swift differences
 
 ## Variables
 
@@ -20,7 +20,7 @@ In Objective-C we need format specifiers to print out our code. These format spe
   * %f (float, double)
   * ...
 
-These are no longer nessecary in Swift
+These are no longer necessary in Swift
 
 ```Objective-C
 NSLog(@"%@", aString) // prints: "Some text"
