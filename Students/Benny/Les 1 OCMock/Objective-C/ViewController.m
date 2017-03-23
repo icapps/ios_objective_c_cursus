@@ -10,6 +10,7 @@
 #import "ViewModel.h"
 
 @interface ViewController ()
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property ViewModel *viewModel;
@@ -30,13 +31,14 @@
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return self.viewModel.posts.count;
 }
 
 - (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"tableViewCell"];
     
-    cell.textLabel.text = self.viewModel.post.title;
+    cell.textLabel.text = [self.viewModel.posts[indexPath.row].id stringValue];
+    cell.detailTextLabel.text = self.viewModel.posts[indexPath.row].title;
     
     return cell;
 }

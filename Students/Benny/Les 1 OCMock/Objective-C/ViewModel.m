@@ -36,11 +36,11 @@
 
 - (void) load:(void (^)(void))done {
     self.service = [[PostService alloc] init];
-   	[self.service post:1 post:^(Post * _Nonnull post) {
-        self.post = post;
+    [self.service postWithPosts:^(NSArray<Post *> * _Nonnull posts) {
+        self.posts = posts;
         done();
     } fail:^(NSString * _Nonnull fail) {
-        NSLog(@"%@", fail);
+         NSLog(@"%@", fail);
     }];
 }
 

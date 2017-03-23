@@ -11,7 +11,7 @@
 
 @interface ViewModel : NSObject
 
-@property (nonatomic, strong) Post * post;
+@property (nonatomic, strong) NSArray <Post *> *posts;
 @property (nonatomic, strong) PostService * service;
 
 - (id) initWithModels: (NSArray <NSString*> *) models;

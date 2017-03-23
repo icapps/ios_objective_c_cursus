@@ -10,8 +10,8 @@ import Faro
 
 class Post: NSObject, Deserializable {
     
-    var userId: Int?
-    var id: Int?
+    var userId: NSNumber?
+    var id: NSNumber?
     var title: String?
     var body: String?
     
@@ -20,8 +20,8 @@ class Post: NSObject, Deserializable {
             return
         }
         
-        userId = json["userId"] as! Int?
-        id = json["id"] as! Int?
+        userId = json["userId"] as! NSNumber?
+        id = json["id"] as! NSNumber?
         title = json["title"] as! String?
         body = json["body"] as! String?
      }
