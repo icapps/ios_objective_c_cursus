@@ -12,24 +12,28 @@
 
 @interface ViewModel: NSObject 
 
-@property (strong, nonatomic) NSArray* ingredients;
-@property (strong, nonatomic) NSArray <Post*> *posts;
+@property (strong, nonatomic, nonnull) NSArray* ingredients;
+@property (strong, nonatomic, nonnull) NSArray <Post*> *posts;
 @property (readonly) NSInteger numberOfRows;
-@property (strong, nonatomic) FaroSwiftService* service;
+@property (strong, nonatomic, nonnull) FaroSwiftService* service;
+
+#pragma mark - updateHandler
+
+@property (nonatomic, strong, nonnull) void (^updateHandler) (void);
 
 #pragma mark - Init
 
-- (id)initWithData: (NSArray*)data;
-- (id)initWithService: (FaroSwiftService*)service;
+- (id _Nonnull)initWithData: (NSArray* _Nonnull)data;
+- (id _Nonnull)initWithService: (FaroSwiftService* _Nonnull)service;
 
 #pragma mark - Functions
 
-- (void)fetchStaticData: (NSArray*)data;
+- (void)fetchStaticData: (NSArray* _Nonnull)data;
 - (void)fetchFaroData;
-- (void) fetchAllFaroData:(void (^)(void))completion;
+- (void)fetchAllFaroData:(void (^ _Nonnull)(void))completion;
 
 #pragma mark - Translations
 
-@property (readonly) NSString* titleLabelText;
+@property (readonly) NSString* _Nonnull titleLabelText;
 
 @end
