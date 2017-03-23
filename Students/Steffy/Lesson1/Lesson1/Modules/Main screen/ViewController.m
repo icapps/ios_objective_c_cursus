@@ -8,12 +8,14 @@
 
 #import "ViewController.h"
 #import "ViewModel.h"
+#import "Lesson1-Swift.h"
 
 @interface ViewController ()
 
 // MARK: - IBOutlets
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 // MARK: - ViewModel
 
@@ -28,7 +30,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.viewModel = [[ViewModel alloc] initWithData: nil];
+    FaroSwiftService* service;
+    
+    self.viewModel = [[ViewModel alloc] initWithService:service];
     [self setupTranslations];
 }
 
@@ -36,6 +40,11 @@
 
 - (void)setupTranslations {
     _titleLabel.text = self.viewModel.titleLabelText;
+}
+- (IBAction)fetchData:(id)sender {
+//    [self.viewModel fetchStaticData:nil];
+    [self.viewModel fetchFaroData];
+    [self.tableView reloadData];
 }
 
 // MARK: - TableView (delegates, datasource)

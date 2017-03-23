@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D133DFF752D778A5C48DB89 /* Pods_Lesson1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EA0C7BAACA29366F9A2BA4 /* Pods_Lesson1Tests.framework */; };
+		6D18DB681E83BEF200E4B60C /* FaroCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D18DB671E83BEF200E4B60C /* FaroCall.swift */; };
 		6D79B8DC1E81564B00796555 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D79B8DB1E81564B00796555 /* main.m */; };
 		6D79B8DF1E81564B00796555 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D79B8DE1E81564B00796555 /* AppDelegate.m */; };
 		6D79B8E21E81564B00796555 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D79B8E11E81564B00796555 /* ViewController.m */; };
@@ -16,6 +17,11 @@
 		6D79B8EA1E81564B00796555 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D79B8E81E81564B00796555 /* LaunchScreen.storyboard */; };
 		6D79B8F51E81564C00796555 /* ViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D79B8F41E81564C00796555 /* ViewModelSpec.m */; };
 		6D79B9171E815FBC00796555 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D79B9161E815FBC00796555 /* ViewModel.m */; };
+		6DB621031E828CBC000960D5 /* IngredientsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB621021E828CBC000960D5 /* IngredientsRequest.swift */; };
+		6DB621051E828D80000960D5 /* IngredientsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB621041E828D80000960D5 /* IngredientsResult.swift */; };
+		6DB621091E8293CB000960D5 /* FaroSwiftService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB621081E8293CB000960D5 /* FaroSwiftService.swift */; };
+		6DB621111E82C46C000960D5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB621101E82C46C000960D5 /* Post.swift */; };
+		6DB621131E82C4A6000960D5 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB621121E82C4A6000960D5 /* PostService.swift */; };
 		8055F2ACA93C5023A2EBD0C0 /* Pods_Lesson1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45110C30132701DFA37CD2BA /* Pods_Lesson1UITests.framework */; };
 		AB92BCE4FF471A0C3D5B0268 /* Pods_Lesson1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E8754483FBFED88132E3E64 /* Pods_Lesson1.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +50,7 @@
 		45110C30132701DFA37CD2BA /* Pods_Lesson1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lesson1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC5354FD01EB939EB9341D8 /* Pods-Lesson1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lesson1Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lesson1Tests/Pods-Lesson1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		597D6093EC17437DBCA3AAE9 /* Pods-Lesson1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lesson1UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lesson1UITests/Pods-Lesson1UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6D18DB671E83BEF200E4B60C /* FaroCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaroCall.swift; sourceTree = "<group>"; };
 		6D79B8D71E81564B00796555 /* Lesson1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D79B8DB1E81564B00796555 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6D79B8DD1E81564B00796555 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +67,12 @@
 		6D79B8FB1E81564C00796555 /* Lesson1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lesson1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D79B9161E815FBC00796555 /* ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
 		6D79B9181E81602300796555 /* ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
+		6DB620FD1E828425000960D5 /* Lesson1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lesson1-Bridging-Header.h"; sourceTree = "<group>"; };
+		6DB621021E828CBC000960D5 /* IngredientsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsRequest.swift; sourceTree = "<group>"; };
+		6DB621041E828D80000960D5 /* IngredientsResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsResult.swift; sourceTree = "<group>"; };
+		6DB621081E8293CB000960D5 /* FaroSwiftService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaroSwiftService.swift; sourceTree = "<group>"; };
+		6DB621101E82C46C000960D5 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		6DB621121E82C4A6000960D5 /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		6E946B05BE6246427835E19D /* Pods-Lesson1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lesson1Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lesson1Tests/Pods-Lesson1Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C3EA0C7BAACA29366F9A2BA4 /* Pods_Lesson1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lesson1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C53BA627EE7DB1B9667EF2D6 /* Pods-Lesson1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lesson1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lesson1/Pods-Lesson1.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +143,7 @@
 		6D79B8D91E81564B00796555 /* Lesson1 */ = {
 			isa = PBXGroup;
 			children = (
+				6DB620FC1E828407000960D5 /* FaroSwift */,
 				6D79B90D1E815A0000796555 /* Modules */,
 				6D79B8DA1E81564B00796555 /* Supporting Files */,
 				6D79B90F1E815A2600796555 /* UI */,
@@ -145,7 +159,6 @@
 				6D79B8EB1E81564B00796555 /* Info.plist */,
 				6D79B8DB1E81564B00796555 /* main.m */,
 			);
-			name = "Supporting Files";
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
@@ -163,7 +176,6 @@
 			children = (
 				6D79B90E1E815A0E00796555 /* Main screen */,
 			);
-			name = Modules;
 			path = Modules;
 			sourceTree = "<group>";
 		};
@@ -176,7 +188,6 @@
 				6D79B9181E81602300796555 /* ViewModel.h */,
 				6D79B9161E815FBC00796555 /* ViewModel.m */,
 			);
-			name = "Main screen";
 			path = "Main screen";
 			sourceTree = "<group>";
 		};
@@ -186,7 +197,6 @@
 				6D79B8E61E81564B00796555 /* Assets.xcassets */,
 				6D79B8E81E81564B00796555 /* LaunchScreen.storyboard */,
 			);
-			name = UI;
 			path = UI;
 			sourceTree = "<group>";
 		};
@@ -195,7 +205,6 @@
 			children = (
 				6D79B9111E815A4400796555 /* Main Screen */,
 			);
-			name = Modules;
 			path = Modules;
 			sourceTree = "<group>";
 		};
@@ -204,8 +213,54 @@
 			children = (
 				6D79B8F41E81564C00796555 /* ViewModelSpec.m */,
 			);
-			name = "Main Screen";
 			path = "Main Screen";
+			sourceTree = "<group>";
+		};
+		6DB620FC1E828407000960D5 /* FaroSwift */ = {
+			isa = PBXGroup;
+			children = (
+				6DB6210F1E82C449000960D5 /* Models */,
+				6DB6210E1E82975A000960D5 /* Service */,
+				6DB6210D1E82974E000960D5 /* Result */,
+				6DB6210C1E829748000960D5 /* Request */,
+				6DB620FD1E828425000960D5 /* Lesson1-Bridging-Header.h */,
+			);
+			name = FaroSwift;
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6DB6210C1E829748000960D5 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				6DB621021E828CBC000960D5 /* IngredientsRequest.swift */,
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
+		6DB6210D1E82974E000960D5 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				6DB621041E828D80000960D5 /* IngredientsResult.swift */,
+			);
+			name = Result;
+			sourceTree = "<group>";
+		};
+		6DB6210E1E82975A000960D5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6DB621081E8293CB000960D5 /* FaroSwiftService.swift */,
+				6D18DB671E83BEF200E4B60C /* FaroCall.swift */,
+				6DB621121E82C4A6000960D5 /* PostService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		6DB6210F1E82C449000960D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6DB621101E82C46C000960D5 /* Post.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		E7BBAC51FD6480F0AEBB6FB6 /* Frameworks */ = {
@@ -295,6 +350,7 @@
 					6D79B8D61E81564B00796555 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = Y698KDFKVQ;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					6D79B8EF1E81564C00796555 = {
@@ -501,8 +557,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DB621111E82C46C000960D5 /* Post.swift in Sources */,
+				6DB621051E828D80000960D5 /* IngredientsResult.swift in Sources */,
+				6DB621031E828CBC000960D5 /* IngredientsRequest.swift in Sources */,
+				6DB621091E8293CB000960D5 /* FaroSwiftService.swift in Sources */,
 				6D79B8E21E81564B00796555 /* ViewController.m in Sources */,
 				6D79B8DF1E81564B00796555 /* AppDelegate.m in Sources */,
+				6D18DB681E83BEF200E4B60C /* FaroCall.swift in Sources */,
+				6DB621131E82C4A6000960D5 /* PostService.swift in Sources */,
 				6D79B9171E815FBC00796555 /* ViewModel.m in Sources */,
 				6D79B8DC1E81564B00796555 /* main.m in Sources */,
 			);
@@ -656,11 +718,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y698KDFKVQ;
 				INFOPLIST_FILE = "Lesson1/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ASDevs.Lesson1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lesson1/Modules/Lesson1-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -670,11 +737,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y698KDFKVQ;
 				INFOPLIST_FILE = "Lesson1/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ASDevs.Lesson1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lesson1/Modules/Lesson1-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -712,6 +783,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 597D6093EC17437DBCA3AAE9 /* Pods-Lesson1UITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = Y698KDFKVQ;
 				INFOPLIST_FILE = Lesson1UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -725,6 +797,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2EBDBEA2C86DFF1A056EF920 /* Pods-Lesson1UITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = Y698KDFKVQ;
 				INFOPLIST_FILE = Lesson1UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

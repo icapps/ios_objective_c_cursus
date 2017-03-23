@@ -7,20 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Lesson1-Swift.h"
 
 
-@interface ViewModel: NSObject {
-    
-}
+@interface ViewModel: NSObject 
 
 @property (strong, nonatomic) NSArray* ingredients;
 @property (readonly) NSInteger numberOfRows;
+@property (strong, nonatomic) FaroSwiftService* service;
 
-// MARK: - Init
+#pragma mark - Init
 
 - (id)initWithData: (NSArray*)data;
+- (id)initWithService: (FaroSwiftService*)service;
 
-// MARK: - Translations
+#pragma mark - Functions
+
+- (void)fetchStaticData: (NSArray*)data;
+- (void)fetchFaroData;
+
+#pragma mark - Translations
 
 @property (readonly) NSString* titleLabelText;
 
