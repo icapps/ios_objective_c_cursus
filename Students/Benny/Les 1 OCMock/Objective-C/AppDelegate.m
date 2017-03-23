@@ -20,10 +20,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Override point for customization after application launch.
     
-    ViewModel * viewModel = [[ViewModel alloc] init];
-    [viewModel load];
-    NSLog(@"%@", viewModel.post);
-    
 	return YES;
 }
 
