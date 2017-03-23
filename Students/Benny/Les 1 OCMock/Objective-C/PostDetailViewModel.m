@@ -10,8 +10,6 @@
 
 @interface PostDetailViewModel()
 
-@property (nonatomic) NSNumber * postId;
-
 @end
 
 @implementation PostDetailViewModel
@@ -20,11 +18,18 @@
     self = [super init];
     if(self) {
         self.post = post;
-        _postId = post.id;
     }
     return self;
 }
 
 
+#pragma MARK: - Variables
+-(NSNumber *) postId {
+    return self.post.id;
+}
+
+-(NSString *) title {
+    return self.post.title;
+}
 
 @end
