@@ -9,31 +9,34 @@
 #import <UIKit/UIKit.h>
 #import "Lesson1-Swift.h"
 
+NS_ASSUME_NONNULL_BEGIN
 
 @interface ViewModel: NSObject 
 
-@property (strong, nonatomic, nonnull) NSArray* ingredients;
-@property (strong, nonatomic, nonnull) NSArray <Post*> *posts;
+@property (strong, nonatomic) NSArray* ingredients;
+@property (strong, nonatomic) NSArray <Post*> *posts;
 @property (readonly) NSInteger numberOfRows;
-@property (strong, nonatomic, nonnull) FaroSwiftService* service;
+@property (strong, nonatomic) FaroSwiftService* service;
 
 #pragma mark - updateHandler
 
-@property (nonatomic, strong, nonnull) void (^updateHandler) (void);
+@property (nonatomic, strong) void (^updateHandler) (void);
 
 #pragma mark - Init
 
-- (id _Nonnull)initWithData: (NSArray* _Nonnull)data;
-- (id _Nonnull)initWithService: (FaroSwiftService* _Nonnull)service;
+- (id)initWithData: (NSArray*)data;
+- (id)initWithService: (FaroSwiftService*)service;
 
 #pragma mark - Functions
 
-- (void)fetchStaticData: (NSArray* _Nonnull)data;
+- (void)fetchStaticData: (NSArray*)data;
 - (void)fetchFaroData;
-- (void)fetchAllFaroData:(void (^ _Nonnull)(void))completion;
+- (void)fetchAllFaroData:(void (^)(void))completion;
 
 #pragma mark - Translations
 
-@property (readonly) NSString* _Nonnull titleLabelText;
+@property (readonly) NSString* titleLabelText;
 
 @end
+
+NS_ASSUME_NONNULL_END
