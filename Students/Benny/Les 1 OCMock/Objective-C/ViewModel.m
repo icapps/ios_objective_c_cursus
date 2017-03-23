@@ -18,20 +18,14 @@
 
 @implementation ViewModel
 
-- (id)initWithModels:(NSArray<NSString *> *)models {
-	self = [super init];
-	if (self) {
-		self.models = models;
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
         self.service = [[PostService alloc] init];
-	}
-	return self;
+    }
+    return self;
 }
-
-- (NSNumber *)numberOfModels {
-	NSLog(@"%@", @(self.models.count));
-	return @(self.models.count);
-}
-
 #pragma MARK: - Service
 
 - (void) load:(void (^)(void))done {

@@ -14,10 +14,6 @@
 @property (nonatomic, strong) NSArray <Post *> *posts;
 @property (nonatomic, strong) PostService * service;
 
-- (id) initWithModels: (NSArray <NSString*> *) models;
-
-- (NSNumber *) numberOfModels;
-
 - (void) load: (void (^)(void))done;
 
 @end
