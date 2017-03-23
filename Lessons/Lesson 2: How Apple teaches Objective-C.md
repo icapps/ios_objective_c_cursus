@@ -33,12 +33,29 @@ Before you had to put the method implementation or declaration before you use it
  //In Old objective-C you would have to put this in the header or class extension  [self startAudio:&error];  ...}- (void)startAudio:(NSError **)error { ... }@end
 ```
 ---
-Whats is a class extension?
-When you write __()__ it is a class extension.
-```objective-c
-@interface SongPlayer ()- (void)startAudio:(NSError **)error;@end
-```
 
+Whats is a class extension?
+
+When you write __()__ it is a class extension.
+
+```objectivec
+@interface SongPlayer ()- (void)startAudio:(NSError **)error;@end
+
+```
+---
+
+### Special error
+
+```objectivec
+NSError* error;
+
+[self startAudio: &error];
+
+if (error != nil) {
+  // handle error
+}
+
+```
 ---
 
 ## Enum with explicit types
@@ -55,11 +72,13 @@ typedef enum NSNumberFormatterStyle : NSUInteger {    NSNumberFormatterNoStyle,
 ```
 ---
 
-Because then you have Strong type checking
+## Because then you have Strong type checking
 
 You can use them easily in switches:
+
 ```objectivec
- switch (style) {  case NSNumberFormatterNoStyle:    break;  case NSNumberFormatterSpellOutStyle:break; }
+ switch (style) {  case NSNumberFormatterNoStyle:    break;  case NSNumberFormatterSpellOutStyle:    break;
+}
 ```
 
 ---
@@ -68,7 +87,7 @@ You can use them easily in switches:
 We talked already about properties and their need for setters and getters:
 Always write as less as possible:
 
-```swift
+```objectivec
 @interface Person : NSObject@property(strong) NSString *name;@end@implementation Person@end
 ```
 
@@ -210,6 +229,8 @@ NSLog(@"%@", dict[@"second"]) // will print 2
 In Objective-C __AND__ Swift you have the __SAME__ memory management!!!!
 Swift is no better at handling memory then Objective-C, it just has some language features like @escaping and the use of self to help you.
 
+---
+
 ## How to make a memory leak?
 
 ```objectivec
@@ -231,11 +252,35 @@ Swift is no better at handling memory then Objective-C, it just has some languag
 ```
 ---
 
-### How to fix it?
+possible solution 1:
+
+```objectivec
+
+@interface Foo ()
+@property (nonatomic, strong) Service* service;
+@property (nonatomic, strong) ViewModel* viewModel;
+@end
+
+@implementation
+
+- (void) load {
+	self.service = [[Service alloc] init];
+  ViewModel* viewModel = self.viewModel; // viewModel retaincount +1
+	[self.service perform: ^ {(Model* model) in // viewModel retaincount +1 = 2
+		viewModel.model = model // this is NO  leak
+    // viewModel retaincount -1 [viewModel release];
+	}];
+  // viewModel retaincount -1
+}
+@end
+```
 
 ---
 
+### How to fix it?
+
 ```objectivec
+
 @interface Foo ()
 @property (nonatomic, strong) Service* service;
 @property (nonatomic, strong) Model* model;
@@ -245,12 +290,13 @@ Swift is no better at handling memory then Objective-C, it just has some languag
 
 - (void) load {
 	self.service = [[Service alloc] init];
-  weak Foo* weakSelf = self
+  __weak Foo* weakSelf = self;
 	[self.service perform: ^ {(Model* model) in
-		weakSelf.model = model // this is a leak
+		weakSelf.model = model; // this is not a leak
 	}];
 }
 @end
+
 ```
 ---
 
@@ -269,4 +315,5 @@ NSArray *people = CFBridgingRelease( ABAddressBookCopyPeopleWithName(addressBook
 
 • `@synthesize` by default• Forward declarations optional
 • Fixed underlying type enums • Literals and subscripting
-• Boxed expressions • GC is deprecated
+• Boxed expressions
+• GC is deprecated
