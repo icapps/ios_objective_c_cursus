@@ -43,12 +43,12 @@ class PostService: FaroSwiftService {
     func fetchAllPosts(_ call: FaroCall, post: @escaping ([Post]) -> Void, fail: @escaping (String) -> Void) -> URLSessionDataTask? {
         return faroService.perform(call.call) { (result: Result<Post>) in
             switch result {
-            case .model(let models):
+            case .models(let models):
                 guard let models = models else {
                     fail("Fail")
                     return
                 }
-                post([models])
+                post(models)
             case .failure(let error):
                 fail("\(error)")
             default:

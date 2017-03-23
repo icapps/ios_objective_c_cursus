@@ -58,12 +58,12 @@
     }];
 }
 
--(void) fetchAllFaroData {
+-(void) fetchAllFaroData:(void (^)(void))completion {
     PostService * postService = [[PostService alloc] init];
     
     [postService allPostsWithPost:^(NSArray<Post *> * _Nonnull posts) {
-        NSLog(@"%@", posts);
         self.posts = posts;
+        completion();
     }fail:^(NSString * _Nonnull fail) {
         NSLog(@"%@", fail);
     }];

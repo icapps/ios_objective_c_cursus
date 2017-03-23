@@ -26,7 +26,7 @@
 
 - (void)fetchStaticData: (NSArray*)data;
 - (void)fetchFaroData;
-- (void)fetchAllFaroData;
+- (void) fetchAllFaroData:(void (^)(void))completion;
 
 #pragma mark - Translations
 
