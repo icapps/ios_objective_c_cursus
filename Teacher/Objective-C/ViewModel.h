@@ -7,11 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ViewModelService.h"
 
 @interface ViewModel : NSObject
+
+
+@property (nonatomic, strong) ViewModelService * fakeService;
+
+- (NSString *) name;
 
 - (id) initWithModels: (NSArray <NSString*> *) models;
 
 - (NSNumber *) numberOfModels;
+
+- (void) load;
 
 @end
