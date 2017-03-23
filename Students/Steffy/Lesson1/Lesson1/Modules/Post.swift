@@ -10,12 +10,22 @@ import Foundation
 import Faro
 
 class Post: NSObject, Deserializable {
-    var id: String?
+    var title: String?
+    var userId: Int?
+    var id: Int?
+    var body: String?
     
     required init?(from raw: Any) {
-        print(raw as? [String: Any] ?? "wrong value")
         guard let json = raw as? [String: Any] else { return }
+        title <-> json["title"]
+        userId <-> json["userId"]
         id <-> json["id"]
+        body <-> json["body"]
+        
+        print("ID:", id ?? "no ID")
+        print("USERID:", userId ?? "no userId")
+        print("TITLE:", title ?? "no title")
+        print("BODY:", body ?? "no body")
     }
     
 }

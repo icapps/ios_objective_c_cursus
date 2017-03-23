@@ -12,12 +12,12 @@
 
 @interface ViewController ()
 
-// MARK: - IBOutlets
+#pragma mark - IBOutlets
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-// MARK: - ViewModel
+#pragma mark - ViewModel
 
 @property (strong, nonatomic) ViewModel* viewModel;
 
@@ -25,7 +25,7 @@
 
 @implementation ViewController
 
-// MARK: - View Flow
+#pragma mark - View Flow
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,7 +36,7 @@
     [self setupTranslations];
 }
 
-// MARK: - Translations
+#pragma mark - Translations
 
 - (void)setupTranslations {
     _titleLabel.text = self.viewModel.titleLabelText;
@@ -47,7 +47,7 @@
     [self.tableView reloadData];
 }
 
-// MARK: - TableView (delegates, datasource)
+#pragma mark - TableView (delegates, datasource)
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];

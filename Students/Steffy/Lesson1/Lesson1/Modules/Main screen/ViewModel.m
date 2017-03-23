@@ -32,7 +32,6 @@ FaroSwiftService *service;
 -(id)initWithService: (FaroSwiftService*)service {
     self = [super init];
     self.service = service;
-    [self fetchFaroData];
     return self;
 }
 
