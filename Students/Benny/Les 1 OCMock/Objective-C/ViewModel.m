@@ -29,7 +29,6 @@
 #pragma MARK: - Service
 
 - (void) load:(void (^)(void))done {
-    self.service = [[PostService alloc] init];
     __weak ViewModel *weakSelf = self;
     [self.service postWithPosts:^(NSArray<Post *> * _Nonnull posts) {
         weakSelf.posts = posts;
@@ -37,6 +36,14 @@
     } fail:^(NSString * _Nonnull fail) {
          NSLog(@"%@", fail);
     }];
+}
+
+- (PostDetailViewModel *) postDetailViewModelAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row < _posts.count) {
+        return [[PostDetailViewModel alloc] initWithPost: self.posts[indexPath.row]];
+    } else {
+        return nil;
+    }
 }
 
 @end

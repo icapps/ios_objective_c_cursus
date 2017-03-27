@@ -39,7 +39,7 @@
 - (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"tableViewCell"];
     
-    cell.textLabel.text = [self.viewModel.posts[indexPath.row].id stringValue];
+    cell.textLabel.text = [self.viewModel postDetailViewModelAtIndexPath: indexPath].title;
     
     return cell;
 }

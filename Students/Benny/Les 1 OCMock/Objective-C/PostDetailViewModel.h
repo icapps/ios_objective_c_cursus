@@ -12,6 +12,7 @@
 @interface PostDetailViewModel : NSObject
 
 @property (nonatomic, strong) Post * post;
+-(NSString *) title;
 
 - (id) initWithPost: (Post *) post;
 
