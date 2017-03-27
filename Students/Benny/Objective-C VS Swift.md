@@ -3,22 +3,57 @@
 
 This document contains a brief overview for the following differences between Objective-C and Swift:
 
-* [Classes](#classes)
+* Classes
+* Structures
+* Variables
+* Functions
+* Enumerations
+* Debugging
 
 ## Classes
 ---
 
-TODO: Add Explanation
-
 ##### Objective-C:
-```Objective-C
-// add example
-```
+
+Objective-C abstracts a class's interface from it's implementation. This means that classes only provide essential information from the interface (.h file) while hiding details in the implementation file (.m file)
+
+* Interface (.h file):
+
+
+  ```Objective-C
+  @interface Car: NSObject {
+    // Add Protected instance variables here (not recommended)
+  }
+  // Add properties and methods here
+  ```
+
+* Implementation (.m file):
+
+  ```Objective-C
+  @implementation Car {
+    // Define functions, properties, etc.
+  }
+  ```
+
+* Initializing
+
+  We allocate and initialize classes in an object of the class to access it's data members defined in the Interface.
+
+  ```Objective-C
+  Car car = [[Car alloc]init];     // Create car object of type Car
+  ```
 
 ##### Swift:
-```Swift
-// add example
-```
+
+In Swift, there is no need to create interfaces or implementation files. It allows us to create a class as a single file while the external interface will be created by default once the class is initialized.
+
+* Class (.swift file):
+
+  ```Swift
+  class Car {
+   
+  }
+  ```
 
 ## Structures
 ---
