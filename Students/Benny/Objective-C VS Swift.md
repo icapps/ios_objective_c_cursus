@@ -5,7 +5,7 @@ This document contains a brief overview for the following differences between Ob
 
 * [Classes](#Classes)
 
-## <a name= "Classes"></a> Classes
+## Classes
 ---
 
 TODO: Add Explanation
