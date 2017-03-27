@@ -6,7 +6,6 @@ This document contains a brief overview for the following differences between Ob
 * Classes
 * Variables
 * Functions
-* Enumerations
 * Debugging
 
 ## Classes
@@ -81,20 +80,6 @@ func add(_ x:Int, to y: Int) -> Int {
     let sum = x + y
     return sum
 }
-```
-
-## Enumerations
-
-TODO: Add Explanation
-
-##### Objective-C:
-```Objective-C
-// add example
-```
-
-##### Swift:
-```Swift
-// add example
 ```
 
 ## Debugging
