@@ -3,7 +3,7 @@
 
 This document contains a brief overview for the following differences between Objective-C and Swift:
 
-* [Classes](#Classes)
+* [Classes](#classes)
 
 ## Classes
 ---
