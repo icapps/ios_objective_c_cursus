@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42C7F31A75B358132B1AA226 /* libPods-GoogleDriveTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D89822B69ADB2CA89B01CE13 /* libPods-GoogleDriveTestTests.a */; };
+		A217DBD98A065BEB89C26BE4 /* libPods-GoogleDriveTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B98B210416B7C6BBC85FB3 /* libPods-GoogleDriveTest.a */; };
 		B5E757FB1E8A50CE0057ABF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E757FA1E8A50CE0057ABF2 /* main.m */; };
 		B5E757FE1E8A50CE0057ABF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E757FD1E8A50CE0057ABF2 /* AppDelegate.m */; };
 		B5E758011E8A50CE0057ABF2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E758001E8A50CE0057ABF2 /* ViewController.m */; };
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		242F72C82BD0B0ADED639324 /* Pods-GoogleDriveTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleDriveTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleDriveTest/Pods-GoogleDriveTest.debug.xcconfig"; sourceTree = "<group>"; };
+		3F5DD2A3C2A076EC64E2C0EB /* Pods-GoogleDriveTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleDriveTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleDriveTest/Pods-GoogleDriveTest.release.xcconfig"; sourceTree = "<group>"; };
+		89B98B210416B7C6BBC85FB3 /* libPods-GoogleDriveTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoogleDriveTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5742E018B1415EBAE3236B5 /* Pods-GoogleDriveTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleDriveTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleDriveTestTests/Pods-GoogleDriveTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		B5E757F61E8A50CE0057ABF2 /* GoogleDriveTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleDriveTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E757FA1E8A50CE0057ABF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B5E757FC1E8A50CE0057ABF2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,6 +46,8 @@
 		B5E7580F1E8A50CE0057ABF2 /* GoogleDriveTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleDriveTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E758131E8A50CE0057ABF2 /* GoogleDriveTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogleDriveTestTests.m; sourceTree = "<group>"; };
 		B5E758151E8A50CE0057ABF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D89822B69ADB2CA89B01CE13 /* libPods-GoogleDriveTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoogleDriveTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F537C536FD9743BCF337C8E9 /* Pods-GoogleDriveTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleDriveTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleDriveTestTests/Pods-GoogleDriveTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A217DBD98A065BEB89C26BE4 /* libPods-GoogleDriveTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +63,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42C7F31A75B358132B1AA226 /* libPods-GoogleDriveTestTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3EEC327FF26B15C92BC8D557 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89B98B210416B7C6BBC85FB3 /* libPods-GoogleDriveTest.a */,
+				D89822B69ADB2CA89B01CE13 /* libPods-GoogleDriveTestTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B5E757ED1E8A50CE0057ABF2 = {
 			isa = PBXGroup;
 			children = (
 				B5E757F81E8A50CE0057ABF2 /* GoogleDriveTest */,
 				B5E758121E8A50CE0057ABF2 /* GoogleDriveTestTests */,
 				B5E757F71E8A50CE0057ABF2 /* Products */,
+				EBA71608953A0A2A8E855FA7 /* Pods */,
+				3EEC327FF26B15C92BC8D557 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +132,17 @@
 			path = GoogleDriveTestTests;
 			sourceTree = "<group>";
 		};
+		EBA71608953A0A2A8E855FA7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				242F72C82BD0B0ADED639324 /* Pods-GoogleDriveTest.debug.xcconfig */,
+				3F5DD2A3C2A076EC64E2C0EB /* Pods-GoogleDriveTest.release.xcconfig */,
+				F537C536FD9743BCF337C8E9 /* Pods-GoogleDriveTestTests.debug.xcconfig */,
+				B5742E018B1415EBAE3236B5 /* Pods-GoogleDriveTestTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5E758181E8A50CE0057ABF2 /* Build configuration list for PBXNativeTarget "GoogleDriveTest" */;
 			buildPhases = (
+				AEB0BC7A28436786CAE55E9E /* [CP] Check Pods Manifest.lock */,
 				B5E757F21E8A50CE0057ABF2 /* Sources */,
 				B5E757F31E8A50CE0057ABF2 /* Frameworks */,
 				B5E757F41E8A50CE0057ABF2 /* Resources */,
+				9921F687D85DC2BC63265C2F /* [CP] Embed Pods Frameworks */,
+				0FEEFCDD060F2FBFD6260848 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,9 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5E7581B1E8A50CE0057ABF2 /* Build configuration list for PBXNativeTarget "GoogleDriveTestTests" */;
 			buildPhases = (
+				7DBF3F856EF2FF58439A0880 /* [CP] Check Pods Manifest.lock */,
 				B5E7580B1E8A50CE0057ABF2 /* Sources */,
 				B5E7580C1E8A50CE0057ABF2 /* Frameworks */,
 				B5E7580D1E8A50CE0057ABF2 /* Resources */,
+				227E5E6F29C15F3D051A8C2D /* [CP] Embed Pods Frameworks */,
+				D5ECC0C9085CB82C71463DDC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,6 +247,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FEEFCDD060F2FBFD6260848 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleDriveTest/Pods-GoogleDriveTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		227E5E6F29C15F3D051A8C2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleDriveTestTests/Pods-GoogleDriveTestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DBF3F856EF2FF58439A0880 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9921F687D85DC2BC63265C2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleDriveTest/Pods-GoogleDriveTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEB0BC7A28436786CAE55E9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D5ECC0C9085CB82C71463DDC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleDriveTestTests/Pods-GoogleDriveTestTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B5E757F21E8A50CE0057ABF2 /* Sources */ = {
@@ -351,6 +482,7 @@
 		};
 		B5E758191E8A50CE0057ABF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 242F72C82BD0B0ADED639324 /* Pods-GoogleDriveTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 22P2NXX9BD;
@@ -363,6 +495,7 @@
 		};
 		B5E7581A1E8A50CE0057ABF2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F5DD2A3C2A076EC64E2C0EB /* Pods-GoogleDriveTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 22P2NXX9BD;
@@ -375,6 +508,7 @@
 		};
 		B5E7581C1E8A50CE0057ABF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F537C536FD9743BCF337C8E9 /* Pods-GoogleDriveTestTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 22P2NXX9BD;
@@ -388,6 +522,7 @@
 		};
 		B5E7581D1E8A50CE0057ABF2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5742E018B1415EBAE3236B5 /* Pods-GoogleDriveTestTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 22P2NXX9BD;
