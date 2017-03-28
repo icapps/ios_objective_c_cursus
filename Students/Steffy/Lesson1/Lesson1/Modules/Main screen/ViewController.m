@@ -48,8 +48,6 @@
     _titleLabel.text = self.viewModel.titleLabelText;
 }
 - (IBAction)fetchData:(id)sender {
-//    [self.viewModel fetchStaticData:nil];
-//    [self.viewModel fetchFaroData];
     [self.viewModel fetchPosts];
 }
 
