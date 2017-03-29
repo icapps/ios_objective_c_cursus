@@ -63,7 +63,7 @@ But you can do it in code.
 ```
 
 ## QUEUE
-You have GCD. Grand central dispatch. This is a relatively complex API in `C` . You can also use `NSOperation` 
+You have GCD. Grand central dispatch. This is a relatively complex API in `C` . You can also use `NSOperation`
 
 ```objective-c
 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
