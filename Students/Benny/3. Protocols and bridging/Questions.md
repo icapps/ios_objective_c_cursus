@@ -32,3 +32,9 @@
 3. Explain the difference between NSOperation and GDC please.
 
 4. NSDictionary 'bindings' argument in NSPredicate filtering?
+
+## SideNote
+
+1. When having to react to delegates, like for example UITextFieldDidEndEditing(), it seems unlikely that you're not going to retain your viewModel inside the collectionViewCell. Isn't "never" a bit harsh?
+
+2. So when only displaying a certain amount of data ,structs are the way to go, but as soon as we need to display more or edit data , viewModel?
