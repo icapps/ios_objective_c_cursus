@@ -6,8 +6,16 @@
 
 2. Why is using Introspection important when we already imported and conformed the ViewController to the "DropboxLoginable" protocol?
 
-3. If modules are theoretically the better option over #import for things like UIKit, why do we still use #import <UIKit/UIKit.h>
-?
+3. Can't you just cast the nav.topViewController to the desired class instead?
+
+4. If performSelector has no target given, will it use the target it is being called from? e.g.
+```Objective-C
+[aClass performSelector: @selector(aSelector)];
+```
+
+5. If modules are theoretically the better option over #import for things like UIKit, why do we still use #import <UIKit/UIKit.h>?
+
+
 
 ## Lesson 4:
 
@@ -20,3 +28,7 @@
 			[self.collectionView reloadData];
 		}];
 ```
+
+3. Explain the difference between NSOperation and GDC please.
+
+4. NSDictionary 'bindings' argument in NSPredicate filtering?
