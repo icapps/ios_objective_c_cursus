@@ -7,10 +7,13 @@
 //
 
 #import "ViewModel.h"
+#import "Objective_C-Swift.h"
 
 @interface ViewModel()
 
 @property (nonatomic, strong) NSArray <NSString*> * models;
+@property (nonatomic, strong) Post * post;
+@property (nonatomic, strong) PostService * service;
 
 @end
 
@@ -21,6 +24,7 @@
 	if (self) {
 		self.models = models;
 		self.service = [[PostService alloc] init];
+		self.fakeService = [[ViewModelService alloc] init];
 	}
 	return self;
 }
@@ -30,14 +34,19 @@
 	return @(self.models.count);
 }
 
+- (NSString *)name {
+	return self.post.name;
+}
+
 #pragma MARK: - Service
 
 - (void) load {
-	[self.service post:1 post:^(Post * _Nonnull post) {
-		self.post = post;
-	} fail:^(NSString * _Nonnull fail) {
-		NSLog(@"%@", fail);
-	}];
+	self.post = [[Post alloc] initFrom:[self.fakeService postDictionary]];
+//	[self.service post:1 post:^(Post * _Nonnull post) {
+//		self.post = post;
+//	} fail:^(NSString * _Nonnull fail) {
+//		NSLog(@"%@", fail);
+//	}];
 }
 
 @end

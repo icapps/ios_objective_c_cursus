@@ -10,6 +10,8 @@ import Foundation
 
 class App {
 
+	
+
 	var foo: Int {
 		get {
 			return _foo

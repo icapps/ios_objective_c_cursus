@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Objective_C-Swift.h"
+#import "ViewModelService.h"
 
 @interface ViewModel : NSObject
 
-@property (nonatomic, strong) Post * post;
-@property (nonatomic, strong) PostService * service;
+
+@property (nonatomic, strong) ViewModelService * fakeService;
+
+- (NSString *) name;
 
 - (id) initWithModels: (NSArray <NSString*> *) models;
 
