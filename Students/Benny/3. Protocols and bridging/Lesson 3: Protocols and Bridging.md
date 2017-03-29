@@ -68,6 +68,23 @@ Using the keychain has always been a hassle.  @iCapps we build a handle Swift fr
 
 Using Objective-C only you would have to
 > [Apple reference on keychain](https://developer.apple.com/library/content/documentation/Security/Conceptual/keychainServConcepts/iPhoneTasks/iPhoneTasks.html)  
+
+---
+**Personal notes: Keychain**
+
+**Basic Keychain Services functions**
+* Add an item to a keychain
+* Find an item in a keychain
+* Get the attributes and data in a keychain item
+* Change attributes and data in a keychain item
+
+![](Images/Keychain.png)
+
+```
+In iOS, Keychain rights depend on the provisioning profile used to sign your application. Be sure to consistently use the same provisioning profile across different versions of your application.
+```
+---
+
 ```objective-c
 #import <Foundation/Foundation.h>
 #import <Security/Security.h>
