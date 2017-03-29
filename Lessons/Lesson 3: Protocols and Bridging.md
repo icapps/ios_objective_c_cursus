@@ -1,4 +1,5 @@
 # Lesson 3: Protocols and Bridging
+> Previous: [Lesson 2: How Apple teaches Objective-C](bear://x-callback-url/open-note?id=E347B683-AFB4-480D-86C7-48FEC8A1E120-46707-000020F9D8F4893C)  
 1. Protocols: Why use Introspection
 2. Casting
 3. Common patterns that are discouraged in Swift but used in Objective-C
@@ -13,6 +14,8 @@
 #Programming/Objective-C/Modules
 
 This lesson was deducted while building open-source app [LottyDropper](https://github.com/icapps/ios_lotty_dropper)
+
+> Side node: *@runtime* means the time when the user is pressing buttons. *@compiletime* means the time the compiler is working (pressing buttons) and the user cannot do anything yet.  
 
 - - - -
 
@@ -47,15 +50,59 @@ if ([self.window.rootViewController isKindOfClass:[UINavigationController class]
 			}
 ```
 
+`[nav.topViewController performSelector:@selector(proceed)];` the performSelector is something common in objective-c. This is done actually to *trick* the compiler. You can put in any selector and *@runtime* the special Objective-C runtime will try to look for **compiled code** to execute on the **target**. In the example above the target is `nav.topViewController`
+#### Target: What is that?
+A `target` is the object receiving messages. You know it from `@IBAction`. If you want to know more and understand the *magic* behind all of this [NSRunloop Apple docs](https://developer.apple.com/reference/foundation/nsrunloop?language=objc). But the main usefull points are:
+1. [performSelector:target:argument:order:modes: - NSRunLoop | Apple Developer Documentation](https://developer.apple.com/reference/foundation/nsrunloop/1409310-performselector?language=objc)
+```objective-c
+if ([target canPerfromSelector:@selector(proceed)]) {
+	// Do something
+}
+```
+2. Use it to *bind* buttons to code
+3. Use it on an array to perform a selector on any object in the array
+```objective-c
+NSArray *newArray = [[NSArray alloc] initWithArray:oldArray copyItems:YES];
+[newArray makeObjectsPerformSelector:@selector(doSomethingToObject)];
+```
+4. [performSelector:withObject:afterDelay:inModes: - NSObject | Apple Developer Documentation](https://developer.apple.com/reference/objectivec/nsobject/1415652-performselector) Use it for delayed actions
+```objective-c
+[self performSelector:@selector(doSomethingToObject) 
+           withObject:foo  
+           afterDelay:15.0];
+```
 - - - -
 
 ## Casting
-- [ ] Put something here
+Casting is more implicit then it is in Swift. Why?
+1. You have something like `id` that can be casted to anything, without the need to explicitly cast
+```objective-c
+id someObject = [NSMutableArray new]; // you don't need to cast id explicitly
+```
+2. Casting from an `int` to a `float` will work but you loose precision
+```objective-c
+int i = (int)19.5f; // (precision is lost)
+```
 
 ## Common patterns that are discouraged in Swift but used in Objective-C
-- [ ] Add example about casting
-- [ ] Look some stuff up on the internet
+### Perform selector
+It is very common to use this. Evan if it is dangerous because if the `target` does not implement the selector your app will crash. You use it mainly to see if an optional method from a protocol is implemented
+### Casting from Array elements
+GIVEN: You have an array of stuff could have all kinds of types
+THEN: You loop trough the array
+EXPECTED: You inspect every element if it is a kind of type. If it is the type you expect you perform an action 
+```objective-c
 
+for (object in objectArray) {
+	if ([object isKindOfClass: [Foo class]) {
+		// Do specific action for Foo
+	} else  if ([object isKindOfClass: [Bar class]]){
+		// Do something with a Bar.
+	}
+}
+```
+## Side node understand MVC Better.
+I noticed in projects we do that MVC is used but not understand. In Dutch some notes and tips are given [Side note: MVC](bear://x-callback-url/open-note?id=E8982FEC-1725-4478-A6D4-661813D8BD26-6928-0000133C018EA631)
 ## Bridging between objective-C And Swift
 ### Why should we bridge?
 Bridging add’s an extra layer of complexity over a project. But you can have good reason to do so. Here are a few of my favourites:
@@ -460,6 +507,8 @@ So in the implementation of `Bar` you do
 @end
 ```
 
+# Whats next
+[Lesson 4: Mapping, filtering, reduce, sort…](bear://x-callback-url/open-note?id=E7068AAC-C318-4475-8EB7-C44574EF845F-1071-00000EABCC3CD0F8)
 
 
 
