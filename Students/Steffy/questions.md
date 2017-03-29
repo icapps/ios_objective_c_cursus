@@ -27,4 +27,6 @@ I've used dispatch once in the lesson project.
 dispatch_async(dispatch_get_main_queue(), ^{
     [self.tableView reloadData];
 });
-```  
+```
+
+*__I get your point of the MVC, but like your collectionViewCell example, why is it that important that it has to be written on that way? I don't see why the previous way isn't MVC.__*
