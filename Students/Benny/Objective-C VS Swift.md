@@ -7,6 +7,7 @@ This document contains a brief overview for the following differences between Ob
 * Variables
 * Functions
 * Debugging
+* Imports
 
 ## Classes
 
@@ -56,9 +57,13 @@ In Swift, there is no need to create interfaces or implementation files. It allo
 
 All variables in Objective-C have to be typed, as opposed to Swift where they can be implicitly defined.
 
+**Objective-C**
+
 ```Objective-C
 NSString *aString = @"Some text"
 ```
+
+**Swift**
 
 ```Swift
 var aString = "Some text"
@@ -66,7 +71,7 @@ var aString = "Some text"
 
 ## Functions
 
-##### Objective-C:
+**Objective-C**
 ```Objective-C
 - (int)addX:(int)x toY:(int)y { // (return type)methodName:(parameter1 type)(parameter1 name) ...
   int sum = x + y;
@@ -74,7 +79,7 @@ var aString = "Some text"
 }
 ```
 
-##### Swift:
+**Swift**
 ```Swift
 func add(_ x:Int, to y: Int) -> Int {
     let sum = x + y
@@ -93,12 +98,34 @@ In Objective-C we need format specifiers to print out our code. These format spe
 
 These are no longer necessary in Swift
 
-##### Objective-C:
+**Objective-C:**
 ```Objective-C
 NSLog(@"%@", aString) // prints: "Some text"
 ```
 
-##### Swift:
+**Swift**
 ```Swift
 print(aString) // prints: "Some text"
+```
+
+## Imports
+
+In Objective-C, the traditional way of accessing files is by #import the header of the desired file.
+
+```Objective-C
+#import "Foo.h" // A file you own and is in your project
+#import <UIKit/UIKit.h> // A file inside a framework/module
+```
+
+Swift does not import Headers, but modules.
+
+```Swift
+import UIKit
+```
+
+It is also possible to import a module in Objective-C when the imported framework is a module.
+
+```Objective-C
+// If this framework is a module you can write
+@import UIKit
 ```
