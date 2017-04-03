@@ -11,10 +11,10 @@ import Faro
 class PostService: BridgeFaroService {
 
 	func post(_ id: Int,  post: @escaping (Post) -> Void, fail: @escaping (String) -> Void) {
-		let _ = fetchPosts(BridgeCall("posts/\(id)"), post: post, fail: fail)
+		let _ = fetchPost(BridgeCall("posts/\(id)"), post: post, fail: fail)
 	}
 
-	func fetchPosts(_ call: BridgeCall, post: @escaping (Post) -> Void, fail: @escaping (String) -> Void) -> URLSessionDataTask? {
+	func fetchPost(_ call: BridgeCall, post: @escaping (Post) -> Void, fail: @escaping (String) -> Void) -> URLSessionDataTask? {
 		return service.perform(call.call) { (result: Result<Post>) in
 			switch result {
 			case .model(let model):
