@@ -27,19 +27,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
-#pragma mark - Navigation
+- (void)didFinishEnteringText:(NSString *)text {
+    [self dismissViewControllerAnimated:YES completion:^{
+        self.readLabel.text = text;
+    }];
+}
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.destinationViewController isKindOfClass:[TIIEnterTextViewController class]]) {
     TIIEnterTextViewController *destinationViewController = segue.destinationViewController;
     destinationViewController.delegate = self;
-}
-
-
-- (void)didFinishEnteringText:(NSString *)text {
-    self.readLabel.text = text;
+    }
 }
 
 @end

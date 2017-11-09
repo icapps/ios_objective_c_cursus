@@ -28,7 +28,6 @@
 
 - (IBAction)doneTapped:(id)sender {
     [self.delegate didFinishEnteringText:self.enterText.text];
-    [self dismissViewControllerAnimated:YES completion:nil];;
 }
 
 
