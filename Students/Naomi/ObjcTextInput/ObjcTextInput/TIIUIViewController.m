@@ -22,12 +22,17 @@
 }
 
 - (void) editingValueFinished:(NSString *)value {
-    self.label.text =value;
+    [self dismissViewControllerAnimated:YES completion:^{
+        self.label.text = value;
+    }];
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    TIITextFieldViewController * destinationViewController = segue.destinationViewController;
-    destinationViewController.delegate = self;
+    if ([segue.destinationViewController isKindOfClass:[TIITextFieldViewController class]]) {
+        TIITextFieldViewController * destinationViewController = segue.destinationViewController;
+        destinationViewController.delegate = self;
+
+    }
 }
 
 @end

@@ -21,7 +21,6 @@
 }
 - (IBAction)closeButtonPressed:(id)sender {
     [self.delegate editingValueFinished: self.valueTextField.text];
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
