@@ -7,6 +7,7 @@
 //
 
 #import "TIIUIViewController.h"
+#import "TIITextInputViewController.h"
 
 @interface TIIUIViewController ()
 
@@ -21,4 +22,10 @@
     self.label.text = @"Ik ben gewonnen!";
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+    if ([segue.destinationViewController isKindOfClass:[TIITextInputViewController class]]) {
+        
+    }
+}
 @end

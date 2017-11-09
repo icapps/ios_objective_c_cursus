@@ -12,6 +12,7 @@
 		C017017F1FB45F1200F41277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C017017E1FB45F1200F41277 /* Assets.xcassets */; };
 		C01701821FB45F1200F41277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01701801FB45F1200F41277 /* LaunchScreen.storyboard */; };
 		C017018C1FB4611F00F41277 /* TIIUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C017018B1FB4611F00F41277 /* TIIUIViewController.m */; };
+		C017018F1FB4688E00F41277 /* TIITextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C017018E1FB4688E00F41277 /* TIITextInputViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		C01701891FB4611F00F41277 /* ObjcTextInput-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjcTextInput-Bridging-Header.h"; sourceTree = "<group>"; };
 		C017018A1FB4611F00F41277 /* TIIUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIIUIViewController.h; sourceTree = "<group>"; };
 		C017018B1FB4611F00F41277 /* TIIUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIIUIViewController.m; sourceTree = "<group>"; };
+		C017018D1FB4688E00F41277 /* TIITextInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIITextInputViewController.h; sourceTree = "<group>"; };
+		C017018E1FB4688E00F41277 /* TIITextInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIITextInputViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 				C017018A1FB4611F00F41277 /* TIIUIViewController.h */,
 				C017018B1FB4611F00F41277 /* TIIUIViewController.m */,
 				C017017B1FB45F1200F41277 /* Main.storyboard */,
+				C017018D1FB4688E00F41277 /* TIITextInputViewController.h */,
+				C017018E1FB4688E00F41277 /* TIITextInputViewController.m */,
 				C017017E1FB45F1200F41277 /* Assets.xcassets */,
 				C01701801FB45F1200F41277 /* LaunchScreen.storyboard */,
 				C01701831FB45F1200F41277 /* Info.plist */,
@@ -142,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C01701781FB45F1200F41277 /* AppDelegate.swift in Sources */,
+				C017018F1FB4688E00F41277 /* TIITextInputViewController.m in Sources */,
 				C017018C1FB4611F00F41277 /* TIIUIViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
