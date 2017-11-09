@@ -7,6 +7,7 @@
 //
 
 #import "TIITextInputViewController.h"
+#import "ObjcTextInput-Swift.h"
 
 @interface TIITextInputViewController ()
 
@@ -19,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.textField.text = self.viewModel.text;
 }
 
 - (IBAction)done:(UIButton *)sender {

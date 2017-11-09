@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ObjcTextInput-Swift.h"
 
 @class TIITextInputViewController;
 
@@ -17,5 +18,6 @@
 @interface TIITextInputViewController : UIViewController
 
 @property (nonatomic, weak) id<TIITextInputViewControllerDelegate> delegate;
+@property (nonatomic, strong) TextViewModel * viewModel;
 
 @end

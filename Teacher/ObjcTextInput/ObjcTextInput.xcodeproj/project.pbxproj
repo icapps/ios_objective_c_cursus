@@ -13,6 +13,7 @@
 		C01701821FB45F1200F41277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01701801FB45F1200F41277 /* LaunchScreen.storyboard */; };
 		C017018C1FB4611F00F41277 /* TIIUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C017018B1FB4611F00F41277 /* TIIUIViewController.m */; };
 		C017018F1FB4688E00F41277 /* TIITextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C017018E1FB4688E00F41277 /* TIITextInputViewController.m */; };
+		C01B5F1E1FB4A259006CC5A6 /* TextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B5F1D1FB4A259006CC5A6 /* TextViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		C017018B1FB4611F00F41277 /* TIIUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIIUIViewController.m; sourceTree = "<group>"; };
 		C017018D1FB4688E00F41277 /* TIITextInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIITextInputViewController.h; sourceTree = "<group>"; };
 		C017018E1FB4688E00F41277 /* TIITextInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIITextInputViewController.m; sourceTree = "<group>"; };
+		C01B5F1D1FB4A259006CC5A6 /* TextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				C01701771FB45F1200F41277 /* AppDelegate.swift */,
+				C01B5F1D1FB4A259006CC5A6 /* TextViewModel.swift */,
 				C017018A1FB4611F00F41277 /* TIIUIViewController.h */,
 				C017018B1FB4611F00F41277 /* TIIUIViewController.m */,
 				C017017B1FB45F1200F41277 /* Main.storyboard */,
@@ -149,6 +152,7 @@
 				C01701781FB45F1200F41277 /* AppDelegate.swift in Sources */,
 				C017018F1FB4688E00F41277 /* TIITextInputViewController.m in Sources */,
 				C017018C1FB4611F00F41277 /* TIIUIViewController.m in Sources */,
+				C01B5F1E1FB4A259006CC5A6 /* TextViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
