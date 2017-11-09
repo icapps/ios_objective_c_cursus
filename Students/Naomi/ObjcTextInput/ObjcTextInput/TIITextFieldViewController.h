@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol EditingValueFinishedDelegate;
-
 @class TIITextFieldViewController;
 
 @protocol EditingValueFinishedDelegate
@@ -17,9 +15,10 @@
 - (void) editingValueFinished:(NSString*) value;
 
 @end
-
 @interface TIITextFieldViewController : UIViewController
 
 @property (nonatomic, weak) id<EditingValueFinishedDelegate> delegate;
 
 @end
+
+
