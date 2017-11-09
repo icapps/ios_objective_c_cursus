@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@class ObjcUpdateHandlerViewModel;
+@class ObjViewController;
+
+@protocol ObjViewControllerDelegate
+
+- (void)objViewControllerDidEnd:(ObjViewController*) sender;
+
+@end
+
 @interface ObjViewController : UIViewController
+
+@property (nonatomic, strong) ObjcUpdateHandlerViewModel * viewModel;
+@property (nonatomic, weak) id<ObjViewControllerDelegate> delegate;
+
+
 
 @end

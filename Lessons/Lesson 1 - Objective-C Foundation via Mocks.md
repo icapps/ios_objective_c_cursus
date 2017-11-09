@@ -5,7 +5,7 @@ As a funny intro to Objective-C checkout the following website
 * http://fuckingclosuresyntax.com
 
 We will now have a look at:
-* Functions (Methods) 
+* Functions (Methods)
 * Pointers
 * Unit testing
 * Mocking
@@ -56,6 +56,16 @@ In objective-C heb je van veel classes een mutable tegenhanger
 
 In swift is dit opgelost met `let` & `var`
 
+```objective-c
+NSArray* array; //je moet het geen waarde geven
+Foo* foo= [[Foo alloc] init];
+array = @[@"string", 12, foo]
+
+NSMutableArray * arrayMutable = [NSMutableArray init(array)];
+
+[arrayMutable  append: @"extra"];
+```
+
 ##### Objective-C meets swift
 Je kan ook in Objective-C dezelfde type safety gaan opzoeken als in Swift. Daarvoor is er vorig jaar aan Objective-C een soort  [Leight Weigth Generics](https://developer.apple.com/library/content/documentation/Swift/Conceptual/BuildingCocoaApps/InteractingWithObjective-CAPIs.html#//apple_ref/doc/uid/TP40014216-CH4-ID173) toegevoegd.
 
@@ -68,17 +78,17 @@ Nu kan er in een array enkel een string *steken*
 ### Instantiation and now finally about pointers and value types
 ![](Lesson%201%20-%20Objective-C%20Foundation%20via%20Mocks/screenshot.png)
 
-Zoals gezegd is objective-C een oude taal. Dus gaat zij er vanuit dat je alles begrijpt over memory. 
+Zoals gezegd is objective-C een oude taal. Dus gaat zij er vanuit dat je alles begrijpt over memory.
 * Plaats maken voor iets = *alloceren*
 * Plaats opvullen met iets = *instantieren*
 
 Ook is code opgedeeld in 2 files
-* Hetgeen de buitenwereld moet weten om aan de code te kunnen 
+* Hetgeen de buitenwereld moet weten om aan de code te kunnen
 
 Om iets aan te maken als `Foo` heb je dus twee stappen nodig
 ```Objective-c
 // in een file met extensie .h
-@interface Foo: NSObject 
+@interface Foo: NSObject
 // alles hierin is publiek
 @end
 
@@ -124,17 +134,6 @@ Uitbreiding:
 2. Maak een Mock van Faro
 3. Doe een `gemockte` service call
 
-# Links 
+# Links
 * We hebben een account bij code-school: https://www.codeschool.com/courses/try-objective-c
-* We hebben een account op Ray Wenderlich: https://videos.raywenderlich.com 
-
-
-
-
-
-
-
-
-
-
-
+* We hebben een account op Ray Wenderlich: https://videos.raywenderlich.com

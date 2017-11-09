@@ -11,7 +11,6 @@
 
 @interface ObjViewController ()
 
-@property (nonatomic, strong) ObjcUpdateHandlerViewModel * viewModel;
 @end
 
 @implementation ObjViewController
