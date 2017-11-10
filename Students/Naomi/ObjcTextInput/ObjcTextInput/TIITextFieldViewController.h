@@ -12,10 +12,12 @@
 
 @protocol EditingValueFinishedDelegate
 
-- (void) editingValueFinished:(NSString*) value;
+- (void) editingValueFinished:(NSString*) value isNewName:(BOOL) isNew;
 
 @end
 @interface TIITextFieldViewController : UIViewController
+
+@property (weak, nonatomic) NSString *currentName;
 
 @property (nonatomic, weak) id<EditingValueFinishedDelegate> delegate;
 

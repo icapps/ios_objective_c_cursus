@@ -18,9 +18,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.valueTextField.text = self.currentName;
 }
 - (IBAction)closeButtonPressed:(id)sender {
-    [self.delegate editingValueFinished: self.valueTextField.text];
+    if([self.valueTextField.text length] == 0) {
+        self.valueTextField.layer.borderColor=[[UIColor redColor]CGColor];
+        self.valueTextField.layer.borderWidth= 1.0;
+    } else {
+        [self.delegate editingValueFinished:self.valueTextField.text isNewName:([self.currentName length] == 0? YES : NO)];
+        }
 }
 
 @end

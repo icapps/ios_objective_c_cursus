@@ -60,9 +60,9 @@
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Cd-64-y7z">
                                 <rect key="frame" x="0.0" y="587" width="375" height="30"/>
-                                <state key="normal" title="Edit"/>
+                                <state key="normal" title="Add"/>
                                 <connections>
-                                    <segue destination="wzC-BI-QiZ" kind="presentation" id="6zF-FN-UMw"/>
+                                    <segue destination="wzC-BI-QiZ" kind="presentation" identifier="addNameSegue" id="6zF-FN-UMw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -80,6 +80,7 @@
                     </view>
                     <connections>
                         <outlet property="labelCollectionView" destination="TcG-tP-I7F" id="04e-3t-xdf"/>
+                        <segue destination="wzC-BI-QiZ" kind="showDetail" identifier="editNameSegue" id="y7e-Ib-7FX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -95,4 +96,7 @@
             <point key="canvasLocation" x="670" y="33"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="6zF-FN-UMw"/>
+    </inferredMetricsTieBreakers>
 </document>
