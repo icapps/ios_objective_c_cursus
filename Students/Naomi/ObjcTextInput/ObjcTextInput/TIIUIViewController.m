@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *labelCollectionView;
 @property (strong, nonatomic) NSMutableArray *names;
+@property (assign, nonatomic) NSInteger indexPathRow;
 
 @end
 
@@ -21,15 +22,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.names = [@[@"Ronald",@"Charlotte",@"Stijn"] mutableCopy];
-    [self.labelCollectionView reloadData];
 }
 
-- (void) editingValueFinished:(NSString *)value {
+- (void) editingValueFinished:(NSString*) value isNewName:(BOOL) isNew {
     [self dismissViewControllerAnimated:YES completion:^{
-        [self.names addObject:value];
-        NSMutableArray *indexpaths = [NSMutableArray array];
-        [indexpaths addObject:[NSIndexPath indexPathForRow:self.names.count-1 inSection:0]];
-        [self.labelCollectionView insertItemsAtIndexPaths:indexpaths];
+        if(isNew){
+            [self.names addObject:value];
+            NSMutableArray *indexpaths = [NSMutableArray array];
+            [indexpaths addObject:[NSIndexPath indexPathForRow:self.names.count-1 inSection:0]];
+            [self.labelCollectionView insertItemsAtIndexPaths:indexpaths];
+        } else {
+            [self.names replaceObjectAtIndex:self.indexPathRow withObject:value];
+            [self.labelCollectionView reloadData];
+            NSLog(@"%@", value);
+        }
+
     }];
 }
 
@@ -37,8 +44,16 @@
     if ([segue.destinationViewController isKindOfClass:[TIITextFieldViewController class]]) {
         TIITextFieldViewController * destinationViewController = segue.destinationViewController;
         destinationViewController.delegate = self;
+      if ([segue.identifier isEqualToString:@"editNameSegue"]){
+            destinationViewController.currentName = self.names[self.indexPathRow];
+        }
 
     }
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath  {
+    self.indexPathRow = indexPath.row;
+    [self performSegueWithIdentifier:@"editNameSegue" sender:self];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
