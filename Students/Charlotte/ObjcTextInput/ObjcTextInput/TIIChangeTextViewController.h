@@ -10,11 +10,14 @@
 
 @class TIIChangeTextViewController;
 
-@protocol ChangeTextDelegate
+@protocol TextDelegate
 @required
--(void)didChangeText: (NSString *) changedText;
+-(void)didAddText: (NSString *) newText;
+-(void)didEditText: (NSString *) editedText :(NSIndexPath *) itemIndex;
 @end
 
-@interface TIIChangeTextViewController : UIViewController
-@property (nonatomic, weak) id<ChangeTextDelegate> delegate;
+@interface TIIChangeTextViewController: UIViewController
+@property (nonatomic, weak) id<TextDelegate> delegate;
+@property (nonatomic, strong) NSString * text;
+@property (nonatomic, assign) NSIndexPath * itemIndex;
 @end

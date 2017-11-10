@@ -8,9 +8,12 @@
 
 #import "TIIUIViewController.h"
 #import "TIIChangeTextViewController.h"
+#import "LabelCollectionViewCell.h"
 
-@interface TIIUIViewController () <ChangeTextDelegate>
-@property (nonatomic, weak) IBOutlet UILabel * label;
+@interface TIIUIViewController () <UICollectionViewDataSource,UICollectionViewDelegate,TextDelegate>
+@property (nonatomic, weak) IBOutlet UICollectionView * collectionView;
+@property (nonatomic, strong) NSMutableArray <NSString *> * textArray;
+@property (nonatomic, assign) NSUInteger selectedItemIndex;
 @end
 
 @implementation TIIUIViewController
@@ -19,12 +22,45 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.label setText:@"Ik heb niet gewonnen"];
+    self.textArray = [[NSMutableArray alloc] init];
+    [self.collectionView reloadData];
 }
 
-- (void)didChangeText:(NSString *)changedText {
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.textArray.count;
+}
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString * cellIdentifier = @"LabelCell";
+    
+    LabelCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    NSString * cellText = [self.textArray objectAtIndex:indexPath.row];
+    cell.label.text = cellText;
+    
+    return cell;
+}
+
+#pragma mark - UICollectionViewDataSource
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    self.selectedItemIndex = indexPath.item;
+}
+
+#pragma mark - TextDelegate
+
+-(void)didAddText:(NSString *)newText {
     [self dismissViewControllerAnimated:YES completion:^{
-        [self.label setText:changedText];
+        [self.textArray addObject:newText];
+        [self.collectionView reloadData];
+    }];
+}
+
+-(void)didEditText:(NSString *)editedText :(NSIndexPath *)itemIndex {
+    [self dismissViewControllerAnimated:YES completion:^{
+        [self.textArray replaceObjectAtIndex:itemIndex.row withObject:editedText];
+        [self.collectionView reloadData];
     }];
 }
 
@@ -38,8 +74,12 @@
         // Pass the selected object to the new view controller.
         TIIChangeTextViewController * controller = segue.destinationViewController;
         controller.delegate = self;
+        
+        if ([segue.identifier isEqualToString:@"Edit"]) {
+            //controller.itemIndex = self.selectedItemIndex;
+            controller.itemIndex = [[self.collectionView indexPathsForSelectedItems] firstObject];
+        }
     }
-    
 }
 
 @end

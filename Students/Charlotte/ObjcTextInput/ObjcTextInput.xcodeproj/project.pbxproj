@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F0E0E371FB4627600893245 /* TIIUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0E0E361FB4627600893245 /* TIIUIViewController.m */; };
+		0F3F8A701FB5A7E2007F9721 /* LabelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F8A6E1FB5A7E2007F9721 /* LabelCollectionViewCell.m */; };
 		0F9713FD1FB467BF00D22588 /* TIIChangeTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9713FC1FB467BF00D22588 /* TIIChangeTextViewController.m */; };
 		C01701781FB45F1200F41277 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01701771FB45F1200F41277 /* AppDelegate.swift */; };
 		C017017D1FB45F1200F41277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C017017B1FB45F1200F41277 /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 		0F0E0E341FB4627500893245 /* ObjcTextInput-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjcTextInput-Bridging-Header.h"; sourceTree = "<group>"; };
 		0F0E0E351FB4627600893245 /* TIIUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIIUIViewController.h; sourceTree = "<group>"; };
 		0F0E0E361FB4627600893245 /* TIIUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIIUIViewController.m; sourceTree = "<group>"; };
+		0F3F8A6D1FB5A7E2007F9721 /* LabelCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabelCollectionViewCell.h; sourceTree = "<group>"; };
+		0F3F8A6E1FB5A7E2007F9721 /* LabelCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabelCollectionViewCell.m; sourceTree = "<group>"; };
 		0F9713FB1FB467BF00D22588 /* TIIChangeTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIIChangeTextViewController.h; sourceTree = "<group>"; };
 		0F9713FC1FB467BF00D22588 /* TIIChangeTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIIChangeTextViewController.m; sourceTree = "<group>"; };
 		C01701741FB45F1200F41277 /* ObjcTextInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcTextInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +72,8 @@
 				0F0E0E341FB4627500893245 /* ObjcTextInput-Bridging-Header.h */,
 				0F9713FB1FB467BF00D22588 /* TIIChangeTextViewController.h */,
 				0F9713FC1FB467BF00D22588 /* TIIChangeTextViewController.m */,
+				0F3F8A6D1FB5A7E2007F9721 /* LabelCollectionViewCell.h */,
+				0F3F8A6E1FB5A7E2007F9721 /* LabelCollectionViewCell.m */,
 			);
 			path = ObjcTextInput;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				0F0E0E371FB4627600893245 /* TIIUIViewController.m in Sources */,
 				C01701781FB45F1200F41277 /* AppDelegate.swift in Sources */,
 				0F9713FD1FB467BF00D22588 /* TIIChangeTextViewController.m in Sources */,
+				0F3F8A701FB5A7E2007F9721 /* LabelCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

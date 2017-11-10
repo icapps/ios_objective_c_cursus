@@ -24,8 +24,14 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)closeController:(id)sender {
-    NSString * changedText = self.textField.text;
-    [self.delegate didChangeText:changedText];
+    NSString * text = self.textField.text;
+    
+    if (self.itemIndex) {
+        [self.delegate didEditText:text :self.itemIndex];
+    } else {
+        [self.delegate didAddText:text];
+    }
+    
 }
 
 @end
