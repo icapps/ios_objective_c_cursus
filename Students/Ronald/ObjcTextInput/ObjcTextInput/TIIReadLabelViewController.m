@@ -9,16 +9,15 @@
 #import "TIIReadLabelViewController.h"
 
 @interface TIIReadLabelViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *readLabel;
-
+@property (strong, nonatomic) NSMutableArray<NSString *> * labelList;
 @end
 
 @implementation TIIReadLabelViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.labelList = [[NSMutableArray alloc] init];
     
-    self.readLabel.text = @"Hello Again";
     // Do any additional setup after loading the view.
 }
 
@@ -29,7 +28,8 @@
 
 - (void)didFinishEnteringText:(NSString *)text {
     [self dismissViewControllerAnimated:YES completion:^{
-        self.readLabel.text = text;
+        [self.labelList addObject:text];
+        NSLog(@"%@", [self.labelList objectAtIndex:0]);
     }];
 }
 

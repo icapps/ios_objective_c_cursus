@@ -18,12 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQv-BD-MPu">
-                                <rect key="frame" x="143" y="333" width="88.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6N-YA-VGk">
                                 <rect key="frame" x="160.5" y="555" width="53" height="30"/>
                                 <state key="normal" title="Change"/>
@@ -34,16 +28,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="aQv-BD-MPu" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="PUL-pQ-SH5"/>
-                            <constraint firstItem="O6N-YA-VGk" firstAttribute="top" secondItem="aQv-BD-MPu" secondAttribute="bottom" constant="201" id="iTC-Yp-7tC"/>
-                            <constraint firstItem="aQv-BD-MPu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nyX-9z-I9w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="O6N-YA-VGk" secondAttribute="bottom" constant="82" id="9Ub-DC-wx0"/>
                             <constraint firstItem="O6N-YA-VGk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pe2-pJ-lFq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="readLabel" destination="aQv-BD-MPu" id="xV2-1n-THK"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
