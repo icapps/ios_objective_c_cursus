@@ -7,10 +7,12 @@
 //
 
 #import "TIIUIViewController.h"
+#import "TIILabelCollectionViewCell.h"
 
 @interface TIIUIViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UICollectionView *labelCollectionView;
+@property (strong, nonatomic) NSMutableArray *names;
 
 @end
 
@@ -18,12 +20,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.label.text = @"Spaghetti";
+    self.names = [@[@"Ronald",@"Charlotte",@"Stijn"] mutableCopy];
+    [self.labelCollectionView reloadData];
 }
 
 - (void) editingValueFinished:(NSString *)value {
     [self dismissViewControllerAnimated:YES completion:^{
-        self.label.text = value;
+        [self.names addObject:value];
+        NSMutableArray *indexpaths = [NSMutableArray array];
+        [indexpaths addObject:[NSIndexPath indexPathForRow:self.names.count-1 inSection:0]];
+        [self.labelCollectionView insertItemsAtIndexPaths:indexpaths];
     }];
 }
 
@@ -34,5 +40,16 @@
 
     }
 }
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    TIILabelCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"nameCell" forIndexPath:indexPath];
+    cell.textLabel.text = [self.names objectAtIndex:indexPath.row];
+    return cell;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.names.count;
+}
+
 
 @end
