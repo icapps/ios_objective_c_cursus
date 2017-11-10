@@ -8,6 +8,9 @@
 
 #import "TIIUIViewController.h"
 #import "TIILabelCollectionViewCell.h"
+#import "MyCustomFlowLayout.h"
+
+const NSInteger rowToInsertNewName = 1;
 
 @interface TIIUIViewController ()
 
@@ -19,17 +22,34 @@
 
 @implementation TIIUIViewController
 
+// MARK: - Life Cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.names = [@[@"Ronald",@"Charlotte",@"Stijn"] mutableCopy];
+    MyCustomFlowLayout *layout = [[MyCustomFlowLayout alloc] init];
+    layout.itemSize = CGSizeMake(375, 50);
 }
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.destinationViewController isKindOfClass:[TIITextFieldViewController class]]) {
+        TIITextFieldViewController * destinationViewController = segue.destinationViewController;
+        destinationViewController.delegate = self;
+        if ([segue.identifier isEqualToString:@"editNameSegue"]){
+            destinationViewController.currentName = self.names[self.indexPathRow];
+        }
+        
+    }
+}
+
+// MARK: - EditingValueFinishedDelegate
 
 - (void) editingValueFinished:(NSString*) value isNewName:(BOOL) isNew {
     [self dismissViewControllerAnimated:YES completion:^{
         if(isNew){
-            [self.names addObject:value];
+            [self.names insertObject:value atIndex:rowToInsertNewName];
             NSMutableArray *indexpaths = [NSMutableArray array];
-            [indexpaths addObject:[NSIndexPath indexPathForRow:self.names.count-1 inSection:0]];
+            [indexpaths addObject:[NSIndexPath indexPathForRow:rowToInsertNewName inSection:0]];
             [self.labelCollectionView insertItemsAtIndexPaths:indexpaths];
         } else {
             [self.names replaceObjectAtIndex:self.indexPathRow withObject:value];
@@ -40,16 +60,7 @@
     }];
 }
 
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.destinationViewController isKindOfClass:[TIITextFieldViewController class]]) {
-        TIITextFieldViewController * destinationViewController = segue.destinationViewController;
-        destinationViewController.delegate = self;
-      if ([segue.identifier isEqualToString:@"editNameSegue"]){
-            destinationViewController.currentName = self.names[self.indexPathRow];
-        }
-
-    }
-}
+// MARK: - CollectionView
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath  {
     self.indexPathRow = indexPath.row;
@@ -65,6 +76,5 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.names.count;
 }
-
 
 @end
