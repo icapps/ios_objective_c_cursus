@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		33674CBA1FB5B17B0055AB23 /* TIILabelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33674CB91FB5B17B0055AB23 /* TIILabelCollectionViewCell.m */; };
+		33A99F071FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A99F061FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift */; };
 		33F484E41FB462110043E06E /* TIIUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F484E31FB462110043E06E /* TIIUIViewController.m */; };
 		33F484E61FB464EB0043E06E /* TextField.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F484E51FB464EB0043E06E /* TextField.storyboard */; };
 		33F484E91FB467A10043E06E /* TIITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F484E81FB467A10043E06E /* TIITextFieldViewController.m */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		33674CB81FB5B17B0055AB23 /* TIILabelCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIILabelCollectionViewCell.h; sourceTree = "<group>"; };
 		33674CB91FB5B17B0055AB23 /* TIILabelCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIILabelCollectionViewCell.m; sourceTree = "<group>"; };
+		33A99F061FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIISlideInCollectionViewLayout.swift; sourceTree = "<group>"; };
 		33F484E11FB462110043E06E /* ObjcTextInput-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjcTextInput-Bridging-Header.h"; sourceTree = "<group>"; };
 		33F484E21FB462110043E06E /* TIIUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIIUIViewController.h; sourceTree = "<group>"; };
 		33F484E31FB462110043E06E /* TIIUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIIUIViewController.m; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				C01701771FB45F1200F41277 /* AppDelegate.swift */,
 				C017017B1FB45F1200F41277 /* Main.storyboard */,
+				33A99F061FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift */,
 				33F484E21FB462110043E06E /* TIIUIViewController.h */,
 				33F484E31FB462110043E06E /* TIIUIViewController.m */,
 				33674CB81FB5B17B0055AB23 /* TIILabelCollectionViewCell.h */,
@@ -158,6 +161,7 @@
 				33F484E41FB462110043E06E /* TIIUIViewController.m in Sources */,
 				C01701781FB45F1200F41277 /* AppDelegate.swift in Sources */,
 				33F484E91FB467A10043E06E /* TIITextFieldViewController.m in Sources */,
+				33A99F071FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift in Sources */,
 				33674CBA1FB5B17B0055AB23 /* TIILabelCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

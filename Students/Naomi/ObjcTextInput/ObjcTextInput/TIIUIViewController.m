@@ -40,6 +40,11 @@
     }];
 }
 
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    return CGSizeMake(width, 50);
+}
+
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.destinationViewController isKindOfClass:[TIITextFieldViewController class]]) {
         TIITextFieldViewController * destinationViewController = segue.destinationViewController;
