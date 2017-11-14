@@ -6,7 +6,7 @@ class Post: NSObject, Codable {
     @objc let title: String
     @objc let userId: Int
 
-    init(id: Int, message: String?, title: String, userId: Int) {
+    @objc init(id: Int, message: String?, title: String, userId: Int) {
         self.id = id
         self.message = message
         self.title = title
