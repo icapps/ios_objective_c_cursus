@@ -35,11 +35,13 @@
             NSArray <Post *>* posts = weakSelf.service.posts;
             NSMutableArray <NSString *> *mapped = [NSMutableArray arrayWithCapacity:[posts count]];
             [posts enumerateObjectsUsingBlock:^(Post * post, NSUInteger idx, BOOL *stop) {
-                NSString * string = [NSString stringWithFormat:@"%li", post.userId];
-                [mapped addObject:string];
+//                NSString * string = [NSString stringWithFormat:@"%@", ];
+                [mapped addObject:post.title];
             }];
             weakSelf.names = mapped;
-            [weakSelf.labelCollectionView reloadData];
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                [weakSelf.labelCollectionView reloadData];
+            }];
         }];
     }
 

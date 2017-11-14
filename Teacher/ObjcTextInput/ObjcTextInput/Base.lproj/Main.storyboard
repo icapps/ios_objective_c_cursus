@@ -130,8 +130,8 @@
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="AiE-Q4-ZY9"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="LpH-JX-xHx"/>
+                                    <outlet property="dataSource" destination="9Nc-8i-1oc" id="ywF-AS-lYb"/>
+                                    <outlet property="delegate" destination="9Nc-8i-1oc" id="aqd-dT-xPQ"/>
                                 </connections>
                             </collectionView>
                         </subviews>
@@ -144,6 +144,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wci-CB-bC6"/>
                     </view>
+                    <connections>
+                        <outlet property="labelCollectionView" destination="XiT-TW-cfe" id="V6y-6Q-tSw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynn-48-ZWk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
