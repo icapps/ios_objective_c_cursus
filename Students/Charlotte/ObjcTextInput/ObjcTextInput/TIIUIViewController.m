@@ -13,7 +13,6 @@
 @interface TIIUIViewController () <UICollectionViewDataSource,UICollectionViewDelegate,TextDelegate>
 @property (nonatomic, weak) IBOutlet UICollectionView * collectionView;
 @property (nonatomic, strong) NSMutableArray <NSString *> * textArray;
-@property (nonatomic, assign) NSUInteger selectedItemIndex;
 @end
 
 @implementation TIIUIViewController
@@ -41,12 +40,6 @@
     return cell;
 }
 
-#pragma mark - UICollectionViewDataSource
-
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    self.selectedItemIndex = indexPath.item;
-}
-
 #pragma mark - TextDelegate
 
 -(void)didAddText:(NSString *)newText {
@@ -56,10 +49,14 @@
     }];
 }
 
--(void)didEditText:(NSString *)editedText :(NSIndexPath *)itemIndex {
+-(void)didEditText:(NSString *)editedText
+       atItemIndex:(NSIndexPath *)itemIndex {
+
     [self dismissViewControllerAnimated:YES completion:^{
-        [self.textArray replaceObjectAtIndex:itemIndex.row withObject:editedText];
-        [self.collectionView reloadData];
+        if (itemIndex.row < self.textArray.count) {
+            self.textArray[itemIndex.row] = editedText;
+            [self.collectionView reloadData];
+        }
     }];
 }
 
@@ -75,7 +72,6 @@
         controller.delegate = self;
         
         if ([segue.identifier isEqualToString:@"Edit"]) {
-            //controller.itemIndex = self.selectedItemIndex;
             controller.itemIndex = [[self.collectionView indexPathsForSelectedItems] firstObject];
         }
     }

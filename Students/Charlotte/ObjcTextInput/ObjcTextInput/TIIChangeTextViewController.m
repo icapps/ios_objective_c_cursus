@@ -23,11 +23,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)closeController:(id)sender {
+- (IBAction)closeController:(UIButton *)sender {
     NSString * text = self.textField.text;
     
     if (self.itemIndex) {
-        [self.delegate didEditText:text :self.itemIndex];
+        [self.delegate didEditText:text atItemIndex:self.itemIndex];
     } else {
         [self.delegate didAddText:text];
     }

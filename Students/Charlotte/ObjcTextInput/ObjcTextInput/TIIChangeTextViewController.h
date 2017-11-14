@@ -13,7 +13,8 @@
 @protocol TextDelegate
 @required
 -(void)didAddText: (NSString *) newText;
--(void)didEditText: (NSString *) editedText :(NSIndexPath *) itemIndex;
+-(void)didEditText: (NSString *) editedText
+       atItemIndex: (NSIndexPath *) itemIndex;
 @end
 
 @interface TIIChangeTextViewController: UIViewController

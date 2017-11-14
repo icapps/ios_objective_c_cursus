@@ -7,9 +7,10 @@
 //
 
 #import "LabelCollectionViewCell.h"
+#import "TIILabel.h"
 
 @interface LabelCollectionViewCell ()
-@property (nonatomic, weak) IBOutlet UILabel * label;
+@property (nonatomic, weak) IBOutlet TIILabel * label;
 @end
 
 @implementation LabelCollectionViewCell
