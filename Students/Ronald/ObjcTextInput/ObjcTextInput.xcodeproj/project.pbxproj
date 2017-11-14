@@ -12,6 +12,7 @@
 		33F484E61FB464EB0043E06E /* TextField.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F484E51FB464EB0043E06E /* TextField.storyboard */; };
 		33F484E91FB467A10043E06E /* TIITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F484E81FB467A10043E06E /* TIITextFieldViewController.m */; };
 		732563A51FB5FA2E00DCF201 /* MyCustomFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 732563A41FB5FA2E00DCF201 /* MyCustomFlowLayout.m */; };
+		73F022A51FBAE76800913C67 /* TIILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F022A41FBAE76800913C67 /* TIILabel.m */; };
 		C01701781FB45F1200F41277 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01701771FB45F1200F41277 /* AppDelegate.swift */; };
 		C017017D1FB45F1200F41277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C017017B1FB45F1200F41277 /* Main.storyboard */; };
 		C017017F1FB45F1200F41277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C017017E1FB45F1200F41277 /* Assets.xcassets */; };
@@ -29,6 +30,8 @@
 		33F484E81FB467A10043E06E /* TIITextFieldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIITextFieldViewController.m; sourceTree = "<group>"; };
 		732563A31FB5FA2E00DCF201 /* MyCustomFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCustomFlowLayout.h; sourceTree = "<group>"; };
 		732563A41FB5FA2E00DCF201 /* MyCustomFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCustomFlowLayout.m; sourceTree = "<group>"; };
+		73F022A31FBAE76800913C67 /* TIILabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIILabel.h; sourceTree = "<group>"; };
+		73F022A41FBAE76800913C67 /* TIILabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIILabel.m; sourceTree = "<group>"; };
 		C01701741FB45F1200F41277 /* ObjcTextInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcTextInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01701771FB45F1200F41277 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C017017C1FB45F1200F41277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,6 +74,8 @@
 				C017017B1FB45F1200F41277 /* Main.storyboard */,
 				33F484E21FB462110043E06E /* TIIUIViewController.h */,
 				33F484E31FB462110043E06E /* TIIUIViewController.m */,
+				73F022A31FBAE76800913C67 /* TIILabel.h */,
+				73F022A41FBAE76800913C67 /* TIILabel.m */,
 				33674CB81FB5B17B0055AB23 /* TIILabelCollectionViewCell.h */,
 				33674CB91FB5B17B0055AB23 /* TIILabelCollectionViewCell.m */,
 				C017017E1FB45F1200F41277 /* Assets.xcassets */,
@@ -165,6 +170,7 @@
 				33F484E91FB467A10043E06E /* TIITextFieldViewController.m in Sources */,
 				732563A51FB5FA2E00DCF201 /* MyCustomFlowLayout.m in Sources */,
 				33674CBA1FB5B17B0055AB23 /* TIILabelCollectionViewCell.m in Sources */,
+				73F022A51FBAE76800913C67 /* TIILabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

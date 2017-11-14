@@ -10,8 +10,6 @@
 #import "TIILabelCollectionViewCell.h"
 #import "MyCustomFlowLayout.h"
 
-const NSInteger rowToInsertNewName = 1;
-
 @interface TIIUIViewController ()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *labelCollectionView;
@@ -46,9 +44,9 @@ const NSInteger rowToInsertNewName = 1;
 - (void) editingValueFinished:(NSString*) value isNewName:(BOOL) isNew {
     [self dismissViewControllerAnimated:YES completion:^{
         if(isNew){
-            [self.names insertObject:value atIndex:rowToInsertNewName];
+            [self.names insertObject:value atIndex:self.names.count - 1];
             NSMutableArray *indexpaths = [NSMutableArray array];
-            [indexpaths addObject:[NSIndexPath indexPathForRow:rowToInsertNewName inSection:0]];
+            [indexpaths addObject:[NSIndexPath indexPathForRow:self.names.count - 1 inSection:0]];
             [self.labelCollectionView insertItemsAtIndexPaths:indexpaths];
         } else {
             [self.names replaceObjectAtIndex:self.indexPathRow withObject:value];
@@ -68,7 +66,7 @@ const NSInteger rowToInsertNewName = 1;
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     TIILabelCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"nameCell" forIndexPath:indexPath];
-    cell.textLabel.text = [self.names objectAtIndex:indexPath.row];
+    [cell configureCell:[self.names objectAtIndex:indexPath.row]];
     return cell;
 }
 
