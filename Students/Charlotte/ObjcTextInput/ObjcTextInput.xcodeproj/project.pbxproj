@@ -7,21 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F0E0E371FB4627600893245 /* TIIUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0E0E361FB4627600893245 /* TIIUIViewController.m */; };
+		0F3F8A701FB5A7E2007F9721 /* LabelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F8A6E1FB5A7E2007F9721 /* LabelCollectionViewCell.m */; };
+		0F9713FD1FB467BF00D22588 /* TIIChangeTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9713FC1FB467BF00D22588 /* TIIChangeTextViewController.m */; };
 		C01701781FB45F1200F41277 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01701771FB45F1200F41277 /* AppDelegate.swift */; };
-		C017017A1FB45F1200F41277 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01701791FB45F1200F41277 /* ViewController.swift */; };
 		C017017D1FB45F1200F41277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C017017B1FB45F1200F41277 /* Main.storyboard */; };
 		C017017F1FB45F1200F41277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C017017E1FB45F1200F41277 /* Assets.xcassets */; };
 		C01701821FB45F1200F41277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01701801FB45F1200F41277 /* LaunchScreen.storyboard */; };
+		C043B0A11FBAE76B00942DF7 /* TIILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C043B0A01FBAE76B00942DF7 /* TIILabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F0E0E341FB4627500893245 /* ObjcTextInput-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjcTextInput-Bridging-Header.h"; sourceTree = "<group>"; };
+		0F0E0E351FB4627600893245 /* TIIUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIIUIViewController.h; sourceTree = "<group>"; };
+		0F0E0E361FB4627600893245 /* TIIUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIIUIViewController.m; sourceTree = "<group>"; };
+		0F3F8A6D1FB5A7E2007F9721 /* LabelCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabelCollectionViewCell.h; sourceTree = "<group>"; };
+		0F3F8A6E1FB5A7E2007F9721 /* LabelCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabelCollectionViewCell.m; sourceTree = "<group>"; };
+		0F9713FB1FB467BF00D22588 /* TIIChangeTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIIChangeTextViewController.h; sourceTree = "<group>"; };
+		0F9713FC1FB467BF00D22588 /* TIIChangeTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIIChangeTextViewController.m; sourceTree = "<group>"; };
 		C01701741FB45F1200F41277 /* ObjcTextInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcTextInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01701771FB45F1200F41277 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C01701791FB45F1200F41277 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C017017C1FB45F1200F41277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C017017E1FB45F1200F41277 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C01701811FB45F1200F41277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C01701831FB45F1200F41277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C043B09F1FBAE76B00942DF7 /* TIILabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIILabel.h; sourceTree = "<group>"; };
+		C043B0A01FBAE76B00942DF7 /* TIILabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIILabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +66,19 @@
 			isa = PBXGroup;
 			children = (
 				C01701771FB45F1200F41277 /* AppDelegate.swift */,
-				C01701791FB45F1200F41277 /* ViewController.swift */,
 				C017017B1FB45F1200F41277 /* Main.storyboard */,
 				C017017E1FB45F1200F41277 /* Assets.xcassets */,
 				C01701801FB45F1200F41277 /* LaunchScreen.storyboard */,
 				C01701831FB45F1200F41277 /* Info.plist */,
+				0F0E0E351FB4627600893245 /* TIIUIViewController.h */,
+				0F0E0E361FB4627600893245 /* TIIUIViewController.m */,
+				0F0E0E341FB4627500893245 /* ObjcTextInput-Bridging-Header.h */,
+				0F9713FB1FB467BF00D22588 /* TIIChangeTextViewController.h */,
+				0F9713FC1FB467BF00D22588 /* TIIChangeTextViewController.m */,
+				0F3F8A6D1FB5A7E2007F9721 /* LabelCollectionViewCell.h */,
+				0F3F8A6E1FB5A7E2007F9721 /* LabelCollectionViewCell.m */,
+				C043B09F1FBAE76B00942DF7 /* TIILabel.h */,
+				C043B0A01FBAE76B00942DF7 /* TIILabel.m */,
 			);
 			path = ObjcTextInput;
 			sourceTree = "<group>";
@@ -96,6 +115,7 @@
 				TargetAttributes = {
 					C01701731FB45F1200F41277 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,8 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C017017A1FB45F1200F41277 /* ViewController.swift in Sources */,
+				0F0E0E371FB4627600893245 /* TIIUIViewController.m in Sources */,
 				C01701781FB45F1200F41277 /* AppDelegate.swift in Sources */,
+				0F9713FD1FB467BF00D22588 /* TIIChangeTextViewController.m in Sources */,
+				C043B0A11FBAE76B00942DF7 /* TIILabel.m in Sources */,
+				0F3F8A701FB5A7E2007F9721 /* LabelCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,11 +297,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObjcTextInput/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.icapps.ObjcTextInput;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjcTextInput/ObjcTextInput-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -288,11 +314,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObjcTextInput/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.icapps.ObjcTextInput;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjcTextInput/ObjcTextInput-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
