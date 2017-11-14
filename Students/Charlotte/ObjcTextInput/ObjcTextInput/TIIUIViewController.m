@@ -45,7 +45,8 @@
 -(void)didAddText:(NSString *)newText {
     [self dismissViewControllerAnimated:YES completion:^{
         [self.textArray addObject:newText];
-        [self.collectionView reloadData];
+        NSArray * lastIndexPaths = @[[NSIndexPath indexPathForRow:self.textArray.count-1 inSection:0]];
+        [self.collectionView insertItemsAtIndexPaths:lastIndexPaths];
     }];
 }
 
@@ -55,7 +56,7 @@
     [self dismissViewControllerAnimated:YES completion:^{
         if (itemIndex.row < self.textArray.count) {
             self.textArray[itemIndex.row] = editedText;
-            [self.collectionView reloadData];
+            [self.collectionView reloadItemsAtIndexPaths:@[itemIndex]];
         }
     }];
 }
