@@ -84,7 +84,12 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath  {
     self.indexPathRow = indexPath.row;
-    [self performSegueWithIdentifier:@"editNameSegue" sender:self];
+    @try {
+       [self performSegueWithIdentifier:@"editNameSegue" sender:self];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Segue not found: %@", exception);
+    }
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
