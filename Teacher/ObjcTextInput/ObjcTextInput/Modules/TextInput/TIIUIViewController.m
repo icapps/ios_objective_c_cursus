@@ -10,6 +10,8 @@
 #import "TIILabelCollectionViewCell.h"
 #import "ObjcTextInput-Swift.h"
 
+@import Faro;
+
 @interface TIIUIViewController ()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *labelCollectionView;

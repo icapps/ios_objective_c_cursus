@@ -16,6 +16,7 @@
 		C017017D1FB45F1200F41277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C017017B1FB45F1200F41277 /* Main.storyboard */; };
 		C017017F1FB45F1200F41277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C017017E1FB45F1200F41277 /* Assets.xcassets */; };
 		C01701821FB45F1200F41277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01701801FB45F1200F41277 /* LaunchScreen.storyboard */; };
+		C02651FB1FBB08B1003D4CEF /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02651FA1FBB08B1003D4CEF /* PostService.swift */; };
 		EEDB8667E4C72A0E11657F3C /* Pods_ObjcTextInput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6DA1CC13809AE7A909562E9 /* Pods_ObjcTextInput.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		C017017E1FB45F1200F41277 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C01701811FB45F1200F41277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C01701831FB45F1200F41277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C02651FA1FBB08B1003D4CEF /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		CBD4A5EA0EE58D68AB0E86D0 /* Pods-ObjcTextInput.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcTextInput.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjcTextInput/Pods-ObjcTextInput.release.xcconfig"; sourceTree = "<group>"; };
 		E6DA1CC13809AE7A909562E9 /* Pods_ObjcTextInput.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjcTextInput.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -92,20 +94,54 @@
 			children = (
 				C01701771FB45F1200F41277 /* AppDelegate.swift */,
 				C017017B1FB45F1200F41277 /* Main.storyboard */,
+				C02651FE1FBB119F003D4CEF /* Modules */,
+				C017017E1FB45F1200F41277 /* Assets.xcassets */,
+				C01701801FB45F1200F41277 /* LaunchScreen.storyboard */,
+				C01701831FB45F1200F41277 /* Info.plist */,
+				33F484E11FB462110043E06E /* ObjcTextInput-Bridging-Header.h */,
+			);
+			path = ObjcTextInput;
+			sourceTree = "<group>";
+		};
+		C02651FC1FBB116C003D4CEF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C02651FA1FBB08B1003D4CEF /* PostService.swift */,
+			);
+			name = Service;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		C02651FD1FBB118C003D4CEF /* TextInput */ = {
+			isa = PBXGroup;
+			children = (
 				33A99F061FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift */,
 				33F484E21FB462110043E06E /* TIIUIViewController.h */,
 				33F484E31FB462110043E06E /* TIIUIViewController.m */,
 				33674CB81FB5B17B0055AB23 /* TIILabelCollectionViewCell.h */,
 				33674CB91FB5B17B0055AB23 /* TIILabelCollectionViewCell.m */,
-				C017017E1FB45F1200F41277 /* Assets.xcassets */,
-				C01701801FB45F1200F41277 /* LaunchScreen.storyboard */,
-				33F484E51FB464EB0043E06E /* TextField.storyboard */,
 				33F484E71FB467A10043E06E /* TIITextFieldViewController.h */,
 				33F484E81FB467A10043E06E /* TIITextFieldViewController.m */,
-				C01701831FB45F1200F41277 /* Info.plist */,
-				33F484E11FB462110043E06E /* ObjcTextInput-Bridging-Header.h */,
+				33F484E51FB464EB0043E06E /* TextField.storyboard */,
 			);
-			path = ObjcTextInput;
+			path = TextInput;
+			sourceTree = "<group>";
+		};
+		C02651FE1FBB119F003D4CEF /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C02651FF1FBB11C8003D4CEF /* Posts */,
+				C02651FD1FBB118C003D4CEF /* TextInput */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C02651FF1FBB11C8003D4CEF /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				C02651FC1FBB116C003D4CEF /* Service */,
+			);
+			path = Posts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33F484E41FB462110043E06E /* TIIUIViewController.m in Sources */,
+				C02651FB1FBB08B1003D4CEF /* PostService.swift in Sources */,
 				C01701781FB45F1200F41277 /* AppDelegate.swift in Sources */,
 				33F484E91FB467A10043E06E /* TIITextFieldViewController.m in Sources */,
 				33A99F071FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift in Sources */,
