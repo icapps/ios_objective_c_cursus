@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		034488545D38F350FE388B7174BA010D /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4866A36FC51658748F2DF0D89F34ACE8 /* ServiceError.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		294C3A0B822A6C5464958BC9CA788182 /* StubbedURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C04764EC365C89DD0802792B2B457B /* StubbedURLProtocol.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2AF1224E19BF917142ED1AB887AE197F /* Faro-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F33544BD2E1FB74F32415631C709808 /* Faro-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		326130CEDDC00C2930A1A8022494D615 /* ParameterEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143303375B5DC3C24B1F63B5A0F2FDB2 /* ParameterEnum.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		328D32BB4710F3C580ABB06685BF2FD1 /* RetryableURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F16C4A7598A7448E70E6D902EC61F76 /* RetryableURLSession.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3424A2B34D66F73AFF78EFE6CC4C6232 /* Pods-ObjcTextInput-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 394ED8743322D0400612073F39D55205 /* Pods-ObjcTextInput-dummy.m */; };
+		47EA4AF4834320D416DA00E1F1AC600A /* ServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA6511951FBEE4DB868FCFA841E007 /* ServiceHandler.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4ED25259E71315E0666CD6BC38E385D4 /* Pods-ObjcTextInput-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41CF8F1777F492256D48013A4CAF0038 /* Pods-ObjcTextInput-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D3CDD06A349CE583DCC9670964EE1EB /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D80E15B321FC23C66A880C8C44F6734 /* Updatable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		73F358227FE33FC6FBBECE680251D8F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		86D604B9BB7D65D1070F9A4B70C3E1F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		93F1CD0008790C7F28A82EE18FADA265 /* URLComponentsSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904C58430B77DAB18B9158DEBFC8AE3A /* URLComponentsSerialization.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9713F1E7F610708863FF7352ACD1F10A /* Data+AppendString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C2A121A44DD76847B5305DFF7DE008 /* Data+AppendString.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A686ED65D1E910E08C6F27C3EE24333A /* ServiceQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF72867B9702C96812565BD09ACA67E /* ServiceQueue.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AAC9DF916FC13F31B30D21F7A4961886 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = D977BC00DFC57962E3179D9B9B06128F /* Call.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B105F954AD9AE1D28D3B66516AD27D36 /* Authorizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15051777EBD122D7F4DE3B1246DAB606 /* Authorizable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B290E85F0ED245359C42E9EBDDD802BC /* MultipartFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8CD660176649E4AB038E46142AF6A /* MultipartFile.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B8407C77A7441212E7A2314927BEAFDC /* Call+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D9BBC1EA08B96DA0A0495EBF395649 /* Call+Stub.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C33EBB542808D148B9AFD9BDEB7CFA0B /* RequestStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CC256ACA8B52228964B83326A80CB /* RequestStub.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C8C233ECFCAB929320DC30DCC581083E /* FaroURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C31BC52A2489970777A9C469DCD329 /* FaroURLSession.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E3B85665A3032DBC67964DFFF751F62A /* BackendConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D790F89FAC28A24081A98FCA4A7D19AE /* BackendConfiguration.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EFF4DD1D60F4C2CF9BC5A3A09DC8CE00 /* String+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34771C3497699A3270D065B4E3A44C8D /* String+Stub.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F762B61A4389DD7AC9C9E64AD8492682 /* Faro-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0EE4DEB9302A32B154C6BC840018B8 /* Faro-dummy.m */; };
+		F798DEA0EDF3C7BF5E7132DA2B51DF60 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8018B386D6CF06BEEB18A71A5D248F4D /* Service.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		773B7B6DA7956A1BCF2D43B709283AA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3510D7D95BED3C177CBDE96FA0203176;
+			remoteInfo = Faro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0506F2183F5EC0320E428BDD75C6449B /* Pods-ObjcTextInput-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ObjcTextInput-acknowledgements.markdown"; sourceTree = "<group>"; };
+		124794E469E0D3266B620275C0678E09 /* Pods-ObjcTextInput.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ObjcTextInput.modulemap"; sourceTree = "<group>"; };
+		143303375B5DC3C24B1F63B5A0F2FDB2 /* ParameterEnum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEnum.swift; path = Sources/Request/ParameterEnum.swift; sourceTree = "<group>"; };
+		15051777EBD122D7F4DE3B1246DAB606 /* Authorizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Authorizable.swift; path = Sources/Request/Authorizable.swift; sourceTree = "<group>"; };
+		1F16C4A7598A7448E70E6D902EC61F76 /* RetryableURLSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryableURLSession.swift; path = Sources/URLSession/RetryableURLSession.swift; sourceTree = "<group>"; };
+		29C31BC52A2489970777A9C469DCD329 /* FaroURLSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FaroURLSession.swift; path = Sources/URLSession/FaroURLSession.swift; sourceTree = "<group>"; };
+		34771C3497699A3270D065B4E3A44C8D /* String+Stub.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Stub.swift"; path = "Sources/Mocking/String+Stub.swift"; sourceTree = "<group>"; };
+		394ED8743322D0400612073F39D55205 /* Pods-ObjcTextInput-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ObjcTextInput-dummy.m"; sourceTree = "<group>"; };
+		413995FEE4BE0264E1A6CFC7AF47C258 /* Faro.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Faro.modulemap; sourceTree = "<group>"; };
+		41CF8F1777F492256D48013A4CAF0038 /* Pods-ObjcTextInput-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ObjcTextInput-umbrella.h"; sourceTree = "<group>"; };
+		43C04764EC365C89DD0802792B2B457B /* StubbedURLProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubbedURLProtocol.swift; path = Sources/Mocking/StubbedURLProtocol.swift; sourceTree = "<group>"; };
+		4866A36FC51658748F2DF0D89F34ACE8 /* ServiceError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceError.swift; path = Sources/Error/ServiceError.swift; sourceTree = "<group>"; };
+		4BCA6511951FBEE4DB868FCFA841E007 /* ServiceHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceHandler.swift; path = Sources/Service/ServiceHandler.swift; sourceTree = "<group>"; };
+		4D80E15B321FC23C66A880C8C44F6734 /* Updatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Updatable.swift; path = Sources/Updateable/Updatable.swift; sourceTree = "<group>"; };
+		4F4361E832AF4FFE6F6A4039D8A651B3 /* Faro.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Faro.xcconfig; sourceTree = "<group>"; };
+		5B9C1AD9E070A5569F30BD7338E5A08C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6F33544BD2E1FB74F32415631C709808 /* Faro-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Faro-umbrella.h"; sourceTree = "<group>"; };
+		75BD76A7E086DD91D6B9BF012538E14E /* Faro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Faro.framework; path = Faro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8018B386D6CF06BEEB18A71A5D248F4D /* Service.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Service.swift; path = Sources/Service/Service.swift; sourceTree = "<group>"; };
+		824E6AFDE6290A2F2913A8550A5B933B /* Pods-ObjcTextInput.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTextInput.debug.xcconfig"; sourceTree = "<group>"; };
+		8A0EE4DEB9302A32B154C6BC840018B8 /* Faro-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Faro-dummy.m"; sourceTree = "<group>"; };
+		8A3C8D6DA1B7CFE9137D18CC81097AE7 /* Pods_ObjcTextInput.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ObjcTextInput.framework; path = "Pods-ObjcTextInput.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B6A7553A537B9FB14E33657CC3B73D7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		904C58430B77DAB18B9158DEBFC8AE3A /* URLComponentsSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLComponentsSerialization.swift; path = Sources/Request/URLComponentsSerialization.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		97E9A7A04823768CA783F586DFD8DE93 /* Pods-ObjcTextInput-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTextInput-frameworks.sh"; sourceTree = "<group>"; };
+		99C8CD660176649E4AB038E46142AF6A /* MultipartFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFile.swift; path = Sources/Request/MultipartFile.swift; sourceTree = "<group>"; };
+		9EEB7B6F05D4B48F61BA5BB2643DF80C /* Pods-ObjcTextInput-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ObjcTextInput-acknowledgements.plist"; sourceTree = "<group>"; };
+		A9B0DAEE6C930B2F61B06C3D624D3D37 /* Pods-ObjcTextInput-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTextInput-resources.sh"; sourceTree = "<group>"; };
+		D4D9BBC1EA08B96DA0A0495EBF395649 /* Call+Stub.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Call+Stub.swift"; path = "Sources/Mocking/Call+Stub.swift"; sourceTree = "<group>"; };
+		D50B73CB99FC694C110FA3E16594AC91 /* Pods-ObjcTextInput.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTextInput.release.xcconfig"; sourceTree = "<group>"; };
+		D790F89FAC28A24081A98FCA4A7D19AE /* BackendConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BackendConfiguration.swift; path = Sources/Request/BackendConfiguration.swift; sourceTree = "<group>"; };
+		D977BC00DFC57962E3179D9B9B06128F /* Call.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Call.swift; path = Sources/Request/Call.swift; sourceTree = "<group>"; };
+		D9C2A121A44DD76847B5305DFF7DE008 /* Data+AppendString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+AppendString.swift"; path = "Sources/Extensions/Data+AppendString.swift"; sourceTree = "<group>"; };
+		DBF72867B9702C96812565BD09ACA67E /* ServiceQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceQueue.swift; path = Sources/Service/ServiceQueue.swift; sourceTree = "<group>"; };
+		E56CC256ACA8B52228964B83326A80CB /* RequestStub.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestStub.swift; path = Sources/Mocking/RequestStub.swift; sourceTree = "<group>"; };
+		ED2C33CF294E59DD5DF4AE1D1EF9E986 /* Faro-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Faro-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10C9C5B353B1DC2A59315666D89CA45A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86D604B9BB7D65D1070F9A4B70C3E1F3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8483C6003D59A27796B004323AF94D9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73F358227FE33FC6FBBECE680251D8F2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08477E533B0E2BA6AB5936AF30989C0A /* Pods-ObjcTextInput */ = {
+			isa = PBXGroup;
+			children = (
+				8B6A7553A537B9FB14E33657CC3B73D7 /* Info.plist */,
+				124794E469E0D3266B620275C0678E09 /* Pods-ObjcTextInput.modulemap */,
+				0506F2183F5EC0320E428BDD75C6449B /* Pods-ObjcTextInput-acknowledgements.markdown */,
+				9EEB7B6F05D4B48F61BA5BB2643DF80C /* Pods-ObjcTextInput-acknowledgements.plist */,
+				394ED8743322D0400612073F39D55205 /* Pods-ObjcTextInput-dummy.m */,
+				97E9A7A04823768CA783F586DFD8DE93 /* Pods-ObjcTextInput-frameworks.sh */,
+				A9B0DAEE6C930B2F61B06C3D624D3D37 /* Pods-ObjcTextInput-resources.sh */,
+				41CF8F1777F492256D48013A4CAF0038 /* Pods-ObjcTextInput-umbrella.h */,
+				824E6AFDE6290A2F2913A8550A5B933B /* Pods-ObjcTextInput.debug.xcconfig */,
+				D50B73CB99FC694C110FA3E16594AC91 /* Pods-ObjcTextInput.release.xcconfig */,
+			);
+			name = "Pods-ObjcTextInput";
+			path = "Target Support Files/Pods-ObjcTextInput";
+			sourceTree = "<group>";
+		};
+		09999EDB477102943E856B091A365C2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				733E0808CC73156FA061FA7E4A90FAF3 /* Faro */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		23FFD87F5D965A5CA4B252D2C6E0533E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75BD76A7E086DD91D6B9BF012538E14E /* Faro.framework */,
+				8A3C8D6DA1B7CFE9137D18CC81097AE7 /* Pods_ObjcTextInput.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		733E0808CC73156FA061FA7E4A90FAF3 /* Faro */ = {
+			isa = PBXGroup;
+			children = (
+				15051777EBD122D7F4DE3B1246DAB606 /* Authorizable.swift */,
+				D790F89FAC28A24081A98FCA4A7D19AE /* BackendConfiguration.swift */,
+				D977BC00DFC57962E3179D9B9B06128F /* Call.swift */,
+				D4D9BBC1EA08B96DA0A0495EBF395649 /* Call+Stub.swift */,
+				D9C2A121A44DD76847B5305DFF7DE008 /* Data+AppendString.swift */,
+				29C31BC52A2489970777A9C469DCD329 /* FaroURLSession.swift */,
+				99C8CD660176649E4AB038E46142AF6A /* MultipartFile.swift */,
+				143303375B5DC3C24B1F63B5A0F2FDB2 /* ParameterEnum.swift */,
+				E56CC256ACA8B52228964B83326A80CB /* RequestStub.swift */,
+				1F16C4A7598A7448E70E6D902EC61F76 /* RetryableURLSession.swift */,
+				8018B386D6CF06BEEB18A71A5D248F4D /* Service.swift */,
+				4866A36FC51658748F2DF0D89F34ACE8 /* ServiceError.swift */,
+				4BCA6511951FBEE4DB868FCFA841E007 /* ServiceHandler.swift */,
+				DBF72867B9702C96812565BD09ACA67E /* ServiceQueue.swift */,
+				34771C3497699A3270D065B4E3A44C8D /* String+Stub.swift */,
+				43C04764EC365C89DD0802792B2B457B /* StubbedURLProtocol.swift */,
+				4D80E15B321FC23C66A880C8C44F6734 /* Updatable.swift */,
+				904C58430B77DAB18B9158DEBFC8AE3A /* URLComponentsSerialization.swift */,
+				FE3573AA88884E706D6E0A88D5DC7A5A /* Support Files */,
+			);
+			name = Faro;
+			path = Faro;
+			sourceTree = "<group>";
+		};
+		735A143D17E19905C8FF69A1E307D6A8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				08477E533B0E2BA6AB5936AF30989C0A /* Pods-ObjcTextInput */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				09999EDB477102943E856B091A365C2C /* Pods */,
+				23FFD87F5D965A5CA4B252D2C6E0533E /* Products */,
+				735A143D17E19905C8FF69A1E307D6A8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FE3573AA88884E706D6E0A88D5DC7A5A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				413995FEE4BE0264E1A6CFC7AF47C258 /* Faro.modulemap */,
+				4F4361E832AF4FFE6F6A4039D8A651B3 /* Faro.xcconfig */,
+				8A0EE4DEB9302A32B154C6BC840018B8 /* Faro-dummy.m */,
+				ED2C33CF294E59DD5DF4AE1D1EF9E986 /* Faro-prefix.pch */,
+				6F33544BD2E1FB74F32415631C709808 /* Faro-umbrella.h */,
+				5B9C1AD9E070A5569F30BD7338E5A08C /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Faro";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A6AA3E7CF748051418775A41B9F417C1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AF1224E19BF917142ED1AB887AE197F /* Faro-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C45A08F37E879EE8062E56CE0DD33AEB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ED25259E71315E0666CD6BC38E385D4 /* Pods-ObjcTextInput-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3510D7D95BED3C177CBDE96FA0203176 /* Faro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F63D4CA6C608FEBB2C94EC0DC724292 /* Build configuration list for PBXNativeTarget "Faro" */;
+			buildPhases = (
+				DB8D25EA6568898EE7BE55F179265E25 /* Sources */,
+				10C9C5B353B1DC2A59315666D89CA45A /* Frameworks */,
+				A6AA3E7CF748051418775A41B9F417C1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Faro;
+			productName = Faro;
+			productReference = 75BD76A7E086DD91D6B9BF012538E14E /* Faro.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5AB945B63D64BFA528CDA68245AAED96 /* Pods-ObjcTextInput */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F738C292E4D39A24B58CF97F7FD8D111 /* Build configuration list for PBXNativeTarget "Pods-ObjcTextInput" */;
+			buildPhases = (
+				2BB0ED679B65F2F76A3498F04BA08019 /* Sources */,
+				8483C6003D59A27796B004323AF94D9B /* Frameworks */,
+				C45A08F37E879EE8062E56CE0DD33AEB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B253BA0874097333206E3154B72C74C /* PBXTargetDependency */,
+			);
+			name = "Pods-ObjcTextInput";
+			productName = "Pods-ObjcTextInput";
+			productReference = 8A3C8D6DA1B7CFE9137D18CC81097AE7 /* Pods_ObjcTextInput.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 23FFD87F5D965A5CA4B252D2C6E0533E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3510D7D95BED3C177CBDE96FA0203176 /* Faro */,
+				5AB945B63D64BFA528CDA68245AAED96 /* Pods-ObjcTextInput */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BB0ED679B65F2F76A3498F04BA08019 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3424A2B34D66F73AFF78EFE6CC4C6232 /* Pods-ObjcTextInput-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB8D25EA6568898EE7BE55F179265E25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B105F954AD9AE1D28D3B66516AD27D36 /* Authorizable.swift in Sources */,
+				E3B85665A3032DBC67964DFFF751F62A /* BackendConfiguration.swift in Sources */,
+				B8407C77A7441212E7A2314927BEAFDC /* Call+Stub.swift in Sources */,
+				AAC9DF916FC13F31B30D21F7A4961886 /* Call.swift in Sources */,
+				9713F1E7F610708863FF7352ACD1F10A /* Data+AppendString.swift in Sources */,
+				F762B61A4389DD7AC9C9E64AD8492682 /* Faro-dummy.m in Sources */,
+				C8C233ECFCAB929320DC30DCC581083E /* FaroURLSession.swift in Sources */,
+				B290E85F0ED245359C42E9EBDDD802BC /* MultipartFile.swift in Sources */,
+				326130CEDDC00C2930A1A8022494D615 /* ParameterEnum.swift in Sources */,
+				C33EBB542808D148B9AFD9BDEB7CFA0B /* RequestStub.swift in Sources */,
+				328D32BB4710F3C580ABB06685BF2FD1 /* RetryableURLSession.swift in Sources */,
+				F798DEA0EDF3C7BF5E7132DA2B51DF60 /* Service.swift in Sources */,
+				034488545D38F350FE388B7174BA010D /* ServiceError.swift in Sources */,
+				47EA4AF4834320D416DA00E1F1AC600A /* ServiceHandler.swift in Sources */,
+				A686ED65D1E910E08C6F27C3EE24333A /* ServiceQueue.swift in Sources */,
+				EFF4DD1D60F4C2CF9BC5A3A09DC8CE00 /* String+Stub.swift in Sources */,
+				294C3A0B822A6C5464958BC9CA788182 /* StubbedURLProtocol.swift in Sources */,
+				5D3CDD06A349CE583DCC9670964EE1EB /* Updatable.swift in Sources */,
+				93F1CD0008790C7F28A82EE18FADA265 /* URLComponentsSerialization.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B253BA0874097333206E3154B72C74C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Faro;
+			target = 3510D7D95BED3C177CBDE96FA0203176 /* Faro */;
+			targetProxy = 773B7B6DA7956A1BCF2D43B709283AA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0E15340A5801A024BACEECCE2E29DC9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F4361E832AF4FFE6F6A4039D8A651B3 /* Faro.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Faro/Faro-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Faro/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Faro/Faro.modulemap";
+				PRODUCT_NAME = Faro;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1D23278938ADF334174C5BF2A4B6B1B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		43CA79AEFE0417EA178A1911CCD913D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D50B73CB99FC694C110FA3E16594AC91 /* Pods-ObjcTextInput.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ObjcTextInput/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ObjcTextInput/Pods-ObjcTextInput.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ObjcTextInput;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		995C3A53DEAA96B47E756185345E180D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D615B57DF91BE122E9B83EE11A9B5802 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F4361E832AF4FFE6F6A4039D8A651B3 /* Faro.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Faro/Faro-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Faro/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Faro/Faro.modulemap";
+				PRODUCT_NAME = Faro;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FBE5FD3A5B39135AE15706AA1BB511C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 824E6AFDE6290A2F2913A8550A5B933B /* Pods-ObjcTextInput.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ObjcTextInput/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ObjcTextInput/Pods-ObjcTextInput.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ObjcTextInput;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F63D4CA6C608FEBB2C94EC0DC724292 /* Build configuration list for PBXNativeTarget "Faro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D615B57DF91BE122E9B83EE11A9B5802 /* Debug */,
+				0E15340A5801A024BACEECCE2E29DC9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				995C3A53DEAA96B47E756185345E180D /* Debug */,
+				1D23278938ADF334174C5BF2A4B6B1B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F738C292E4D39A24B58CF97F7FD8D111 /* Build configuration list for PBXNativeTarget "Pods-ObjcTextInput" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBE5FD3A5B39135AE15706AA1BB511C5 /* Debug */,
+				43CA79AEFE0417EA178A1911CCD913D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

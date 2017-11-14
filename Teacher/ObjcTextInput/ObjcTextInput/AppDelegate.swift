@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Faro
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
