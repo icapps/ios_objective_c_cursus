@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LabelCollectionViewCell : UICollectionViewCell
-@property (nonatomic, weak) IBOutlet UILabel * label;
+-(void)configureWithString: (NSString *) labelText;
 @end

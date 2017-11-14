@@ -37,8 +37,7 @@
     
     LabelCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     NSString * cellText = [self.textArray objectAtIndex:indexPath.row];
-    cell.label.text = cellText;
-    
+    [cell configureWithString:cellText];
     return cell;
 }
 

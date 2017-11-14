@@ -8,11 +8,19 @@
 
 #import "LabelCollectionViewCell.h"
 
+@interface LabelCollectionViewCell ()
+@property (nonatomic, weak) IBOutlet UILabel * label;
+@end
+
 @implementation LabelCollectionViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+}
+
+- (void)configureWithString:(NSString *)labelText {
+    self.label.text = labelText;
 }
 
 @end
