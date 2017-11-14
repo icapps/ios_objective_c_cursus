@@ -8,5 +8,8 @@ target 'ObjcTextInput' do
 
   # Pods for ObjcTextInput
   pod 'Faro',      git: 'git@github.com:icapps/ios-faro.git', branch:'swift4'
+  target 'ObjcTextInputTests' do
+
+  end
 
 end

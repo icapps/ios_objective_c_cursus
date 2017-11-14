@@ -12,14 +12,17 @@
 		2AF1224E19BF917142ED1AB887AE197F /* Faro-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F33544BD2E1FB74F32415631C709808 /* Faro-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		326130CEDDC00C2930A1A8022494D615 /* ParameterEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143303375B5DC3C24B1F63B5A0F2FDB2 /* ParameterEnum.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		328D32BB4710F3C580ABB06685BF2FD1 /* RetryableURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F16C4A7598A7448E70E6D902EC61F76 /* RetryableURLSession.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3424A2B34D66F73AFF78EFE6CC4C6232 /* Pods-ObjcTextInput-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 394ED8743322D0400612073F39D55205 /* Pods-ObjcTextInput-dummy.m */; };
+		3424A2B34D66F73AFF78EFE6CC4C6232 /* Pods-ObjcTextInput-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B9E9EBB7144E04537E0AE7FC5E1069 /* Pods-ObjcTextInput-dummy.m */; };
 		47EA4AF4834320D416DA00E1F1AC600A /* ServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA6511951FBEE4DB868FCFA841E007 /* ServiceHandler.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4ED25259E71315E0666CD6BC38E385D4 /* Pods-ObjcTextInput-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41CF8F1777F492256D48013A4CAF0038 /* Pods-ObjcTextInput-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4ED25259E71315E0666CD6BC38E385D4 /* Pods-ObjcTextInput-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A41FC06A021B58D69EFB5A55583060E /* Pods-ObjcTextInput-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		589974BBA5BD39313F6BF32024369DC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		59B366E758256AC69E13E09E7BD7A76C /* Pods-ObjcTextInput-ObjcTextInputTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D6640C6DC7330B2C5FD05772490F28C4 /* Pods-ObjcTextInput-ObjcTextInputTests-dummy.m */; };
 		5D3CDD06A349CE583DCC9670964EE1EB /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D80E15B321FC23C66A880C8C44F6734 /* Updatable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		73F358227FE33FC6FBBECE680251D8F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		86D604B9BB7D65D1070F9A4B70C3E1F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		93F1CD0008790C7F28A82EE18FADA265 /* URLComponentsSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904C58430B77DAB18B9158DEBFC8AE3A /* URLComponentsSerialization.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9713F1E7F610708863FF7352ACD1F10A /* Data+AppendString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C2A121A44DD76847B5305DFF7DE008 /* Data+AppendString.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A14A2ED4FD95E99FAE70666B9DC5ACD4 /* Pods-ObjcTextInput-ObjcTextInputTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6000740DF8828335E9E412BC887400ED /* Pods-ObjcTextInput-ObjcTextInputTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A686ED65D1E910E08C6F27C3EE24333A /* ServiceQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF72867B9702C96812565BD09ACA67E /* ServiceQueue.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AAC9DF916FC13F31B30D21F7A4961886 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = D977BC00DFC57962E3179D9B9B06128F /* Call.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B105F954AD9AE1D28D3B66516AD27D36 /* Authorizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15051777EBD122D7F4DE3B1246DAB606 /* Authorizable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -41,47 +44,65 @@
 			remoteGlobalIDString = 3510D7D95BED3C177CBDE96FA0203176;
 			remoteInfo = Faro;
 		};
+		FEA8B890A876EAD2E2071D83113D4FC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3510D7D95BED3C177CBDE96FA0203176;
+			remoteInfo = Faro;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0506F2183F5EC0320E428BDD75C6449B /* Pods-ObjcTextInput-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ObjcTextInput-acknowledgements.markdown"; sourceTree = "<group>"; };
-		124794E469E0D3266B620275C0678E09 /* Pods-ObjcTextInput.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ObjcTextInput.modulemap"; sourceTree = "<group>"; };
 		143303375B5DC3C24B1F63B5A0F2FDB2 /* ParameterEnum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEnum.swift; path = Sources/Request/ParameterEnum.swift; sourceTree = "<group>"; };
 		15051777EBD122D7F4DE3B1246DAB606 /* Authorizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Authorizable.swift; path = Sources/Request/Authorizable.swift; sourceTree = "<group>"; };
 		1F16C4A7598A7448E70E6D902EC61F76 /* RetryableURLSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryableURLSession.swift; path = Sources/URLSession/RetryableURLSession.swift; sourceTree = "<group>"; };
+		26F4AD316A10664287A6B8E317F331C4 /* Pods-ObjcTextInput-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ObjcTextInput-acknowledgements.markdown"; sourceTree = "<group>"; };
 		29C31BC52A2489970777A9C469DCD329 /* FaroURLSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FaroURLSession.swift; path = Sources/URLSession/FaroURLSession.swift; sourceTree = "<group>"; };
+		33D599977A2BF300C08435B3347BBA07 /* Pods_ObjcTextInput_ObjcTextInputTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ObjcTextInput_ObjcTextInputTests.framework; path = "Pods-ObjcTextInput-ObjcTextInputTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34771C3497699A3270D065B4E3A44C8D /* String+Stub.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Stub.swift"; path = "Sources/Mocking/String+Stub.swift"; sourceTree = "<group>"; };
-		394ED8743322D0400612073F39D55205 /* Pods-ObjcTextInput-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ObjcTextInput-dummy.m"; sourceTree = "<group>"; };
+		371D11047AF6623A13AC2515D6DDACDC /* Pods-ObjcTextInput-ObjcTextInputTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTextInput-ObjcTextInputTests.release.xcconfig"; sourceTree = "<group>"; };
 		413995FEE4BE0264E1A6CFC7AF47C258 /* Faro.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Faro.modulemap; sourceTree = "<group>"; };
-		41CF8F1777F492256D48013A4CAF0038 /* Pods-ObjcTextInput-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ObjcTextInput-umbrella.h"; sourceTree = "<group>"; };
+		41DD6865274623502CED320BCEA7DD89 /* Pods_ObjcTextInput.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ObjcTextInput.framework; path = "Pods-ObjcTextInput.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C04764EC365C89DD0802792B2B457B /* StubbedURLProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubbedURLProtocol.swift; path = Sources/Mocking/StubbedURLProtocol.swift; sourceTree = "<group>"; };
 		4866A36FC51658748F2DF0D89F34ACE8 /* ServiceError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceError.swift; path = Sources/Error/ServiceError.swift; sourceTree = "<group>"; };
+		4B998E0D85A3B6E9A9AC42419C0B5DCA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BCA6511951FBEE4DB868FCFA841E007 /* ServiceHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceHandler.swift; path = Sources/Service/ServiceHandler.swift; sourceTree = "<group>"; };
 		4D80E15B321FC23C66A880C8C44F6734 /* Updatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Updatable.swift; path = Sources/Updateable/Updatable.swift; sourceTree = "<group>"; };
 		4F4361E832AF4FFE6F6A4039D8A651B3 /* Faro.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Faro.xcconfig; sourceTree = "<group>"; };
+		55D41D24BE860CFD5F64EEC57EE626F3 /* Pods-ObjcTextInput-ObjcTextInputTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTextInput-ObjcTextInputTests-frameworks.sh"; sourceTree = "<group>"; };
+		57F6A53CFF7D2431172EB518C57E0A6D /* Pods-ObjcTextInput-ObjcTextInputTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ObjcTextInput-ObjcTextInputTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		58F754780ADF1331AEC355487A29FBA7 /* Pods-ObjcTextInput.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTextInput.release.xcconfig"; sourceTree = "<group>"; };
 		5B9C1AD9E070A5569F30BD7338E5A08C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6000740DF8828335E9E412BC887400ED /* Pods-ObjcTextInput-ObjcTextInputTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ObjcTextInput-ObjcTextInputTests-umbrella.h"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		67538CDDB43F6761B680B74884B3AB29 /* Pods-ObjcTextInput-ObjcTextInputTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ObjcTextInput-ObjcTextInputTests.modulemap"; sourceTree = "<group>"; };
 		6F33544BD2E1FB74F32415631C709808 /* Faro-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Faro-umbrella.h"; sourceTree = "<group>"; };
-		75BD76A7E086DD91D6B9BF012538E14E /* Faro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Faro.framework; path = Faro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76B9E9EBB7144E04537E0AE7FC5E1069 /* Pods-ObjcTextInput-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ObjcTextInput-dummy.m"; sourceTree = "<group>"; };
 		8018B386D6CF06BEEB18A71A5D248F4D /* Service.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Service.swift; path = Sources/Service/Service.swift; sourceTree = "<group>"; };
-		824E6AFDE6290A2F2913A8550A5B933B /* Pods-ObjcTextInput.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTextInput.debug.xcconfig"; sourceTree = "<group>"; };
+		88B8A65FF8366B4B9D72D397BE385D68 /* Pods-ObjcTextInput-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTextInput-resources.sh"; sourceTree = "<group>"; };
 		8A0EE4DEB9302A32B154C6BC840018B8 /* Faro-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Faro-dummy.m"; sourceTree = "<group>"; };
-		8A3C8D6DA1B7CFE9137D18CC81097AE7 /* Pods_ObjcTextInput.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ObjcTextInput.framework; path = "Pods-ObjcTextInput.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B6A7553A537B9FB14E33657CC3B73D7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		904C58430B77DAB18B9158DEBFC8AE3A /* URLComponentsSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLComponentsSerialization.swift; path = Sources/Request/URLComponentsSerialization.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		97E9A7A04823768CA783F586DFD8DE93 /* Pods-ObjcTextInput-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTextInput-frameworks.sh"; sourceTree = "<group>"; };
 		99C8CD660176649E4AB038E46142AF6A /* MultipartFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFile.swift; path = Sources/Request/MultipartFile.swift; sourceTree = "<group>"; };
-		9EEB7B6F05D4B48F61BA5BB2643DF80C /* Pods-ObjcTextInput-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ObjcTextInput-acknowledgements.plist"; sourceTree = "<group>"; };
-		A9B0DAEE6C930B2F61B06C3D624D3D37 /* Pods-ObjcTextInput-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTextInput-resources.sh"; sourceTree = "<group>"; };
+		9A2E85B3A81E54EBEF924FF95E5EA761 /* Pods-ObjcTextInput-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ObjcTextInput-acknowledgements.plist"; sourceTree = "<group>"; };
+		9A41FC06A021B58D69EFB5A55583060E /* Pods-ObjcTextInput-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ObjcTextInput-umbrella.h"; sourceTree = "<group>"; };
+		A63D94EA7DAEFF4F698CA4F04323C5A6 /* Pods-ObjcTextInput-ObjcTextInputTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ObjcTextInput-ObjcTextInputTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AD12E0B01E248233C89BAF648CDB8CBB /* Pods-ObjcTextInput-ObjcTextInputTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTextInput-ObjcTextInputTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C340C2E6D9462172FED93FAA7BA2EE8B /* Pods-ObjcTextInput-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTextInput-frameworks.sh"; sourceTree = "<group>"; };
 		D4D9BBC1EA08B96DA0A0495EBF395649 /* Call+Stub.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Call+Stub.swift"; path = "Sources/Mocking/Call+Stub.swift"; sourceTree = "<group>"; };
-		D50B73CB99FC694C110FA3E16594AC91 /* Pods-ObjcTextInput.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTextInput.release.xcconfig"; sourceTree = "<group>"; };
+		D6640C6DC7330B2C5FD05772490F28C4 /* Pods-ObjcTextInput-ObjcTextInputTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ObjcTextInput-ObjcTextInputTests-dummy.m"; sourceTree = "<group>"; };
 		D790F89FAC28A24081A98FCA4A7D19AE /* BackendConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BackendConfiguration.swift; path = Sources/Request/BackendConfiguration.swift; sourceTree = "<group>"; };
 		D977BC00DFC57962E3179D9B9B06128F /* Call.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Call.swift; path = Sources/Request/Call.swift; sourceTree = "<group>"; };
 		D9C2A121A44DD76847B5305DFF7DE008 /* Data+AppendString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+AppendString.swift"; path = "Sources/Extensions/Data+AppendString.swift"; sourceTree = "<group>"; };
+		D9DFF397024A32134B1CAF26DB713430 /* Faro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Faro.framework; path = Faro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF72867B9702C96812565BD09ACA67E /* ServiceQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceQueue.swift; path = Sources/Service/ServiceQueue.swift; sourceTree = "<group>"; };
+		E19034B2797FEB7B0AEA0077D7EAA41D /* Pods-ObjcTextInput.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ObjcTextInput.modulemap"; sourceTree = "<group>"; };
 		E56CC256ACA8B52228964B83326A80CB /* RequestStub.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestStub.swift; path = Sources/Mocking/RequestStub.swift; sourceTree = "<group>"; };
+		E99E5D85F91ACA44172F6539A417DE61 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E99FCE18FBEAE995D84A5668CB706C13 /* Pods-ObjcTextInput.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTextInput.debug.xcconfig"; sourceTree = "<group>"; };
 		ED2C33CF294E59DD5DF4AE1D1EF9E986 /* Faro-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Faro-prefix.pch"; sourceTree = "<group>"; };
+		FAF658DAD568A51F0547B5F3A1A53E6F /* Pods-ObjcTextInput-ObjcTextInputTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTextInput-ObjcTextInputTests-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +111,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				86D604B9BB7D65D1070F9A4B70C3E1F3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6ED9D8FE2446038BF7B4086A34BD41B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				589974BBA5BD39313F6BF32024369DC3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,22 +133,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08477E533B0E2BA6AB5936AF30989C0A /* Pods-ObjcTextInput */ = {
+		065CF869F7C04A059ABF5D4783E6B46F /* Pods-ObjcTextInput-ObjcTextInputTests */ = {
 			isa = PBXGroup;
 			children = (
-				8B6A7553A537B9FB14E33657CC3B73D7 /* Info.plist */,
-				124794E469E0D3266B620275C0678E09 /* Pods-ObjcTextInput.modulemap */,
-				0506F2183F5EC0320E428BDD75C6449B /* Pods-ObjcTextInput-acknowledgements.markdown */,
-				9EEB7B6F05D4B48F61BA5BB2643DF80C /* Pods-ObjcTextInput-acknowledgements.plist */,
-				394ED8743322D0400612073F39D55205 /* Pods-ObjcTextInput-dummy.m */,
-				97E9A7A04823768CA783F586DFD8DE93 /* Pods-ObjcTextInput-frameworks.sh */,
-				A9B0DAEE6C930B2F61B06C3D624D3D37 /* Pods-ObjcTextInput-resources.sh */,
-				41CF8F1777F492256D48013A4CAF0038 /* Pods-ObjcTextInput-umbrella.h */,
-				824E6AFDE6290A2F2913A8550A5B933B /* Pods-ObjcTextInput.debug.xcconfig */,
-				D50B73CB99FC694C110FA3E16594AC91 /* Pods-ObjcTextInput.release.xcconfig */,
+				E99E5D85F91ACA44172F6539A417DE61 /* Info.plist */,
+				67538CDDB43F6761B680B74884B3AB29 /* Pods-ObjcTextInput-ObjcTextInputTests.modulemap */,
+				A63D94EA7DAEFF4F698CA4F04323C5A6 /* Pods-ObjcTextInput-ObjcTextInputTests-acknowledgements.markdown */,
+				57F6A53CFF7D2431172EB518C57E0A6D /* Pods-ObjcTextInput-ObjcTextInputTests-acknowledgements.plist */,
+				D6640C6DC7330B2C5FD05772490F28C4 /* Pods-ObjcTextInput-ObjcTextInputTests-dummy.m */,
+				55D41D24BE860CFD5F64EEC57EE626F3 /* Pods-ObjcTextInput-ObjcTextInputTests-frameworks.sh */,
+				FAF658DAD568A51F0547B5F3A1A53E6F /* Pods-ObjcTextInput-ObjcTextInputTests-resources.sh */,
+				6000740DF8828335E9E412BC887400ED /* Pods-ObjcTextInput-ObjcTextInputTests-umbrella.h */,
+				AD12E0B01E248233C89BAF648CDB8CBB /* Pods-ObjcTextInput-ObjcTextInputTests.debug.xcconfig */,
+				371D11047AF6623A13AC2515D6DDACDC /* Pods-ObjcTextInput-ObjcTextInputTests.release.xcconfig */,
 			);
-			name = "Pods-ObjcTextInput";
-			path = "Target Support Files/Pods-ObjcTextInput";
+			name = "Pods-ObjcTextInput-ObjcTextInputTests";
+			path = "Target Support Files/Pods-ObjcTextInput-ObjcTextInputTests";
 			sourceTree = "<group>";
 		};
 		09999EDB477102943E856B091A365C2C /* Pods */ = {
@@ -130,11 +159,12 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		23FFD87F5D965A5CA4B252D2C6E0533E /* Products */ = {
+		2B8F89B728A3185EF73D151D4B7650CD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				75BD76A7E086DD91D6B9BF012538E14E /* Faro.framework */,
-				8A3C8D6DA1B7CFE9137D18CC81097AE7 /* Pods_ObjcTextInput.framework */,
+				D9DFF397024A32134B1CAF26DB713430 /* Faro.framework */,
+				41DD6865274623502CED320BCEA7DD89 /* Pods_ObjcTextInput.framework */,
+				33D599977A2BF300C08435B3347BBA07 /* Pods_ObjcTextInput_ObjcTextInputTests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,23 +196,42 @@
 			path = Faro;
 			sourceTree = "<group>";
 		};
-		735A143D17E19905C8FF69A1E307D6A8 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				08477E533B0E2BA6AB5936AF30989C0A /* Pods-ObjcTextInput */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				09999EDB477102943E856B091A365C2C /* Pods */,
-				23FFD87F5D965A5CA4B252D2C6E0533E /* Products */,
-				735A143D17E19905C8FF69A1E307D6A8 /* Targets Support Files */,
+				2B8F89B728A3185EF73D151D4B7650CD /* Products */,
+				B4A9F68680DB1D9C9175AEACBE91BDCD /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		B4A9F68680DB1D9C9175AEACBE91BDCD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8EF88CD6369EF7DEDDF138A90CA9E23 /* Pods-ObjcTextInput */,
+				065CF869F7C04A059ABF5D4783E6B46F /* Pods-ObjcTextInput-ObjcTextInputTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B8EF88CD6369EF7DEDDF138A90CA9E23 /* Pods-ObjcTextInput */ = {
+			isa = PBXGroup;
+			children = (
+				4B998E0D85A3B6E9A9AC42419C0B5DCA /* Info.plist */,
+				E19034B2797FEB7B0AEA0077D7EAA41D /* Pods-ObjcTextInput.modulemap */,
+				26F4AD316A10664287A6B8E317F331C4 /* Pods-ObjcTextInput-acknowledgements.markdown */,
+				9A2E85B3A81E54EBEF924FF95E5EA761 /* Pods-ObjcTextInput-acknowledgements.plist */,
+				76B9E9EBB7144E04537E0AE7FC5E1069 /* Pods-ObjcTextInput-dummy.m */,
+				C340C2E6D9462172FED93FAA7BA2EE8B /* Pods-ObjcTextInput-frameworks.sh */,
+				88B8A65FF8366B4B9D72D397BE385D68 /* Pods-ObjcTextInput-resources.sh */,
+				9A41FC06A021B58D69EFB5A55583060E /* Pods-ObjcTextInput-umbrella.h */,
+				E99FCE18FBEAE995D84A5668CB706C13 /* Pods-ObjcTextInput.debug.xcconfig */,
+				58F754780ADF1331AEC355487A29FBA7 /* Pods-ObjcTextInput.release.xcconfig */,
+			);
+			name = "Pods-ObjcTextInput";
+			path = "Target Support Files/Pods-ObjcTextInput";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -234,6 +283,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E0F71A94AE65437DDFBBC27E1BFAA344 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A14A2ED4FD95E99FAE70666B9DC5ACD4 /* Pods-ObjcTextInput-ObjcTextInputTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -251,7 +308,7 @@
 			);
 			name = Faro;
 			productName = Faro;
-			productReference = 75BD76A7E086DD91D6B9BF012538E14E /* Faro.framework */;
+			productReference = D9DFF397024A32134B1CAF26DB713430 /* Faro.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		5AB945B63D64BFA528CDA68245AAED96 /* Pods-ObjcTextInput */ = {
@@ -269,7 +326,25 @@
 			);
 			name = "Pods-ObjcTextInput";
 			productName = "Pods-ObjcTextInput";
-			productReference = 8A3C8D6DA1B7CFE9137D18CC81097AE7 /* Pods_ObjcTextInput.framework */;
+			productReference = 41DD6865274623502CED320BCEA7DD89 /* Pods_ObjcTextInput.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5D7EBD82D6981B59458DF3977564D0A9 /* Pods-ObjcTextInput-ObjcTextInputTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0715AF382D20B8AC1DAB48122620AE77 /* Build configuration list for PBXNativeTarget "Pods-ObjcTextInput-ObjcTextInputTests" */;
+			buildPhases = (
+				3C872095D3E2524852A52072B500F10C /* Sources */,
+				6ED9D8FE2446038BF7B4086A34BD41B8 /* Frameworks */,
+				E0F71A94AE65437DDFBBC27E1BFAA344 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CA765A1DE3F79273EEEA6440424B79D /* PBXTargetDependency */,
+			);
+			name = "Pods-ObjcTextInput-ObjcTextInputTests";
+			productName = "Pods-ObjcTextInput-ObjcTextInputTests";
+			productReference = 33D599977A2BF300C08435B3347BBA07 /* Pods_ObjcTextInput_ObjcTextInputTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -289,12 +364,13 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 23FFD87F5D965A5CA4B252D2C6E0533E /* Products */;
+			productRefGroup = 2B8F89B728A3185EF73D151D4B7650CD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				3510D7D95BED3C177CBDE96FA0203176 /* Faro */,
 				5AB945B63D64BFA528CDA68245AAED96 /* Pods-ObjcTextInput */,
+				5D7EBD82D6981B59458DF3977564D0A9 /* Pods-ObjcTextInput-ObjcTextInputTests */,
 			);
 		};
 /* End PBXProject section */
@@ -305,6 +381,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3424A2B34D66F73AFF78EFE6CC4C6232 /* Pods-ObjcTextInput-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C872095D3E2524852A52072B500F10C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59B366E758256AC69E13E09E7BD7A76C /* Pods-ObjcTextInput-ObjcTextInputTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +421,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4CA765A1DE3F79273EEEA6440424B79D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Faro;
+			target = 3510D7D95BED3C177CBDE96FA0203176 /* Faro */;
+			targetProxy = FEA8B890A876EAD2E2071D83113D4FC9 /* PBXContainerItemProxy */;
+		};
 		9B253BA0874097333206E3154B72C74C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Faro;
@@ -433,9 +523,43 @@
 			};
 			name = Release;
 		};
+		23E06BEE8388506178F5F4568F93BF37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 371D11047AF6623A13AC2515D6DDACDC /* Pods-ObjcTextInput-ObjcTextInputTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ObjcTextInput-ObjcTextInputTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ObjcTextInput-ObjcTextInputTests/Pods-ObjcTextInput-ObjcTextInputTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ObjcTextInput_ObjcTextInputTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		43CA79AEFE0417EA178A1911CCD913D9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D50B73CB99FC694C110FA3E16594AC91 /* Pods-ObjcTextInput.release.xcconfig */;
+			baseConfigurationReference = 58F754780ADF1331AEC355487A29FBA7 /* Pods-ObjcTextInput.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -466,6 +590,40 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		7B75C00A5190C7C9474B26662CEEC77B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD12E0B01E248233C89BAF648CDB8CBB /* Pods-ObjcTextInput-ObjcTextInputTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ObjcTextInput-ObjcTextInputTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ObjcTextInput-ObjcTextInputTests/Pods-ObjcTextInput-ObjcTextInputTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ObjcTextInput_ObjcTextInputTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		995C3A53DEAA96B47E756185345E180D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -560,7 +718,7 @@
 		};
 		FBE5FD3A5B39135AE15706AA1BB511C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 824E6AFDE6290A2F2913A8550A5B933B /* Pods-ObjcTextInput.debug.xcconfig */;
+			baseConfigurationReference = E99FCE18FBEAE995D84A5668CB706C13 /* Pods-ObjcTextInput.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -595,6 +753,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0715AF382D20B8AC1DAB48122620AE77 /* Build configuration list for PBXNativeTarget "Pods-ObjcTextInput-ObjcTextInputTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B75C00A5190C7C9474B26662CEEC77B /* Debug */,
+				23E06BEE8388506178F5F4568F93BF37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0F63D4CA6C608FEBB2C94EC0DC724292 /* Build configuration list for PBXNativeTarget "Faro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
