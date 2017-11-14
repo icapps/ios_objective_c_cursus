@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,105 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TIIUIViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TcG-tP-I7F">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="557"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewLayout key="collectionViewLayout" id="adZ-Zc-rPN" customClass="MyCustomFlowLayout">
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="horizontalInset">
+                                            <integer key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="verticalInset">
+                                            <integer key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="maximumItemWidth">
+                                            <integer key="value" value="375"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="minimumItemWidth">
+                                            <integer key="value" value="375"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="itemHeight">
+                                            <integer key="value" value="50"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </collectionViewLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="nameCell" id="pnX-mE-ArI" customClass="TIILabelCollectionViewCell">
+                                        <rect key="frame" x="-1" y="0.0" width="377" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="377" height="47"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxi-7R-0os" customClass="TIILabel">
+                                                    <rect key="frame" x="0.0" y="13.5" width="377" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="lxi-7R-0os" firstAttribute="centerX" secondItem="pnX-mE-ArI" secondAttribute="centerX" id="b63-Ek-7TZ"/>
+                                            <constraint firstItem="lxi-7R-0os" firstAttribute="centerY" secondItem="pnX-mE-ArI" secondAttribute="centerY" id="fx0-nK-c2L"/>
+                                            <constraint firstItem="lxi-7R-0os" firstAttribute="width" secondItem="pnX-mE-ArI" secondAttribute="width" id="yau-V7-RkC"/>
+                                        </constraints>
+                                        <size key="customSize" width="377" height="47"/>
+                                        <connections>
+                                            <outlet property="textLabel" destination="lxi-7R-0os" id="djw-fj-anP"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="CqX-SS-lEI"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="TgJ-7q-42E"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Cd-64-y7z">
+                                <rect key="frame" x="0.0" y="587" width="375" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <segue destination="wzC-BI-QiZ" kind="presentation" identifier="addNameSegue" id="6zF-FN-UMw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Cd-64-y7z" firstAttribute="top" secondItem="TcG-tP-I7F" secondAttribute="bottom" constant="30" id="2zc-Z0-OLK"/>
+                            <constraint firstItem="6Cd-64-y7z" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Mdf-hR-lJF"/>
+                            <constraint firstItem="TcG-tP-I7F" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NaQ-Zj-hGy"/>
+                            <constraint firstItem="6Cd-64-y7z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Np5-e7-aiY"/>
+                            <constraint firstItem="TcG-tP-I7F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SPR-M6-Z9U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6Cd-64-y7z" secondAttribute="bottom" constant="50" id="U2T-Yw-drY"/>
+                            <constraint firstItem="TcG-tP-I7F" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="whM-Px-E0c"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="labelCollectionView" destination="TcG-tP-I7F" id="04e-3t-xdf"/>
+                        <segue destination="wzC-BI-QiZ" kind="showDetail" identifier="editNameSegue" id="y7e-Ib-7FX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+        </scene>
+        <!--TextField-->
+        <scene sceneID="Qvs-r2-vDn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TextField" id="wzC-BI-QiZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZVl-y8-OfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="33"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="6zF-FN-UMw"/>
+    </inferredMetricsTieBreakers>
 </document>
