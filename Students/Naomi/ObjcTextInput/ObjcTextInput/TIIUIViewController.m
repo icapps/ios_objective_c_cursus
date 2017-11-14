@@ -8,6 +8,7 @@
 
 #import "TIIUIViewController.h"
 #import "TIILabelCollectionViewCell.h"
+#import "ObjcTextInput-Swift.h"
 
 @interface TIIUIViewController ()
 
@@ -22,19 +23,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.names = [@[@"Ronald",@"Charlotte",@"Stijn"] mutableCopy];
+
+    TIISlideInCollectionViewLayout * layout = (TIISlideInCollectionViewLayout*) self.labelCollectionView.collectionViewLayout;
+    layout.translation = [[Translation alloc] initWithX:300 y:0];
 }
 
 - (void) editingValueFinished:(NSString*) value isNewName:(BOOL) isNew {
     [self dismissViewControllerAnimated:YES completion:^{
         if(isNew){
             [self.names addObject:value];
-            NSMutableArray *indexpaths = [NSMutableArray array];
-            [indexpaths addObject:[NSIndexPath indexPathForRow:self.names.count-1 inSection:0]];
-            [self.labelCollectionView insertItemsAtIndexPaths:indexpaths];
+            NSArray * lastIndexpaths = @[[NSIndexPath indexPathForRow:self.names.count-1 inSection:0]];
+            [self.labelCollectionView insertItemsAtIndexPaths:lastIndexpaths];
         } else {
             [self.names replaceObjectAtIndex:self.indexPathRow withObject:value];
-            [self.labelCollectionView reloadData];
-            NSLog(@"%@", value);
+            [self.labelCollectionView reloadItemsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.indexPathRow inSection:0]]];
         }
 
     }];
