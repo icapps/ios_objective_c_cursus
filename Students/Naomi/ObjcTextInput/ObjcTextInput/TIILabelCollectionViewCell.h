@@ -10,6 +10,6 @@
 
 @interface TIILabelCollectionViewCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+-(void) configureWithString: (NSString*) textValue;
 
 @end

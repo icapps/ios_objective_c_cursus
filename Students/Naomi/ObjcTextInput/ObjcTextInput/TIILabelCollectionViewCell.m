@@ -8,6 +8,16 @@
 
 #import "TIILabelCollectionViewCell.h"
 
+@interface TIILabelCollectionViewCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+
+@end
+
 @implementation TIILabelCollectionViewCell
+
+-(void)configureWithString:(NSString *)textValue {
+    self.textLabel.text = textValue;
+}
 
 @end

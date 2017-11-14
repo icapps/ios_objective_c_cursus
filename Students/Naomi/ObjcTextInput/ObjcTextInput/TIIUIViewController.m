@@ -63,7 +63,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     TIILabelCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"nameCell" forIndexPath:indexPath];
-    cell.textLabel.text = [self.names objectAtIndex:indexPath.row];
+    [cell configureWithString:[self.names objectAtIndex:indexPath.row]];
     return cell;
 }
 
