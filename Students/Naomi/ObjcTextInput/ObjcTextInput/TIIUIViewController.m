@@ -38,7 +38,6 @@ const NSInteger rowToInsertNewName = 1;
         if ([segue.identifier isEqualToString:@"editNameSegue"]){
             destinationViewController.currentName = self.names[self.indexPathRow];
         }
-        
     }
 }
 
