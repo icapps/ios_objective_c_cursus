@@ -16,9 +16,27 @@
 		C017017D1FB45F1200F41277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C017017B1FB45F1200F41277 /* Main.storyboard */; };
 		C017017F1FB45F1200F41277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C017017E1FB45F1200F41277 /* Assets.xcassets */; };
 		C01701821FB45F1200F41277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01701801FB45F1200F41277 /* LaunchScreen.storyboard */; };
+		C02651FB1FBB08B1003D4CEF /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02651FA1FBB08B1003D4CEF /* PostService.swift */; };
+		C02652011FBB1415003D4CEF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02652001FBB1415003D4CEF /* Post.swift */; };
+		C0B9EC7A1FBB15C5001168D5 /* ObjcTextInputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B9EC791FBB15C5001168D5 /* ObjcTextInputTests.swift */; };
+		C0B9EC811FBB15CE001168D5 /* PostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B9EC711FBB159C001168D5 /* PostTests.swift */; };
+		C587F04C306CAD752850D0AF /* Pods_ObjcTextInput_ObjcTextInputTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FF15F3A5B714098053B8D0 /* Pods_ObjcTextInput_ObjcTextInputTests.framework */; };
+		EEDB8667E4C72A0E11657F3C /* Pods_ObjcTextInput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6DA1CC13809AE7A909562E9 /* Pods_ObjcTextInput.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C0B9EC7C1FBB15C5001168D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C017016C1FB45F1200F41277 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C01701731FB45F1200F41277;
+			remoteInfo = ObjcTextInput;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0A2B026F0EA2D8A7283938FB /* Pods-ObjcTextInput-ObjcTextInputTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcTextInput-ObjcTextInputTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjcTextInput-ObjcTextInputTests/Pods-ObjcTextInput-ObjcTextInputTests.release.xcconfig"; sourceTree = "<group>"; };
+		268001BFD457FBD3278559BA /* Pods-ObjcTextInput.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcTextInput.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjcTextInput/Pods-ObjcTextInput.debug.xcconfig"; sourceTree = "<group>"; };
 		33674CB81FB5B17B0055AB23 /* TIILabelCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIILabelCollectionViewCell.h; sourceTree = "<group>"; };
 		33674CB91FB5B17B0055AB23 /* TIILabelCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIILabelCollectionViewCell.m; sourceTree = "<group>"; };
 		33A99F061FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIISlideInCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -28,12 +46,22 @@
 		33F484E51FB464EB0043E06E /* TextField.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextField.storyboard; sourceTree = "<group>"; };
 		33F484E71FB467A10043E06E /* TIITextFieldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIITextFieldViewController.h; sourceTree = "<group>"; };
 		33F484E81FB467A10043E06E /* TIITextFieldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIITextFieldViewController.m; sourceTree = "<group>"; };
+		83CD46171D8919E18EC523E5 /* Pods-ObjcTextInput-ObjcTextInputTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcTextInput-ObjcTextInputTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjcTextInput-ObjcTextInputTests/Pods-ObjcTextInput-ObjcTextInputTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C01701741FB45F1200F41277 /* ObjcTextInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcTextInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01701771FB45F1200F41277 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C017017C1FB45F1200F41277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C017017E1FB45F1200F41277 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C01701811FB45F1200F41277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C01701831FB45F1200F41277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C02651FA1FBB08B1003D4CEF /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		C02652001FBB1415003D4CEF /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		C0B9EC711FBB159C001168D5 /* PostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTests.swift; sourceTree = "<group>"; };
+		C0B9EC771FBB15C5001168D5 /* ObjcTextInputTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjcTextInputTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B9EC791FBB15C5001168D5 /* ObjcTextInputTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjcTextInputTests.swift; sourceTree = "<group>"; };
+		C0B9EC7B1FBB15C5001168D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBD4A5EA0EE58D68AB0E86D0 /* Pods-ObjcTextInput.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcTextInput.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjcTextInput/Pods-ObjcTextInput.release.xcconfig"; sourceTree = "<group>"; };
+		D5FF15F3A5B714098053B8D0 /* Pods_ObjcTextInput_ObjcTextInputTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjcTextInput_ObjcTextInputTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6DA1CC13809AE7A909562E9 /* Pods_ObjcTextInput.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjcTextInput.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +69,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEDB8667E4C72A0E11657F3C /* Pods_ObjcTextInput.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B9EC741FBB15C5001168D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C587F04C306CAD752850D0AF /* Pods_ObjcTextInput_ObjcTextInputTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F576C15BEB8A57A87ADF972 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6DA1CC13809AE7A909562E9 /* Pods_ObjcTextInput.framework */,
+				D5FF15F3A5B714098053B8D0 /* Pods_ObjcTextInput_ObjcTextInputTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B2B15A574CBC12714CDCA7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				268001BFD457FBD3278559BA /* Pods-ObjcTextInput.debug.xcconfig */,
+				CBD4A5EA0EE58D68AB0E86D0 /* Pods-ObjcTextInput.release.xcconfig */,
+				83CD46171D8919E18EC523E5 /* Pods-ObjcTextInput-ObjcTextInputTests.debug.xcconfig */,
+				0A2B026F0EA2D8A7283938FB /* Pods-ObjcTextInput-ObjcTextInputTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C017016B1FB45F1200F41277 = {
 			isa = PBXGroup;
 			children = (
 				C01701761FB45F1200F41277 /* ObjcTextInput */,
+				C0B9EC781FBB15C5001168D5 /* ObjcTextInputTests */,
 				C01701751FB45F1200F41277 /* Products */,
+				8B2B15A574CBC12714CDCA7E /* Pods */,
+				1F576C15BEB8A57A87ADF972 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				C01701741FB45F1200F41277 /* ObjcTextInput.app */,
+				C0B9EC771FBB15C5001168D5 /* ObjcTextInputTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,20 +129,65 @@
 			children = (
 				C01701771FB45F1200F41277 /* AppDelegate.swift */,
 				C017017B1FB45F1200F41277 /* Main.storyboard */,
+				C02651FE1FBB119F003D4CEF /* Modules */,
+				C017017E1FB45F1200F41277 /* Assets.xcassets */,
+				C01701801FB45F1200F41277 /* LaunchScreen.storyboard */,
+				C01701831FB45F1200F41277 /* Info.plist */,
+				33F484E11FB462110043E06E /* ObjcTextInput-Bridging-Header.h */,
+			);
+			path = ObjcTextInput;
+			sourceTree = "<group>";
+		};
+		C02651FC1FBB116C003D4CEF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C02651FA1FBB08B1003D4CEF /* PostService.swift */,
+				C02652001FBB1415003D4CEF /* Post.swift */,
+				C0B9EC711FBB159C001168D5 /* PostTests.swift */,
+			);
+			name = Service;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		C02651FD1FBB118C003D4CEF /* TextInput */ = {
+			isa = PBXGroup;
+			children = (
 				33A99F061FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift */,
 				33F484E21FB462110043E06E /* TIIUIViewController.h */,
 				33F484E31FB462110043E06E /* TIIUIViewController.m */,
 				33674CB81FB5B17B0055AB23 /* TIILabelCollectionViewCell.h */,
 				33674CB91FB5B17B0055AB23 /* TIILabelCollectionViewCell.m */,
-				C017017E1FB45F1200F41277 /* Assets.xcassets */,
-				C01701801FB45F1200F41277 /* LaunchScreen.storyboard */,
-				33F484E51FB464EB0043E06E /* TextField.storyboard */,
 				33F484E71FB467A10043E06E /* TIITextFieldViewController.h */,
 				33F484E81FB467A10043E06E /* TIITextFieldViewController.m */,
-				C01701831FB45F1200F41277 /* Info.plist */,
-				33F484E11FB462110043E06E /* ObjcTextInput-Bridging-Header.h */,
+				33F484E51FB464EB0043E06E /* TextField.storyboard */,
 			);
-			path = ObjcTextInput;
+			path = TextInput;
+			sourceTree = "<group>";
+		};
+		C02651FE1FBB119F003D4CEF /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C02651FF1FBB11C8003D4CEF /* Posts */,
+				C02651FD1FBB118C003D4CEF /* TextInput */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C02651FF1FBB11C8003D4CEF /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				C02651FC1FBB116C003D4CEF /* Service */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		C0B9EC781FBB15C5001168D5 /* ObjcTextInputTests */ = {
+			isa = PBXGroup;
+			children = (
+				C0B9EC791FBB15C5001168D5 /* ObjcTextInputTests.swift */,
+				C0B9EC7B1FBB15C5001168D5 /* Info.plist */,
+			);
+			path = ObjcTextInputTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01701861FB45F1200F41277 /* Build configuration list for PBXNativeTarget "ObjcTextInput" */;
 			buildPhases = (
+				7EF6755007FAD754C303C371 /* [CP] Check Pods Manifest.lock */,
 				C01701701FB45F1200F41277 /* Sources */,
 				C01701711FB45F1200F41277 /* Frameworks */,
 				C01701721FB45F1200F41277 /* Resources */,
+				E805F51482389CE90EBA4B60 /* [CP] Embed Pods Frameworks */,
+				F3D170965CD1B1CB75A47CA1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -103,6 +212,27 @@
 			productName = ObjcTextInput;
 			productReference = C01701741FB45F1200F41277 /* ObjcTextInput.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C0B9EC761FBB15C5001168D5 /* ObjcTextInputTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0B9EC7E1FBB15C5001168D5 /* Build configuration list for PBXNativeTarget "ObjcTextInputTests" */;
+			buildPhases = (
+				EAC9024B9D7CE9B26F4C4D63 /* [CP] Check Pods Manifest.lock */,
+				C0B9EC731FBB15C5001168D5 /* Sources */,
+				C0B9EC741FBB15C5001168D5 /* Frameworks */,
+				C0B9EC751FBB15C5001168D5 /* Resources */,
+				64955FEE6D41011779F2F6EF /* [CP] Embed Pods Frameworks */,
+				DACFCE11794C03C70BFA4AC6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0B9EC7D1FBB15C5001168D5 /* PBXTargetDependency */,
+			);
+			name = ObjcTextInputTests;
+			productName = ObjcTextInputTests;
+			productReference = C0B9EC771FBB15C5001168D5 /* ObjcTextInputTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -118,6 +248,11 @@
 						CreatedOnToolsVersion = 9.1;
 						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
+					};
+					C0B9EC761FBB15C5001168D5 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C01701731FB45F1200F41277;
 					};
 				};
 			};
@@ -135,6 +270,7 @@
 			projectRoot = "";
 			targets = (
 				C01701731FB45F1200F41277 /* ObjcTextInput */,
+				C0B9EC761FBB15C5001168D5 /* ObjcTextInputTests */,
 			);
 		};
 /* End PBXProject section */
@@ -151,7 +287,119 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0B9EC751FBB15C5001168D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		64955FEE6D41011779F2F6EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ObjcTextInput-ObjcTextInputTests/Pods-ObjcTextInput-ObjcTextInputTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Faro/Faro.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Faro.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjcTextInput-ObjcTextInputTests/Pods-ObjcTextInput-ObjcTextInputTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EF6755007FAD754C303C371 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ObjcTextInput-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DACFCE11794C03C70BFA4AC6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjcTextInput-ObjcTextInputTests/Pods-ObjcTextInput-ObjcTextInputTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E805F51482389CE90EBA4B60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ObjcTextInput/Pods-ObjcTextInput-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Faro/Faro.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Faro.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjcTextInput/Pods-ObjcTextInput-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAC9024B9D7CE9B26F4C4D63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ObjcTextInput-ObjcTextInputTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3D170965CD1B1CB75A47CA1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjcTextInput/Pods-ObjcTextInput-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C01701701FB45F1200F41277 /* Sources */ = {
@@ -159,14 +407,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				33F484E41FB462110043E06E /* TIIUIViewController.m in Sources */,
+				C02651FB1FBB08B1003D4CEF /* PostService.swift in Sources */,
 				C01701781FB45F1200F41277 /* AppDelegate.swift in Sources */,
 				33F484E91FB467A10043E06E /* TIITextFieldViewController.m in Sources */,
 				33A99F071FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift in Sources */,
+				C02652011FBB1415003D4CEF /* Post.swift in Sources */,
 				33674CBA1FB5B17B0055AB23 /* TIILabelCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0B9EC731FBB15C5001168D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B9EC7A1FBB15C5001168D5 /* ObjcTextInputTests.swift in Sources */,
+				C0B9EC811FBB15CE001168D5 /* PostTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C0B9EC7D1FBB15C5001168D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C01701731FB45F1200F41277 /* ObjcTextInput */;
+			targetProxy = C0B9EC7C1FBB15C5001168D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C017017B1FB45F1200F41277 /* Main.storyboard */ = {
@@ -297,6 +564,7 @@
 		};
 		C01701871FB45F1200F41277 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 268001BFD457FBD3278559BA /* Pods-ObjcTextInput.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -314,6 +582,7 @@
 		};
 		C01701881FB45F1200F41277 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBD4A5EA0EE58D68AB0E86D0 /* Pods-ObjcTextInput.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -325,6 +594,40 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "ObjcTextInput/ObjcTextInput-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C0B9EC7F1FBB15C5001168D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83CD46171D8919E18EC523E5 /* Pods-ObjcTextInput-ObjcTextInputTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NE8H673N63;
+				INFOPLIST_FILE = ObjcTextInputTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.icapps.ObjcTextInputTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ObjcTextInput.app/ObjcTextInput";
+			};
+			name = Debug;
+		};
+		C0B9EC801FBB15C5001168D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A2B026F0EA2D8A7283938FB /* Pods-ObjcTextInput-ObjcTextInputTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NE8H673N63;
+				INFOPLIST_FILE = ObjcTextInputTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.icapps.ObjcTextInputTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ObjcTextInput.app/ObjcTextInput";
 			};
 			name = Release;
 		};
@@ -345,6 +648,15 @@
 			buildConfigurations = (
 				C01701871FB45F1200F41277 /* Debug */,
 				C01701881FB45F1200F41277 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0B9EC7E1FBB15C5001168D5 /* Build configuration list for PBXNativeTarget "ObjcTextInputTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0B9EC7F1FBB15C5001168D5 /* Debug */,
+				C0B9EC801FBB15C5001168D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

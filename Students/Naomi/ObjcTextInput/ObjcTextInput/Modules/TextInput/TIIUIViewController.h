@@ -11,4 +11,6 @@
 
 @interface TIIUIViewController : UIViewController <EditingValueFinishedDelegate, UICollectionViewDataSource>
 
+@property (nonatomic) BOOL showPosts;
+
 @end

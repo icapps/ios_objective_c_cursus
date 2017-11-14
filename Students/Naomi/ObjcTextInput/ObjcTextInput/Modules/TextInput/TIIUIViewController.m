@@ -10,11 +10,14 @@
 #import "TIILabelCollectionViewCell.h"
 #import "ObjcTextInput-Swift.h"
 
+@import Faro;
+
 @interface TIIUIViewController ()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *labelCollectionView;
 @property (strong, nonatomic) NSMutableArray *names;
 @property (assign, nonatomic) NSInteger indexPathRow;
+@property (nonatomic, strong) PostService * service;
 
 @end
 
@@ -22,7 +25,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.names = [@[@"Ronald",@"Charlotte",@"Stijn"] mutableCopy];
+    self.service = [[PostService alloc] init];
+
+    if (!self.showPosts) {
+        self.names = [@[@"Ronald",@"Charlotte",@"Stijn"] mutableCopy];
+    } else {
+        __weak TIIUIViewController * weakSelf = self;
+        [self.service getPosts:^{
+            NSArray <Post *>* posts = weakSelf.service.posts;
+            NSMutableArray <NSString *> *mapped = [NSMutableArray arrayWithCapacity:[posts count]];
+            [posts enumerateObjectsUsingBlock:^(Post * post, NSUInteger idx, BOOL *stop) {
+//                NSString * string = [NSString stringWithFormat:@"%@", ];
+                [mapped addObject:post.title];
+            }];
+            weakSelf.names = mapped;
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                [weakSelf.labelCollectionView reloadData];
+            }];
+        }];
+    }
 
     TIISlideInCollectionViewLayout * layout = (TIISlideInCollectionViewLayout*) self.labelCollectionView.collectionViewLayout;
     layout.translation = [[Translation alloc] initWithX:300 y:0];
@@ -55,6 +76,9 @@
             destinationViewController.currentName = self.names[self.indexPathRow];
         }
 
+    } else if ([segue.destinationViewController isKindOfClass:[TIIUIViewController class]]) {
+        TIIUIViewController * destinationViewController = segue.destinationViewController;
+        destinationViewController.showPosts = YES;
     }
 }
 
