@@ -14,7 +14,6 @@ class TIISlideInCollectionViewLayout: UICollectionViewFlowLayout {
         at itemIndexPath: IndexPath
         ) -> UICollectionViewLayoutAttributes? {
         let attributes = super.initialLayoutAttributesForAppearingItem(at: itemIndexPath)
-        attributes?.bounds = CGRect(x: 0, y: 0, width: 250, height: 50)
         attributes?.alpha = 0.0
         attributes?.transform = CGAffineTransform(translationX: -200.0, y: 0)
 
