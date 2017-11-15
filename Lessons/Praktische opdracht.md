@@ -21,4 +21,5 @@ Voorbeeld https://todo.microsoft.com
 ##  Custom Animation voor plus button
 1. Als je op de plus drukt komt de modal voor de tekst input als een geest uit een fles
 2. Als je met je vinger naar beneden duwt duw je de modal interactief naar beneden
+
 Meer info op [Building Adaptive Apps with UIKit - WWDC 2014 - Videos - Apple Developer](https://developer.apple.com/videos/play/wwdc2014/216/)
