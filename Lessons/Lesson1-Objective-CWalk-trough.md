@@ -20,9 +20,9 @@ As a funny intro to Objective-C checkout the following website
 func ships(atPoint bombLocation: CGPoint, withDamage damaged: Bool)
 ```
 
-![](Lesson1Images/screenshot.png)
+![](Lesson1-Objective-CWalk-trough/screenshot.png)
 
-![](Lesson1Images/screenshot%201.png)
+![](Lesson1-Objective-CWalk-trough/screenshot%201.png)
 
 ### Pointers VS Value type
 Dit is in Swift veel beter gedefinieerd. In Objective-C mag alles!
@@ -66,7 +66,7 @@ NSArray <NSString *> * array = @[@"string"]
 Nu kan er in een array enkel een string **steken**
 - - - -
 ## Instantiation and a look back at pointers
-![](Lesson1Images/screenshot%202.png)
+![](Lesson1-Objective-CWalk-trough/screenshot%202.png)
 
 Zoals gezegd is objective-C een oude taal. Dus gaat zij er vanuit dat je alles begrijpt over memory.
 * Plaats maken voor iets = **alloceren**
@@ -92,9 +92,9 @@ Om iets aan te maken als `Foo` heb je dus twee stappen nodig
 
 ```
 
-![](Lesson1Images/screenshot%203.png)
+![](Lesson1-Objective-CWalk-trough/screenshot%203.png)
 
-![](Lesson1Images/screenshot%204.png)
+![](Lesson1-Objective-CWalk-trough/screenshot%204.png)
 
 Objective-C is veel dynamischer als Swift. Het heeft namelijk een runtime die bepaald hoe de code gaat werken. Dit is belangrijk voor Unit testing!!!
 - - - -
