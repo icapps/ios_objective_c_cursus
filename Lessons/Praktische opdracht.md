@@ -12,6 +12,9 @@ previous: [Lesson 7: Static, Const singletons and Blocks](bear://x-callback-url/
 ## Peak and Pop to reorder CollectionViewCells
 1. Force press cell popt de cell er uit
 2. cell kan je verplaatsen naar een andere plaats, reorderen van hierboven
+
+Voorbeeld https://todo.microsoft.com
+
 	* [iOS 9 UITableView – How to “Peek and Pop” in to table cells with 3D touch? | laurenz.io](http://laurenz.io/2015/10/ios-9-uitableview-how-to-peek-and-pop-in-to-table-cells-with-3d-touch/)
 ##  Custom Animation voor plus button
 1. Als je op de plus drukt komt de modal voor de tekst input als een geest uit een fles
