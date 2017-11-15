@@ -7,20 +7,17 @@
 //
 
 #import "TIILabelCollectionViewCell.h"
-#import "TIILabel.h"
 
-@interface TIILabelCollectionViewCell ()
-    @property (weak, nonatomic) IBOutlet TIILabel *textLabel;
+@interface TIILabelCollectionViewCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+
 @end
 
 @implementation TIILabelCollectionViewCell
 
--(void)awakeFromNib {
-    [super awakeFromNib];
-}
-
--(void)configureCell: (NSString *) text {
-    self.textLabel.text = text;
+-(void)configureWithString:(NSString *)textValue {
+    self.textLabel.text = textValue;
 }
 
 @end

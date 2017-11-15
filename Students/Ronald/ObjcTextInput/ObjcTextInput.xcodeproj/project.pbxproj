@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		33674CBA1FB5B17B0055AB23 /* TIILabelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33674CB91FB5B17B0055AB23 /* TIILabelCollectionViewCell.m */; };
+		33A99F071FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A99F061FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift */; };
 		33F484E41FB462110043E06E /* TIIUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F484E31FB462110043E06E /* TIIUIViewController.m */; };
 		33F484E61FB464EB0043E06E /* TextField.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F484E51FB464EB0043E06E /* TextField.storyboard */; };
 		33F484E91FB467A10043E06E /* TIITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F484E81FB467A10043E06E /* TIITextFieldViewController.m */; };
-		732563A51FB5FA2E00DCF201 /* MyCustomFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 732563A41FB5FA2E00DCF201 /* MyCustomFlowLayout.m */; };
-		73F022A51FBAE76800913C67 /* TIILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F022A41FBAE76800913C67 /* TIILabel.m */; };
 		C01701781FB45F1200F41277 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01701771FB45F1200F41277 /* AppDelegate.swift */; };
 		C017017D1FB45F1200F41277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C017017B1FB45F1200F41277 /* Main.storyboard */; };
 		C017017F1FB45F1200F41277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C017017E1FB45F1200F41277 /* Assets.xcassets */; };
@@ -22,16 +21,13 @@
 /* Begin PBXFileReference section */
 		33674CB81FB5B17B0055AB23 /* TIILabelCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIILabelCollectionViewCell.h; sourceTree = "<group>"; };
 		33674CB91FB5B17B0055AB23 /* TIILabelCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIILabelCollectionViewCell.m; sourceTree = "<group>"; };
+		33A99F061FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIISlideInCollectionViewLayout.swift; sourceTree = "<group>"; };
 		33F484E11FB462110043E06E /* ObjcTextInput-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjcTextInput-Bridging-Header.h"; sourceTree = "<group>"; };
 		33F484E21FB462110043E06E /* TIIUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIIUIViewController.h; sourceTree = "<group>"; };
 		33F484E31FB462110043E06E /* TIIUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIIUIViewController.m; sourceTree = "<group>"; };
 		33F484E51FB464EB0043E06E /* TextField.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextField.storyboard; sourceTree = "<group>"; };
 		33F484E71FB467A10043E06E /* TIITextFieldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIITextFieldViewController.h; sourceTree = "<group>"; };
 		33F484E81FB467A10043E06E /* TIITextFieldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIITextFieldViewController.m; sourceTree = "<group>"; };
-		732563A31FB5FA2E00DCF201 /* MyCustomFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCustomFlowLayout.h; sourceTree = "<group>"; };
-		732563A41FB5FA2E00DCF201 /* MyCustomFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCustomFlowLayout.m; sourceTree = "<group>"; };
-		73F022A31FBAE76800913C67 /* TIILabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIILabel.h; sourceTree = "<group>"; };
-		73F022A41FBAE76800913C67 /* TIILabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIILabel.m; sourceTree = "<group>"; };
 		C01701741FB45F1200F41277 /* ObjcTextInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcTextInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01701771FB45F1200F41277 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C017017C1FB45F1200F41277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,10 +68,9 @@
 			children = (
 				C01701771FB45F1200F41277 /* AppDelegate.swift */,
 				C017017B1FB45F1200F41277 /* Main.storyboard */,
+				33A99F061FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift */,
 				33F484E21FB462110043E06E /* TIIUIViewController.h */,
 				33F484E31FB462110043E06E /* TIIUIViewController.m */,
-				73F022A31FBAE76800913C67 /* TIILabel.h */,
-				73F022A41FBAE76800913C67 /* TIILabel.m */,
 				33674CB81FB5B17B0055AB23 /* TIILabelCollectionViewCell.h */,
 				33674CB91FB5B17B0055AB23 /* TIILabelCollectionViewCell.m */,
 				C017017E1FB45F1200F41277 /* Assets.xcassets */,
@@ -85,8 +80,6 @@
 				33F484E81FB467A10043E06E /* TIITextFieldViewController.m */,
 				C01701831FB45F1200F41277 /* Info.plist */,
 				33F484E11FB462110043E06E /* ObjcTextInput-Bridging-Header.h */,
-				732563A31FB5FA2E00DCF201 /* MyCustomFlowLayout.h */,
-				732563A41FB5FA2E00DCF201 /* MyCustomFlowLayout.m */,
 			);
 			path = ObjcTextInput;
 			sourceTree = "<group>";
@@ -168,9 +161,8 @@
 				33F484E41FB462110043E06E /* TIIUIViewController.m in Sources */,
 				C01701781FB45F1200F41277 /* AppDelegate.swift in Sources */,
 				33F484E91FB467A10043E06E /* TIITextFieldViewController.m in Sources */,
-				732563A51FB5FA2E00DCF201 /* MyCustomFlowLayout.m in Sources */,
+				33A99F071FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift in Sources */,
 				33674CBA1FB5B17B0055AB23 /* TIILabelCollectionViewCell.m in Sources */,
-				73F022A51FBAE76800913C67 /* TIILabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
