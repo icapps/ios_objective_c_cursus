@@ -8,7 +8,7 @@
 # WWDC video
 <a href='Lesson2-HowAppleTeachesObjective-C/session_405__modern_objectivec.pdf'>session_405__modern_objectivec.pdf</a>
 
-![](Lesson2-HowAppleTeachesObjective-C/Lesson2-HowAppleTeachesObjective-C/screenshot.png)
+![](Lesson2-HowAppleTeachesObjective-C/screenshot.png)
 
 ### In this notes a resume and comparison to swift is made.
 * Objective-C is full of pointers. Swift too?
@@ -26,7 +26,7 @@
 * ARC: Automatic Reference Counting
 - - - -
 ## Objective-C is full of pointers. Swift too?
-In the 
+In the
 ```swift
 var array = ["C", "d", "A"]
 func sort(_ array: [String]) -> [String] {
@@ -73,7 +73,7 @@ You can use them easily in switches:
 ```objective-c
  switch (style) {  case NSNumberFormatterNoStyle:			[foo do];
 			break; // Best altijd schrijven want is fall through!!!  case NSNumberFormatterSpellOutStyle:
-			[foo spell];		break; 
+			[foo spell];		break;
 }
 ```
 - - - -
@@ -166,7 +166,7 @@ Then you can do:
 class Foo {
 	let name: String
 	init(name: String) {
-		self.name = name	
+		self.name = name
 	}
 }
 ```
@@ -202,7 +202,7 @@ return return self
 ```
 - - - -
 ### Initialization happens at runtime -> no constant containers
-Because **Objective-C** is a dynamic language you cannot assign Objective-C classes to a global constant. This would mean the memory for this constant global would we allocated at compile time. The compiled code would contain the exact memory needed to execute the program. This is not so with dynamic languages. The memory is allocated at run time. 
+Because **Objective-C** is a dynamic language you cannot assign Objective-C classes to a global constant. This would mean the memory for this constant global would we allocated at compile time. The compiled code would contain the exact memory needed to execute the program. This is not so with dynamic languages. The memory is allocated at run time.
 So you can create in code an array reference, pointer, to a location that at runtime will be given memory space only when the pointer is used in a part of the code that is run. The memory needed to run a dynamic program is therefore smaller then a compile time program. Not all the memory is needed at startup.
 ```objective-c
 // Will give an error
@@ -239,12 +239,12 @@ Swift is no better at handling memory then Objective-C, it just has some languag
 ### How to make a memory leak?
 ```objective-c
 
-@interface Foo () 
+@interface Foo ()
 @property (nonatomic, strong) Service* service;
 @property (nonatomic, strong) Model* model;
 @end
 
-@implementation 
+@implementation
 
 - (void) load {
 	self.service = [[Service alloc] init];
@@ -258,12 +258,12 @@ Swift is no better at handling memory then Objective-C, it just has some languag
 ### How to fix it?
 
 ```objective-c
-@interface Foo () 
+@interface Foo ()
 @property (nonatomic, strong) Service* service;
 @property (nonatomic, strong) Model* model;
 @end
 
-@implementation 
+@implementation
 
 - (void) load {
 	self.service = [[Service alloc] init];
@@ -283,11 +283,10 @@ NSArray *people = CFBridgingRelease( ABAddressBookCopyPeopleWithName(addressBook
 ```
 
 # Summary
-• `@synthesize` by default• Forward declarations optional 
-• Fixed underlying type enums 
+• `@synthesize` by default• Forward declarations optional
+• Fixed underlying type enums
 • Literals and subscripting
-• Boxed expressions 
+• Boxed expressions
 - - - -
 > Previous: [Lesson 1- Objective-C Foundation via Mocks](bear://x-callback-url/open-note?id=73AB9243-8C60-44E0-B3AC-D604DC860C2A-1511-0000040097ECE2D8)  
 > Next: [Lesson 3: Protocols and Bridging](bear://x-callback-url/open-note?id=06F79FE9-4A48-46E5-BAB0-3D111EA5947F-74998-00003292A1E8E08B)  
-
