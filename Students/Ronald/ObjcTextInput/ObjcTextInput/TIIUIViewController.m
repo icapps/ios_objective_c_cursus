@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *labelCollectionView;
 @property (strong, nonatomic) NSMutableArray *names;
 @property (assign, nonatomic) NSInteger indexPathRow;
+@property UILongPressGestureRecognizer *longPress;
+@property (nonatomic) BOOL isEditable;
 
 @end
 
@@ -23,7 +25,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.names = [@[@"Ronald",@"Charlotte",@"Stijn"] mutableCopy];
-
+    self.longPress = [[UILongPressGestureRecognizer alloc]
+                         initWithTarget:self
+                         action:@selector(handleLongPress:)];
+    [self.labelCollectionView addGestureRecognizer:self.longPress];
+    self.isEditable = NO;
     TIISlideInCollectionViewLayout * layout = (TIISlideInCollectionViewLayout*) self.labelCollectionView.collectionViewLayout;
     layout.translation = [[Translation alloc] initWithX:300 y:0];
 }
@@ -58,6 +64,13 @@
     }
 }
 
+- (IBAction)editTableView:(UIBarButtonItem *)sender {
+    self.isEditable = !self.isEditable;
+    [self.labelCollectionView reloadData];
+}
+
+// MARK: - Collection View Datasource
+
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath  {
     self.indexPathRow = indexPath.row;
     [self performSegueWithIdentifier:@"editNameSegue" sender:self];
@@ -65,7 +78,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     TIILabelCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"nameCell" forIndexPath:indexPath];
-    [cell configureWithString:[self.names objectAtIndex:indexPath.row]];
+    [cell configureWithString:[self.names objectAtIndex:indexPath.row] andDragHandler:self.isEditable];
     return cell;
 }
 
@@ -73,5 +86,43 @@
     return self.names.count;
 }
 
+// MARK: - Collection View Delegate
+
+-(BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.isEditable) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+-(void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    NSString * selectedItem = [self.names objectAtIndex:sourceIndexPath.row];
+    [self.names removeObjectAtIndex:sourceIndexPath.row];
+    [self.names insertObject:selectedItem atIndex:destinationIndexPath.row];
+  
+    for (NSString * name in self.names) {
+        NSLog(@"Array: %@",name);
+    }
+}
+
+-(void)handleLongPress:(UILongPressGestureRecognizer*)sender{
+    switch(sender.state) {
+        case UIGestureRecognizerStateBegan:{
+            CGPoint selectedPoint = [sender locationInView: self.labelCollectionView];
+            NSIndexPath * selectedIndexPath = [self.labelCollectionView indexPathForItemAtPoint:selectedPoint];
+            [self.labelCollectionView beginInteractiveMovementForItemAtIndexPath:selectedIndexPath];
+        }
+        case UIGestureRecognizerStateChanged:
+            [self.labelCollectionView updateInteractiveMovementTargetPosition:[sender locationInView: self.labelCollectionView]];
+            break;
+        case UIGestureRecognizerStateEnded:
+            [self.labelCollectionView endInteractiveMovement];
+            break;
+        default:
+            [self.labelCollectionView cancelInteractiveMovement];
+            break;
+    }
+}
 
 @end
