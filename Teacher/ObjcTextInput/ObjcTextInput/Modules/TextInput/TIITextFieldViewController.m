@@ -7,6 +7,7 @@
 //
 
 #import "TIITextFieldViewController.h"
+#import "TIIUIViewController.h"
 
 @interface TIITextFieldViewController ()
 
@@ -19,6 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.valueTextField.text = self.currentName;
+
+    // GLobals
+
+    NSLog(@"%p", global);
+    NSLog(@"%i", globalValue);
 }
 - (IBAction)closeButtonPressed:(id)sender {
     if([self.valueTextField.text length] == 0) {
