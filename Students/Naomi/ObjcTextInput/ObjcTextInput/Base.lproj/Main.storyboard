@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,27 +26,38 @@
                                 <collectionViewLayout key="collectionViewLayout" id="1Gf-OQ-Lwp" customClass="TIISlideInCollectionViewLayout" customModule="ObjcTextInput" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="nameCell" id="pnX-mE-ArI" customClass="TIILabelCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxi-7R-0os">
-                                                    <rect key="frame" x="0.0" y="15" width="50" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxi-7R-0os">
+                                                    <rect key="frame" x="30" y="15" width="266" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reoderIcon" translatesAutoresizingMaskIntoConstraints="NO" id="k9g-bn-KB5">
+                                                    <rect key="frame" x="311" y="12" width="30" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="k9g-bn-KB5" secondAttribute="height" multiplier="37:32" id="v9X-Dh-gQa"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstItem="lxi-7R-0os" firstAttribute="centerX" secondItem="pnX-mE-ArI" secondAttribute="centerX" id="b63-Ek-7TZ"/>
+                                            <constraint firstItem="k9g-bn-KB5" firstAttribute="leading" secondItem="lxi-7R-0os" secondAttribute="trailing" constant="15" id="MKp-9t-Odn"/>
+                                            <constraint firstItem="k9g-bn-KB5" firstAttribute="width" secondItem="pnX-mE-ArI" secondAttribute="width" multiplier="0.08" id="Qx0-Fn-8sa"/>
+                                            <constraint firstItem="lxi-7R-0os" firstAttribute="leading" secondItem="pnX-mE-ArI" secondAttribute="leading" constant="30" id="RF2-Wv-Yzy"/>
+                                            <constraint firstAttribute="trailing" secondItem="k9g-bn-KB5" secondAttribute="trailing" multiplier="1.1" id="foI-t2-zSz"/>
                                             <constraint firstItem="lxi-7R-0os" firstAttribute="centerY" secondItem="pnX-mE-ArI" secondAttribute="centerY" id="fx0-nK-c2L"/>
-                                            <constraint firstItem="lxi-7R-0os" firstAttribute="width" secondItem="pnX-mE-ArI" secondAttribute="width" id="yau-V7-RkC"/>
+                                            <constraint firstItem="k9g-bn-KB5" firstAttribute="centerY" secondItem="pnX-mE-ArI" secondAttribute="centerY" id="vnW-cK-xor"/>
                                         </constraints>
+                                        <size key="customSize" width="375" height="50"/>
                                         <connections>
+                                            <outlet property="reorderIcon" destination="k9g-bn-KB5" id="cGj-n6-ca0"/>
                                             <outlet property="textLabel" destination="lxi-7R-0os" id="djw-fj-anP"/>
                                         </connections>
                                     </collectionViewCell>
@@ -75,6 +88,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="k5U-3C-VXO">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="edit" id="PvC-gC-znz">
+                            <connections>
+                                <action selector="editButtonClicked:" destination="BYZ-38-t0r" id="InB-R6-42e"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Fetch Posts" id="P7T-yp-4rA" userLabel="Fetch Posts">
                             <connections>
                                 <segue destination="9Nc-8i-1oc" kind="show" id="tNm-ZY-2f9"/>
@@ -179,6 +197,9 @@
             <point key="canvasLocation" x="-481" y="33"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="reoderIcon" width="32" height="32"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="y7e-Ib-7FX"/>
     </inferredMetricsTieBreakers>

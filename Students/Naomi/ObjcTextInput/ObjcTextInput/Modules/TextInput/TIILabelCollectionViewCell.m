@@ -10,14 +10,16 @@
 
 @interface TIILabelCollectionViewCell()
 
+@property (weak, nonatomic) IBOutlet UIImageView *reorderIcon;
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
 
 @end
 
 @implementation TIILabelCollectionViewCell
 
--(void)configureWithString:(NSString *)textValue {
+-(void)configureWithString:(NSString *)textValue isEditable:(BOOL) canEdit {
     self.textLabel.text = textValue;
+    [self.reorderIcon setHidden:!canEdit];
 }
 
 @end
