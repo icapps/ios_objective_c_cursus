@@ -16,10 +16,13 @@ As a funny intro to Objective-C checkout the following website
 * Externe links en referenties
 - - - -
 ## ​Functions (Methods)  structures
+```swift
 func ships(atPoint bombLocation: CGPoint, withDamage damaged: Bool)
-![](Lesson%201%20-%20Objective-C%20Walk-trough/Lesson%201%20-%20Objective-C%20Walk-trough/screenshot.png)
+```
 
-![](Lesson%201%20-%20Objective-C%20Walk-trough/Lesson%201%20-%20Objective-C%20Walk-trough/screenshot%201.png)
+![](Lesson1Images/screenshot.png)
+
+![](Lesson1Images/screenshot%201.png)
 
 ### Pointers VS Value type
 Dit is in Swift veel beter gedefinieerd. In Objective-C mag alles!
@@ -33,12 +36,14 @@ NSArray* array; //je moet het geen waarde geven
 array = @[@"string"];
 ```
 **In Objective-C kan je alles mixen in een array**
+
 ```objective-c
 NSArray* array; //je moet het geen waarde geven
 Foo* foo= [[Foo alloc] init];
 array = @[@"string", 12, foo]
 ```
 Dit zou in swift in een Any array kunnen:
+
 ```swift
 let array: [Any] = ["string", 12]
 ```
@@ -61,17 +66,18 @@ NSArray <NSString *> * array = @[@"string"]
 Nu kan er in een array enkel een string **steken**
 - - - -
 ## Instantiation and a look back at pointers
-![](Lesson%201%20-%20Objective-C%20Walk-trough/Lesson%201%20-%20Objective-C%20Walk-trough/screenshot%202.png)
+![](Lesson1Images/screenshot%202.png)
 
-Zoals gezegd is objective-C een oude taal. Dus gaat zij er vanuit dat je alles begrijpt over memory. 
+Zoals gezegd is objective-C een oude taal. Dus gaat zij er vanuit dat je alles begrijpt over memory.
 * Plaats maken voor iets = **alloceren**
 * Plaats opvullen met iets = **instantieren**
 **Ook is code opgedeeld in 2 files**
-* Hetgeen de buitenwereld moet weten om aan de code te kunnen 
+* Hetgeen de buitenwereld moet weten om aan de code te kunnen
 Om iets aan te maken als `Foo` heb je dus twee stappen nodig
+
 ```Objective-c
 // in een file met extensie .h
-@interface Foo: NSObject 
+@interface Foo: NSObject
 // alles hierin is publiek
 @end
 
@@ -83,11 +89,12 @@ Om iets aan te maken als `Foo` heb je dus twee stappen nodig
 @implementation Foo
 
 @end
+
 ```
 
-![](Lesson%201%20-%20Objective-C%20Walk-trough/Lesson%201%20-%20Objective-C%20Walk-trough/screenshot%203.png)
+![](Lesson1Images/screenshot%203.png)
 
-![](Lesson%201%20-%20Objective-C%20Walk-trough/Lesson%201%20-%20Objective-C%20Walk-trough/screenshot%204.png)
+![](Lesson1Images/screenshot%204.png)
 
 Objective-C is veel dynamischer als Swift. Het heeft namelijk een runtime die bepaald hoe de code gaat werken. Dit is belangrijk voor Unit testing!!!
 - - - -
@@ -95,16 +102,9 @@ Objective-C is veel dynamischer als Swift. Het heeft namelijk een runtime die be
 > **Swift** -> Hoe de code gaat ‘draaien’ wordt bepaald wanneer je compileert  
 > **Objective-C** -> de basis wordt opgezet maar tijdens het doorlopen van het programma kunnen er **alternatieve** paden aangebracht worden. Of anders de beslissing over welk code path er gevolgd zal worden wordt ad runtime gedaan.  
 - - - -
-## Externe links en referenties 
+## Externe links en referenties
 * [Objective-C Tutorial | Code School](https://www.codeschool.com/courses/try-objective-c)
 * [Videos | Ray Wenderlich](https://videos.raywenderlich.com)
 * [Objective-C for Swift Developers | Udacity](https://www.udacity.com/course/objective-c-for-swift-developers--ud1009)
 - - - -
 > Next: [Lesson 2: How Apple teaches Objective-C](bear://x-callback-url/open-note?id=E347B683-AFB4-480D-86C7-48FEC8A1E120-46707-000020F9D8F4893C)  
-
-
-
-
-
-
-
