@@ -1,0 +1,15 @@
+# Praktische opdracht
+previous: [Lesson 7: Static, Const singletons and Blocks](bear://x-callback-url/open-note?id=A88D4654-FAE2-4BC8-A160-701B091E6809-1174-000001250A06170C)
+- - - -
+## Reorder CollectionView
+1. Edit knop toont drag handlers
+2. Met de vingers een cell verplaatsen toont deze op de nieuwe plaats
+3. Op de nieuwe plaats wordt de cell met standaard animatie van insert toegevoegd
+## Drag and Drop CollectionView
+1. Andere application op iPad dragged een tekst
+2. Droppen op de app toont de text via een insert op de table view
+	* [Drag and Drop with Collection and Table View - WWDC 2017 - Videos - Apple Developer](https://developer.apple.com/videos/play/wwdc2017/223/)
+# Peak and Pop to reorder CollectionViewCells
+1. Force press cell popt de cell er uit
+2. cell kan je verplaatsen naar een andere plaats, reorderen van hierboven
+	* [iOS 9 UITableView – How to “Peek and Pop” in to table cells with 3D touch? | laurenz.io](http://laurenz.io/2015/10/ios-9-uitableview-how-to-peek-and-pop-in-to-table-cells-with-3d-touch/)
