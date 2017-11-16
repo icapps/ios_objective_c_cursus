@@ -67,6 +67,15 @@ int main(int argc, char * argv[]) {
         book.author = @"George Orwell";
         printf("%s is written by %s\n", [book.title UTF8String], [book.author UTF8String]);
 
+        NSString* (^getBarString)(NSString *, NSString*) = ^ NSString* (NSString* string, NSString* string2) {
+            return [NSString stringWithFormat:@"%@ --- %@", string, string2];
+        };
+            // gebruiken
+        NSString * bar = getBarString(@"bar", @"foo");
+
+        NSLog(@"%@", bar);
+
+
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
