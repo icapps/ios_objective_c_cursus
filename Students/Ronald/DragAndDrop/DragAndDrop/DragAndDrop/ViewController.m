@@ -7,12 +7,13 @@
 //
 
 #import "ViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *helloLabel;
 @property (weak, nonatomic) IBOutlet UITextField *helloTextField;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (strong, nonatomic) NSMutableArray<NSString *> * names;
 @end
 
 @implementation ViewController
@@ -22,6 +23,10 @@
     UIDragInteraction *dragInteraction = [[UIDragInteraction alloc] initWithDelegate:self];
     UIDropInteraction *dropInteraction = [[UIDropInteraction alloc] initWithDelegate:self];
     [self.helloLabel addInteraction:dragInteraction];
+    self.names = [@[@"Ronald", @"Charlotte", @"Stijn", @"Naomi"]mutableCopy];
+    [self.tableView setDelegate:self];
+    [self.tableView setDataSource:self];
+    [self.tableView setDragDelegate:self];
     [self.tableView setDropDelegate:self];
 }
 
@@ -31,19 +36,53 @@
     // Dispose of any resources that can be recreated.
 }
 
+// MARK: - Normal Drag Interaction
 
 - (nonnull NSArray<UIDragItem *> *)dragInteraction:(nonnull UIDragInteraction *)interaction itemsForBeginningSession:(nonnull id<UIDragSession>)session {
     NSItemProvider *itemProvider = [[NSItemProvider alloc] initWithObject:[self.helloLabel text]];
     UIDragItem *item = [[UIDragItem alloc] initWithItemProvider:itemProvider];
     [item setLocalObject:self.helloLabel];
     
-    /*
-     Returning a non-empty array, as shown here, enables dragging. You
-     can disable dragging by instead returning an empty array.
-     */
     NSMutableArray *array = [[NSMutableArray alloc] initWithObjects:item, nil];
     return array;
 }
+
+// MARK: - Table View Delegate
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"myCell";
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    [cell.textLabel setText:self.names[indexPath.row]];
+    return cell;
+}
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.names count];
+}
+
+// MARK: - Table Drag Interaction
+
+- (nonnull NSArray<UIDragItem *> *)tableView:(nonnull UITableView *)tableView itemsForBeginningDragSession:(nonnull id<UIDragSession>)session atIndexPath:(nonnull NSIndexPath *)indexPath {
+    return [self dragItemsForIndexPath:indexPath];
+}
+
+-(NSMutableArray<UIDragItem *> *) dragItemsForIndexPath:(NSIndexPath *) indexPath {
+    NSString * name = self.names[indexPath.row];
+    NSData * data = [name dataUsingEncoding:NSUTF8StringEncoding];
+
+    NSItemProvider *itemProvider = [[NSItemProvider alloc] init];
+    
+    [itemProvider registerDataRepresentationForTypeIdentifier: (NSString *) kUTTypePlainText visibility:NSItemProviderRepresentationVisibilityAll loadHandler:^ NSProgress * _Nullable(void (^ _Nonnull completionHandler)(NSData * _Nullable, NSError * _Nullable)) {
+        completionHandler(data, nil);
+        return nil;
+    }];
+    UIDragItem * dragItem = [[UIDragItem alloc] initWithItemProvider:itemProvider];
+    NSMutableArray<UIDragItem *> * dragItems = [[NSMutableArray alloc] init];
+    [dragItems addObject:dragItem];
+    return dragItems;
+}
+
+// MARK- Table Drop Interaction
 
 -(BOOL)tableView:(UITableView *)tableView canHandleDropSession:(id<UIDropSession>)session {
     return YES;
@@ -59,23 +98,22 @@
 }
 
 - (void)tableView:(nonnull UITableView *)tableView performDropWithCoordinator:(nonnull id<UITableViewDropCoordinator>)coordinator {
-    NSIndexPath *destinationIndexPath = coordinator.destinationIndexPath;
-    
-    [coordinator.session loadObjectsOfClass:NSString.self)  completion:<#^(NSArray<__kindof id<NSItemProviderReading>> * _Nonnull objects)completion#>]
-    
-    coordinator.session.loadObjects(ofClass: NSString.self) { items in
-        // Consume drag items.
-        let stringItems = items as! [String]
-        
-        var indexPaths = [IndexPath]()
-        for (index, item) in stringItems.enumerated() {
-            let indexPath = IndexPath(row: destinationIndexPath.row + index, section: destinationIndexPath.section)
-            self.model.addItem(item, at: indexPath.row)
-            indexPaths.append(indexPath)
-        }
-        
-        tableView.insertRows(at: indexPaths, with: .automatic)
+    NSIndexPath *destinationIndexPath = [[NSIndexPath alloc] init];
+    if (coordinator.destinationIndexPath) {
+        destinationIndexPath = coordinator.destinationIndexPath;
+    } else {
+        destinationIndexPath = [NSIndexPath indexPathForRow:[self.tableView numberOfRowsInSection:0] inSection:0];
     }
-}
+    
+    [coordinator.session loadObjectsOfClass:NSString.self completion:^(NSArray<NSString *> * items) {
+        NSMutableArray<NSIndexPath *> * indexPaths = [[NSMutableArray alloc] init];
+        [items enumerateObjectsUsingBlock:^(NSString * item, NSUInteger index, BOOL *stop) {
+            NSIndexPath * indexPath = [NSIndexPath indexPathForRow:destinationIndexPath.row + index inSection:destinationIndexPath.section];
+            [self.names insertObject:item atIndex:indexPath.row];
+            [indexPaths addObject:indexPath];
+        }];
+        [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+    }];
+    }
 
 @end

@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UIDragInteractionDelegate, UIDropInteractionDelegate, UITableViewDropDelegate>
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIDragInteractionDelegate, UIDropInteractionDelegate, UITableViewDropDelegate, UITableViewDragDelegate>
 
-
+-(NSMutableArray<UIDragItem *> *) dragItemsForIndexPath:(NSIndexPath *) indexPath;
 @end
 
