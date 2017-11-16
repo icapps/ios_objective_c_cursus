@@ -6,7 +6,7 @@ Next: [Lesson 7: Static, Const singletons and Blocks](bear://x-callback-url/open
 * Dive into setters and getters
 * Categories
 	* Verschil met protocol extensions
-* Overrides 
+* Overrides
 * For statement
 ### Setters en getters override
 ```objective-c
@@ -78,7 +78,7 @@ Dus dit is hoe het werkt. Waarom je het zou gebruiken kan je merken als je de ca
 ### Hoe verschilt category van swift extension
 * Een extension in swift kan geen methoden overschrijven van de class. In swift kan dit wel.
 * Category op Int of NSString zijn niet mogelijk, extensions wel
-* Category is een header en een implementation file. Extension is enkel een implementatie. 
+* Category is een header en een implementation file. Extension is enkel een implementatie.
 * Een protocol extension is eigenlijk een Category want zij bevat een header, het protocol, en de extension, de implementatie
 ```swift
 protocol Proto {
@@ -105,7 +105,7 @@ Dit wordt in objective-c
 ## Overrides
 In objective-c kan je alles overriden van de super class. Dus alle gedrag van Foundation/cocoa kan je aanpassen, niets is final.
 - - - -
-##Hoe gebruik je een for statement
+## Hoe gebruik je een for statement
 ```objective-c
  for (NSInteger i = 0; i< array.count; i++) {
         NSLog(@"%@", array[i]);

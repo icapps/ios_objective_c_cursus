@@ -1,4 +1,4 @@
-# Lesson 5: Bridging Objectiv-C  <-> Swift
+# Lesson 5: Bridging Objective-C  <-> Swift
 > Previous:  [Lesson 4: Mapping, filtering, reduce, sort…](bear://x-callback-url/open-note?id=E7068AAC-C318-4475-8EB7-C44574EF845F-1071-00000EABCC3CD0F8)  
 > Next: [Lesson 6: Overrides and Magic with categories](bear://x-callback-url/open-note?id=F768EBFA-53BC-4C89-B29B-35E862EA0D8C-2441-000003A6DA13F743)  
 - - - -
