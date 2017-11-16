@@ -17,6 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    if (self.itemIndex) {
+        self.textField.text = self.originalText;
+    }
+    
+    [self.textField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
