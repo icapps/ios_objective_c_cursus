@@ -28,4 +28,5 @@ Meer info op [Building Adaptive Apps with UIKit - WWDC 2014 - Videos - Apple Dev
 
 Explore the wonders of a truely dynamic language that Objective-C is. Try to make a property with @dynamic.
 
-More info: http://theocacao.com/document.page/516 
+More info: http://theocacao.com/document.page/516
+And example code : https://gist.github.com/mdippery/651966

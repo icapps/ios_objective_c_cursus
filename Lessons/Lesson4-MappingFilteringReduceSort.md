@@ -65,7 +65,7 @@ But you can do it in code.
 ```
 - - - -
 ## QUEUE
-You have GCD. Grand central dispatch. This is a relatively complex API in `C` . You can also use `NSOperation` 
+You have GCD. Grand central dispatch. This is a relatively complex API in `C` . You can also use `NSOperation`
 ### GCD
 [Dispatch Queue Apple Documentation](https://developer.apple.com/library/content/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationQueues/OperationQueues.html)
 #### Back to main
@@ -82,8 +82,10 @@ You have GCD. Grand central dispatch. This is a relatively complex API in `C` . 
        });
 ```
 ### NSOperation
-![](Lesson4-MappingFilteringReduceSort/Lesson4-MappingFilteringReduceSort/NSOperation%20dependent%20ques.png)
+![](Lesson4-MappingFilteringReduceSort/NSOperation%20dependent%20ques.png)
+
 [Operation - Foundation | Apple Developer Documentation](https://developer.apple.com/reference/foundation/operation)
+
 #### Back to main
 ```objective-c
 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
@@ -95,26 +97,26 @@ You have GCD. Grand central dispatch. This is a relatively complex API in `C` . 
 ```objective-c
 NSOperationQueue * backgroundQUEUE [[NSOperationQueue alloc] init];
 [backgroundQUEUE setName: @"Background QUEUE"];
-NSBlockOperation * backgroundOperation = [[NSBlockOperation alloc] init]; 
+NSBlockOperation * backgroundOperation = [[NSBlockOperation alloc] init];
 [backgroundOperation addExecutionBlock: {
 	// Perform background operation.
 }];
 [backgroundQUEUE addOperation: backgroundOperation];
 [backgroundQUEUE start];
-``` 
+```
 #### Extra: Dependencies
 You can use a `NSBlockOperation` to do something like promises in other languages.
 [addDependency(_:) - Operation | Apple Developer Documentation](https://developer.apple.com/reference/foundation/operation/1412859-adddependency)
 ```objective-c
-NSBlockOperation * backgroundOperation = [[NSBlockOperation alloc] init]; 
+NSBlockOperation * backgroundOperation = [[NSBlockOperation alloc] init];
 [backgroundOperation addExecutionBlock: {
 	NSLog(@"Operation 1 done");
 }];
-NSBlockOperation * backgroundOperation2 = [[NSBlockOperation alloc] init]; 
+NSBlockOperation * backgroundOperation2 = [[NSBlockOperation alloc] init];
 [backgroundOperation2 addExecutionBlock: {
 		NSLog(@"Operation 3 done");
 }];
-NSBlockOperation * finalOperation = [[NSBlockOperation alloc] init]; 
+NSBlockOperation * finalOperation = [[NSBlockOperation alloc] init];
 [background setName: @"Final"];
 [background addExecutionBlock: {
 		NSLog(@"Operation 3 done");
