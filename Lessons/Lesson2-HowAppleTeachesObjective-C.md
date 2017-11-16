@@ -19,7 +19,7 @@
 	* No type
 * Properties
 	* Syntesize
-	* Core Data syntesize
+	* Core Data syntesize - Dynamic
 * Literals: Shorthand notation for stuff you use all the time.
 * Initializers
 * Static global constants and Objective-C Objects
@@ -204,6 +204,7 @@ return return self
 ### Initialization happens at runtime -> no constant containers
 Because **Objective-C** is a dynamic language you cannot assign Objective-C classes to a global constant. This would mean the memory for this constant global would we allocated at compile time. The compiled code would contain the exact memory needed to execute the program. This is not so with dynamic languages. The memory is allocated at run time.
 So you can create in code an array reference, pointer, to a location that at runtime will be given memory space only when the pointer is used in a part of the code that is run. The memory needed to run a dynamic program is therefore smaller then a compile time program. Not all the memory is needed at startup.
+
 ```objective-c
 // Will give an error
 static NSArray const * const thePlanets = @[  @"Mercury", @"Venus", @"Earth",  @"Mars", @"Jupiter", @"Saturn",  @"Uranus", @"Neptune"];

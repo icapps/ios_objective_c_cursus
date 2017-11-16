@@ -23,3 +23,9 @@ Voorbeeld https://todo.microsoft.com
 2. Als je met je vinger naar beneden duwt duw je de modal interactief naar beneden
 
 Meer info op [Building Adaptive Apps with UIKit - WWDC 2014 - Videos - Apple Developer](https://developer.apple.com/videos/play/wwdc2014/216/)
+
+## EXTRA
+
+Explore the wonders of a truely dynamic language that Objective-C is. Try to make a property with @dynamic.
+
+More info: http://theocacao.com/document.page/516 
