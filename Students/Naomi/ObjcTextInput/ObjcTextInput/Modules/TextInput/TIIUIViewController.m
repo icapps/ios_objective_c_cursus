@@ -18,7 +18,7 @@
 @property (strong, nonatomic) NSMutableArray *names;
 @property (assign, nonatomic) NSInteger indexPathRow;
 @property (nonatomic, strong) PostService * service;
-@property (nonatomic, strong) id previewingContext;
+@property (nonatomic, strong) id previewContext;
 @property (nonatomic) BOOL canEdit;
 
 @end
@@ -31,12 +31,12 @@
     self.canEdit = NO;
 
     UIPasteConfiguration * config = [[UIPasteConfiguration alloc]init];
-//    UIPasteConfiguration * config =  [[UIPasteConfiguration alloc] initWithAcceptableTypeIdentifiers: [NSString.self]];
     self.view.pasteConfiguration = config;
 
-//    if([self isForceTouchAvailable]) {
-//        [self registerForPreviewingWithDelegate:self sourceView: self.view];
-//    }
+    if([self isForceTouchAvailable]) {
+        self.previewContext = [self registerForPreviewingWithDelegate:self sourceView:self.labelCollectionView];
+    }
+
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
     [self.labelCollectionView addGestureRecognizer:longPress];
 
@@ -61,9 +61,53 @@
     layout.translation = [[Translation alloc] initWithX:300 y:0];
 }
 
--(void)pasteItemProviders:(NSArray<NSItemProvider *> *)itemProviders {
-    NSLog(@"%@", itemProviders);
+#pragma mark - Peek and Pop
+
+- (nullable UIViewController *)previewingContext:(nonnull id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location{
+    if ([self.presentedViewController isKindOfClass:[TIIUIViewController class]]) {
+        return nil;
+    }
+    NSIndexPath *path = [self.labelCollectionView indexPathForItemAtPoint:location];
+    if (path) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"TextField" bundle:nil];
+
+        TIITextFieldViewController *previewController = [storyboard instantiateViewControllerWithIdentifier:@"TIITextFieldViewController"];
+        self.indexPathRow = path.row;
+        previewController.delegate = self;
+        previewController.currentName = self.names[path.row];
+        return previewController;
+    }
+    return nil;
 }
+
+- (void)previewingContext:(id )previewingContext commitViewController: (UIViewController *)viewControllerToCommit {
+
+    [self presentViewController:viewControllerToCommit animated:YES completion:nil];
+}
+
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    [super traitCollectionDidChange:previousTraitCollection];
+    if ([self isForceTouchAvailable]) {
+        if (!self.previewContext) {
+            self.previewContext = [self registerForPreviewingWithDelegate:self sourceView:self.view];
+        }
+    } else {
+        if (self.previewContext) {
+            [self unregisterForPreviewingWithContext:self.previewContext];
+            self.previewContext = nil;
+        }
+    }
+}
+
+- (BOOL)isForceTouchAvailable {
+    BOOL isForceTouchAvailable = NO;
+    if ([self.traitCollection respondsToSelector:@selector(forceTouchCapability)]) {
+        isForceTouchAvailable = self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable;
+    }
+    return isForceTouchAvailable;
+}
+
+#pragma mark - Edit methods
 
 - (IBAction)editButtonClicked:(id)sender {
     [self toggleEditMode];
@@ -71,6 +115,7 @@
 
 -(void)handleLongPress:(UILongPressGestureRecognizer *)gesture
 {
+    if(self.canEdit){
     switch(gesture.state) {
         case UIGestureRecognizerStateBegan: {
             CGPoint cellPosition = [gesture locationInView:self.labelCollectionView];
@@ -92,6 +137,7 @@
             [self.labelCollectionView cancelInteractiveMovement];
             [self toggleEditMode];
     }
+    }
 }
 
 -(void)toggleEditMode {
@@ -109,40 +155,6 @@
     [self.names insertObject:temp atIndex:destinationIndexPath.row];
 }
 
-//- (UIViewController *)previewingContext:(id )previewingContext viewControllerForLocation:(CGPoint)location{
-//    if ([self.presentedViewController isKindOfClass:[TIIUIViewController class]]) {
-//        return nil;
-//    }
-//    CGPoint cellPostion = [self.labelCollectionView convertPoint:location fromView:self.view];
-//    NSIndexPath *path = [self.labelCollectionView indexPathForItemAtPoint:cellPostion];
-//
-//    if (path) {
-//
-//        TIILabelCollectionViewCell *collectionviewCell = [self.labelCollectionView cellForItemAtIndexPath:path];
-//
-//        // get your UIStoryboard
-//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MyStoryboard" bundle:nil];
-//
-//        // set the view controller by initializing it form the storyboard
-//        WebViewController *previewController = [storyboard instantiateViewControllerWithIdentifier:@"MyWebView"];
-//
-//        // if you want to transport date use your custom "detailItem" function like this:
-//        previewController.detailItem = [self.data objectAtIndex:path.row];
-//
-//        previewingContext.sourceRect = [self.view convertRect:tableCell.frame fromView:self.tableView];
-//        return previewController;
-//    }
-//    return nil;
-//}
-
-- (BOOL)isForceTouchAvailable {
-    BOOL isForceTouchAvailable = NO;
-    if ([self.traitCollection respondsToSelector:@selector(forceTouchCapability)]) {
-        isForceTouchAvailable = self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable;
-    }
-    return isForceTouchAvailable;
-}
-
 - (void) editingValueFinished:(NSString*) value isNewName:(BOOL) isNew {
     [self dismissViewControllerAnimated:YES completion:^{
         if(isNew){
@@ -157,6 +169,7 @@
     }];
 }
 
+#pragma mark - Collectionview methods
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
 

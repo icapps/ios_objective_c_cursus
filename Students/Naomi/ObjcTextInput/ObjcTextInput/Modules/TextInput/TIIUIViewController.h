@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TIITextFieldViewController.h"
 
-@interface TIIUIViewController : UIViewController <EditingValueFinishedDelegate, UICollectionViewDataSource > //UIViewControllerPreviewingDelegate 3D touch
+@interface TIIUIViewController : UIViewController <EditingValueFinishedDelegate, UICollectionViewDataSource, UIViewControllerPreviewingDelegate>
 
 @property (nonatomic) BOOL showPosts;
 

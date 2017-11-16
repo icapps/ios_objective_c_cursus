@@ -45,7 +45,7 @@
 }
 
 -(BOOL)tableView:(UITableView *)tableView canHandleDropSession:(id<UIDropSession>)session {
-    return YES;//[self tableView:self.dragAndDropTableview canHandleDropSession:session];
+    return YES;
 }
 
 -(BOOL) canHandleSession:(id<UIDropSession>) session {
