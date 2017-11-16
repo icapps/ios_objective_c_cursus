@@ -29,6 +29,11 @@
     [super viewDidLoad];
     self.service = [[PostService alloc] init];
     self.canEdit = NO;
+
+    UIPasteConfiguration * config = [[UIPasteConfiguration alloc]init];
+//    UIPasteConfiguration * config =  [[UIPasteConfiguration alloc] initWithAcceptableTypeIdentifiers: [NSString.self]];
+    self.view.pasteConfiguration = config;
+
 //    if([self isForceTouchAvailable]) {
 //        [self registerForPreviewingWithDelegate:self sourceView: self.view];
 //    }
@@ -55,6 +60,11 @@
     TIISlideInCollectionViewLayout * layout = (TIISlideInCollectionViewLayout*) self.labelCollectionView.collectionViewLayout;
     layout.translation = [[Translation alloc] initWithX:300 y:0];
 }
+
+-(void)pasteItemProviders:(NSArray<NSItemProvider *> *)itemProviders {
+    NSLog(@"%@", itemProviders);
+}
+
 - (IBAction)editButtonClicked:(id)sender {
     [self toggleEditMode];
 }
@@ -149,6 +159,7 @@
 
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     return CGSizeMake(width, 50);
 }
