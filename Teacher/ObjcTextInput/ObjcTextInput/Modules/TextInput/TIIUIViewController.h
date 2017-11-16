@@ -8,13 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "TIITextFieldViewController.h"
-#import "ObjcTextInput-Swift.h"
-
 
 static int const globalValue = 10;
 static int const * const global = &globalValue;
 
-//static Post const * const globalPost = [[Post alloc] init];
 
 @interface TIIUIViewController : UIViewController <EditingValueFinishedDelegate, UICollectionViewDataSource>
 

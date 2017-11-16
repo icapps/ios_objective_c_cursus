@@ -22,6 +22,7 @@
 
 @property (nonatomic, weak) id<EditingValueFinishedDelegate> editingDelegate;
 
+- (void) itsTimeToDismiss;
 @end
 
 

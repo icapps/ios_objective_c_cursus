@@ -13,6 +13,14 @@ class GenieAnimator: UIPercentDrivenInteractiveTransition, UIViewControllerAnima
 
     private var interactive = true
     private var presenting = false
+    fileprivate let dismiss: () -> Void
+    fileprivate let present: () -> Void
+
+   @objc init(dismiss: @escaping () -> Void, present: @escaping () -> Void) {
+        self.dismiss = dismiss
+        self.present = present
+        super.init()
+    }
 
     @objc func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 2.0
@@ -84,4 +92,83 @@ class GenieAnimator: UIPercentDrivenInteractiveTransition, UIViewControllerAnima
         return self
     }
 
+}
+
+extension GenieAnimator: UIGestureRecognizerDelegate {
+
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        guard let panGesture = gestureRecognizer as? UIPanGestureRecognizer else {
+            return true
+        }
+        handleOffstagePan(pan: panGesture)
+        return true
+    }
+    func handleOnstagePan(pan: UIPanGestureRecognizer){
+        // how much distance have we panned in reference to the parent view?
+        let translation = pan.translation(in: pan.view!)
+
+        // do some math to translate this to a percentage based value
+        let d =  translation.x / pan.view!.bounds.size.width * 0.5
+
+        // now lets deal with different states that the gesture recognizer sends
+        switch (pan.state) {
+
+        case UIGestureRecognizerState.began:
+            // set our interactive flag to true
+            self.interactive = true
+
+            // trigger the start of the transition
+            self.present()
+            break
+
+        case UIGestureRecognizerState.changed:
+
+            // update progress of the transition
+            self.update(d)
+            break
+
+        default: // .Ended, .Cancelled, .Failed ...
+
+            // return flag to false and finish the transition
+            self.interactive = false
+            if(d > 0.2){
+                // threshold crossed: finish
+                self.finish()
+            }
+            else {
+                // threshold not met: cancel
+                self.cancel()
+            }
+        }
+    }
+
+    // pretty much the same as 'handleOnstagePan' except
+    // we're panning from right to left
+    // perfoming our exitSegeue to start the transition
+    func handleOffstagePan(pan: UIPanGestureRecognizer){
+
+        let translation = pan.translation(in: pan.view!)
+        let d =  translation.x / pan.view!.bounds.width * -0.5
+
+        switch (pan.state) {
+
+        case UIGestureRecognizerState.began:
+            self.interactive = true
+            self.dismiss()
+            break
+
+        case UIGestureRecognizerState.changed:
+            self.update(d)
+            break
+
+        default: // .Ended, .Cancelled, .Failed ...
+            self.interactive = false
+            if(d > 0.1){
+                self.finish()
+            }
+            else {
+                self.cancel()
+            }
+        }
+    }
 }

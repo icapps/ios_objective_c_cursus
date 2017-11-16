@@ -9,6 +9,7 @@
 #import "TIIUIViewController.h"
 #import "TIILabelCollectionViewCell.h"
 #import "Post+Post_Service.h"
+#import "ObjcTextInput-Swift.h"
 
 @import Faro;
 
@@ -18,6 +19,7 @@
 @property (strong, nonatomic) NSMutableArray *names;
 @property (assign, nonatomic) NSInteger indexPathRow;
 @property (nonatomic, strong) PostService * service;
+@property (nonatomic, strong) TIITextFieldViewController * textFieldViewController;
 
 @end
 
@@ -127,11 +129,11 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.destinationViewController isKindOfClass:[TIITextFieldViewController class]]) {
-        TIITextFieldViewController * destinationViewController = segue.destinationViewController;
-        destinationViewController.editingDelegate = self;
-        destinationViewController.transitioningDelegate = self;
+        self.textFieldViewController = segue.destinationViewController;
+         self.textFieldViewController.editingDelegate = self;
+         self.textFieldViewController.transitioningDelegate = self;
       if ([segue.identifier isEqualToString:@"editNameSegue"]){
-            destinationViewController.currentName = self.names[self.indexPathRow];
+             self.textFieldViewController.currentName = self.names[self.indexPathRow];
         }
 
     } else if ([segue.destinationViewController isKindOfClass:[TIIUIViewController class]]) {
@@ -158,11 +160,21 @@
 #pragma mark: - UIViewControllerTransitioningDelegate
 
 -(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
-    return [[GenieAnimator alloc] init];
-}
--(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
-    return [[GenieAnimator alloc] init];
+    __weak TIIUIViewController * weakSelf = self;
+    return [[GenieAnimator alloc] initWithDismiss:^{
+        [weakSelf.textFieldViewController itsTimeToDismiss];
+    } present:^{
+        [weakSelf performSegueWithIdentifier:@"addNameSegue" sender:self];
+    }];
 }
 
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    __weak TIIUIViewController * weakSelf = self;
+    return [[GenieAnimator alloc] initWithDismiss:^{
+        [weakSelf.textFieldViewController itsTimeToDismiss];
+    } present:^{
+        [weakSelf performSegueWithIdentifier:@"addNameSegue" sender:self];
+    }];
+}
 
 @end

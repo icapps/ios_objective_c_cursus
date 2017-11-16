@@ -44,10 +44,12 @@
                         <viewLayoutGuide key="safeArea" id="T8i-CR-eH0"/>
                     </view>
                     <connections>
+                        <outlet property="panGesture" destination="EaL-eR-vW5" id="gGp-Jy-4fL"/>
                         <outlet property="valueTextField" destination="Dyh-cb-yf2" id="f15-MT-1YA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16I-Dn-Psg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="EaL-eR-vW5"/>
             </objects>
             <point key="canvasLocation" x="-38" y="4"/>
         </scene>
