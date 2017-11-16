@@ -16,6 +16,7 @@
 		C017017D1FB45F1200F41277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C017017B1FB45F1200F41277 /* Main.storyboard */; };
 		C017017F1FB45F1200F41277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C017017E1FB45F1200F41277 /* Assets.xcassets */; };
 		C01701821FB45F1200F41277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01701801FB45F1200F41277 /* LaunchScreen.storyboard */; };
+		C03C16871FBDC77400B7CB77 /* GenieAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03C16861FBDC77400B7CB77 /* GenieAnimator.swift */; };
 		C03EAB7F1FBC77C400139C9E /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EAB7A1FBC77C400139C9E /* PostService.swift */; };
 		C03EAB801FBC77C400139C9E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EAB7B1FBC77C400139C9E /* Post.swift */; };
 		C03EAB821FBC77C400139C9E /* Post+Post_Service.m in Sources */ = {isa = PBXBuildFile; fileRef = C03EAB7D1FBC77C400139C9E /* Post+Post_Service.m */; };
@@ -54,6 +55,7 @@
 		C017017E1FB45F1200F41277 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C01701811FB45F1200F41277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C01701831FB45F1200F41277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C03C16861FBDC77400B7CB77 /* GenieAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GenieAnimator.swift; path = ObjcTextInput/Modules/TextInput/GenieAnimator.swift; sourceTree = SOURCE_ROOT; };
 		C03EAB7A1FBC77C400139C9E /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostService.swift; path = ObjcTextInput/Modules/Posts/Service/PostService.swift; sourceTree = SOURCE_ROOT; };
 		C03EAB7B1FBC77C400139C9E /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = ObjcTextInput/Modules/Posts/Service/Post.swift; sourceTree = SOURCE_ROOT; };
 		C03EAB7C1FBC77C400139C9E /* PostTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostTests.swift; path = ObjcTextInput/Modules/Posts/Service/PostTests.swift; sourceTree = SOURCE_ROOT; };
@@ -149,6 +151,7 @@
 				C03EAB7D1FBC77C400139C9E /* Post+Post_Service.m */,
 				C03EAB7A1FBC77C400139C9E /* PostService.swift */,
 				C03EAB7C1FBC77C400139C9E /* PostTests.swift */,
+				C03C16861FBDC77400B7CB77 /* GenieAnimator.swift */,
 			);
 			name = Service;
 			path = "New Group";
@@ -411,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C03C16871FBDC77400B7CB77 /* GenieAnimator.swift in Sources */,
 				33F484E41FB462110043E06E /* TIIUIViewController.m in Sources */,
 				C03EAB7F1FBC77C400139C9E /* PostService.swift in Sources */,
 				C01701781FB45F1200F41277 /* AppDelegate.swift in Sources */,

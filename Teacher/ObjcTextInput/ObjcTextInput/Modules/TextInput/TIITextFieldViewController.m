@@ -8,6 +8,7 @@
 
 #import "TIITextFieldViewController.h"
 #import "TIIUIViewController.h"
+#import "ObjcTextInput-Swift.h"
 
 @interface TIITextFieldViewController ()
 
@@ -31,7 +32,7 @@
         self.valueTextField.layer.borderColor=[[UIColor redColor]CGColor];
         self.valueTextField.layer.borderWidth= 1.0;
     } else {
-        [self.delegate editingValueFinished:self.valueTextField.text isNewName:([self.currentName length] == 0? YES : NO)];
+        [self.editingDelegate editingValueFinished:self.valueTextField.text isNewName:([self.currentName length] == 0? YES : NO)];
         }
 }
 

@@ -12,16 +12,24 @@
 
 @import Faro;
 
-@interface TIIUIViewController ()
+@interface TIIUIViewController () <EditingValueFinishedDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *labelCollectionView;
 @property (strong, nonatomic) NSMutableArray *names;
 @property (assign, nonatomic) NSInteger indexPathRow;
 @property (nonatomic, strong) PostService * service;
+@property (nonatomic, strong) GenieAnimator * animator;
 
 @end
 
 @implementation TIIUIViewController
+
+-(GenieAnimator *)animator {
+    if (_animator == nil) {
+        _animator = [[GenieAnimator alloc] init];
+    }
+    return _animator;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -128,7 +136,8 @@
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.destinationViewController isKindOfClass:[TIITextFieldViewController class]]) {
         TIITextFieldViewController * destinationViewController = segue.destinationViewController;
-        destinationViewController.delegate = self;
+        destinationViewController.editingDelegate = self;
+        destinationViewController.transitioningDelegate = self.animator;
       if ([segue.identifier isEqualToString:@"editNameSegue"]){
             destinationViewController.currentName = self.names[self.indexPathRow];
         }
