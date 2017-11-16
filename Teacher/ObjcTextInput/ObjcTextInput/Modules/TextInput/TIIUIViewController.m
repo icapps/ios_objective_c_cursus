@@ -12,24 +12,16 @@
 
 @import Faro;
 
-@interface TIIUIViewController () <EditingValueFinishedDelegate>
+@interface TIIUIViewController () <EditingValueFinishedDelegate, UIViewControllerTransitioningDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *labelCollectionView;
 @property (strong, nonatomic) NSMutableArray *names;
 @property (assign, nonatomic) NSInteger indexPathRow;
 @property (nonatomic, strong) PostService * service;
-@property (nonatomic, strong) GenieAnimator * animator;
 
 @end
 
 @implementation TIIUIViewController
-
--(GenieAnimator *)animator {
-    if (_animator == nil) {
-        _animator = [[GenieAnimator alloc] init];
-    }
-    return _animator;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -137,7 +129,7 @@
     if ([segue.destinationViewController isKindOfClass:[TIITextFieldViewController class]]) {
         TIITextFieldViewController * destinationViewController = segue.destinationViewController;
         destinationViewController.editingDelegate = self;
-        destinationViewController.transitioningDelegate = self.animator;
+        destinationViewController.transitioningDelegate = self;
       if ([segue.identifier isEqualToString:@"editNameSegue"]){
             destinationViewController.currentName = self.names[self.indexPathRow];
         }
@@ -161,6 +153,15 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.names.count;
+}
+
+#pragma mark: - UIViewControllerTransitioningDelegate
+
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    return [[GenieAnimator alloc] init];
+}
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    return [[GenieAnimator alloc] init];
 }
 
 

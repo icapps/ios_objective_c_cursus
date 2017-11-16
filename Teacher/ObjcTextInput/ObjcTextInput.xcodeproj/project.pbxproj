@@ -151,7 +151,6 @@
 				C03EAB7D1FBC77C400139C9E /* Post+Post_Service.m */,
 				C03EAB7A1FBC77C400139C9E /* PostService.swift */,
 				C03EAB7C1FBC77C400139C9E /* PostTests.swift */,
-				C03C16861FBDC77400B7CB77 /* GenieAnimator.swift */,
 			);
 			name = Service;
 			path = "New Group";
@@ -160,6 +159,7 @@
 		C02651FD1FBB118C003D4CEF /* TextInput */ = {
 			isa = PBXGroup;
 			children = (
+				C03C16861FBDC77400B7CB77 /* GenieAnimator.swift */,
 				33A99F061FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift */,
 				33F484E21FB462110043E06E /* TIIUIViewController.h */,
 				33F484E31FB462110043E06E /* TIIUIViewController.m */,
