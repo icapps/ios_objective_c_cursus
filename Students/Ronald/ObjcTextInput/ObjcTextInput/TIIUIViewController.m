@@ -18,6 +18,8 @@
 @property UILongPressGestureRecognizer *longPress;
 @property (nonatomic) BOOL isEditable;
 
+@property (nonatomic, strong) id previewingContext;
+
 @end
 
 @implementation TIIUIViewController
@@ -32,6 +34,10 @@
     self.isEditable = NO;
     TIISlideInCollectionViewLayout * layout = (TIISlideInCollectionViewLayout*) self.labelCollectionView.collectionViewLayout;
     layout.translation = [[Translation alloc] initWithX:300 y:0];
+    
+    if ([self isForceTouchAvailable]) {
+        self.previewingContext = [self registerForPreviewingWithDelegate:self sourceView:self.labelCollectionView];
+    }
 }
 
 - (void) editingValueFinished:(NSString*) value isNewName:(BOOL) isNew {
@@ -86,7 +92,7 @@
     return self.names.count;
 }
 
-// MARK: - Collection View Delegate
+#pragma mark - Collection View Delegate
 
 -(BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath {
     if (self.isEditable) {
@@ -125,4 +131,57 @@
     }
 }
 
+#pragma mark - Peek and Pop
+
+- (BOOL)isForceTouchAvailable {
+    BOOL isForceTouchAvailable = NO;
+    if ([self.traitCollection respondsToSelector:@selector(forceTouchCapability)]) {
+        isForceTouchAvailable = self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable;
+    }
+    return isForceTouchAvailable;
+}
+
+- (void)previewingContext:(nonnull id<UIViewControllerPreviewing>)previewingContext commitViewController:(nonnull UIViewController *)viewControllerToCommit {
+    [self presentViewController:viewControllerToCommit animated:YES completion:nil];
+}
+
+- (nullable UIViewController *)previewingContext:(nonnull id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location {
+    // check if we're not already displaying a preview controller
+    if ([self.presentedViewController isKindOfClass:[UIViewController class]]) {
+        return nil;
+    }
+    
+    NSIndexPath * selectedIndexPath = [self.labelCollectionView indexPathForItemAtPoint:location];
+    
+    if (selectedIndexPath) {
+        UICollectionViewCell *cell = [self.labelCollectionView cellForItemAtIndexPath:selectedIndexPath];
+        
+        // get your UIStoryboard
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"TextField" bundle:nil];
+        
+        // set the view controller by initializing it form the storyboard
+        TIITextFieldViewController *previewController = [storyboard instantiateViewControllerWithIdentifier:@"TIITextFieldViewController"];
+    
+        previewController.currentName = [self.names objectAtIndex:selectedIndexPath.row];
+        previewController.delegate = self;
+        self.indexPathRow = selectedIndexPath.row;
+        previewingContext.sourceRect = cell.frame;
+        return previewController;
+    }
+    return nil;
+}
+
+-(void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    [super traitCollectionDidChange:previousTraitCollection];
+    if ([self isForceTouchAvailable]) {
+        if (!self.previewingContext) {
+            self.previewingContext = [self registerForPreviewingWithDelegate:self sourceView:self.labelCollectionView];
+        }
+    } else {
+        if (self.previewingContext) {
+            [self unregisterForPreviewingWithContext:self.previewingContext];
+            self.previewingContext = nil;
+        }
+    }
+}
 @end

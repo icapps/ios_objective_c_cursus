@@ -12,6 +12,7 @@
 		33F484E41FB462110043E06E /* TIIUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F484E31FB462110043E06E /* TIIUIViewController.m */; };
 		33F484E61FB464EB0043E06E /* TextField.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F484E51FB464EB0043E06E /* TextField.storyboard */; };
 		33F484E91FB467A10043E06E /* TIITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F484E81FB467A10043E06E /* TIITextFieldViewController.m */; };
+		734842811FBDD7F000FE7614 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7348427F1FBDD7F000FE7614 /* DetailViewController.m */; };
 		C01701781FB45F1200F41277 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01701771FB45F1200F41277 /* AppDelegate.swift */; };
 		C017017D1FB45F1200F41277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C017017B1FB45F1200F41277 /* Main.storyboard */; };
 		C017017F1FB45F1200F41277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C017017E1FB45F1200F41277 /* Assets.xcassets */; };
@@ -28,6 +29,8 @@
 		33F484E51FB464EB0043E06E /* TextField.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextField.storyboard; sourceTree = "<group>"; };
 		33F484E71FB467A10043E06E /* TIITextFieldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIITextFieldViewController.h; sourceTree = "<group>"; };
 		33F484E81FB467A10043E06E /* TIITextFieldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIITextFieldViewController.m; sourceTree = "<group>"; };
+		7348427E1FBDD7F000FE7614 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		7348427F1FBDD7F000FE7614 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		C01701741FB45F1200F41277 /* ObjcTextInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcTextInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01701771FB45F1200F41277 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C017017C1FB45F1200F41277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +83,8 @@
 				33F484E81FB467A10043E06E /* TIITextFieldViewController.m */,
 				C01701831FB45F1200F41277 /* Info.plist */,
 				33F484E11FB462110043E06E /* ObjcTextInput-Bridging-Header.h */,
+				7348427E1FBDD7F000FE7614 /* DetailViewController.h */,
+				7348427F1FBDD7F000FE7614 /* DetailViewController.m */,
 			);
 			path = ObjcTextInput;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 				33F484E91FB467A10043E06E /* TIITextFieldViewController.m in Sources */,
 				33A99F071FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift in Sources */,
 				33674CBA1FB5B17B0055AB23 /* TIILabelCollectionViewCell.m in Sources */,
+				734842811FBDD7F000FE7614 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
