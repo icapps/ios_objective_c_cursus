@@ -24,9 +24,18 @@ Voorbeeld https://todo.microsoft.com
 
 Meer info op [Building Adaptive Apps with UIKit - WWDC 2014 - Videos - Apple Developer](https://developer.apple.com/videos/play/wwdc2014/216/)
 
+### Tutorial custom transitions
+De tutorial kan je online vinden. Al is hij wat oud. Ik heb de code aangepast en naar swift 4 gezet. Je kan van hier starten en vertalen naar Objective-C.
+
+* Tutorial: http://mathewsanders.com/animated-transitions-in-swift/
+* Custom menu
+	* interactive transition: https://github.com/doozMen/Interactive-Transition-Swift-Tutorial
+	* Non interactive but interesting transition:
+	* https://github.com/doozMen/Custom-Menu-Transition-Swift-Tutorial
+
 ## EXTRA
 
-Explore the wonders of a truely dynamic language that Objective-C is. Try to make a property with @dynamic.
+Explore the wonders of a truly dynamic language that Objective-C is. Try to make a property with @dynamic.
 
 More info: http://theocacao.com/document.page/516
 And example code : https://gist.github.com/mdippery/651966
