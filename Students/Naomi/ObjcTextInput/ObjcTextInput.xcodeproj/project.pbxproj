@@ -10,7 +10,6 @@
 		33674CBA1FB5B17B0055AB23 /* TIILabelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33674CB91FB5B17B0055AB23 /* TIILabelCollectionViewCell.m */; };
 		33A99F071FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A99F061FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift */; };
 		33B82B121FBD824A00990C06 /* TIIDragAndDropTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B82B111FBD824A00990C06 /* TIIDragAndDropTableViewController.m */; };
-		33C0F1661FBDE9740093DEA8 /* TIITransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0F1651FBDE9740093DEA8 /* TIITransitionManager.swift */; };
 		33F484E41FB462110043E06E /* TIIUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F484E31FB462110043E06E /* TIIUIViewController.m */; };
 		33F484E61FB464EB0043E06E /* TextField.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F484E51FB464EB0043E06E /* TextField.storyboard */; };
 		33F484E91FB467A10043E06E /* TIITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F484E81FB467A10043E06E /* TIITextFieldViewController.m */; };
@@ -22,6 +21,7 @@
 		C02652011FBB1415003D4CEF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02652001FBB1415003D4CEF /* Post.swift */; };
 		C0B9EC7A1FBB15C5001168D5 /* ObjcTextInputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B9EC791FBB15C5001168D5 /* ObjcTextInputTests.swift */; };
 		C0B9EC811FBB15CE001168D5 /* PostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B9EC711FBB159C001168D5 /* PostTests.swift */; };
+		C0DB8C2B1FC2FF6D00B5A95D /* TIITransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB8C2A1FC2FF6D00B5A95D /* TIITransitionManager.swift */; };
 		C587F04C306CAD752850D0AF /* Pods_ObjcTextInput_ObjcTextInputTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FF15F3A5B714098053B8D0 /* Pods_ObjcTextInput_ObjcTextInputTests.framework */; };
 		EEDB8667E4C72A0E11657F3C /* Pods_ObjcTextInput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6DA1CC13809AE7A909562E9 /* Pods_ObjcTextInput.framework */; };
 /* End PBXBuildFile section */
@@ -44,7 +44,6 @@
 		33A99F061FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIISlideInCollectionViewLayout.swift; sourceTree = "<group>"; };
 		33B82B101FBD824A00990C06 /* TIIDragAndDropTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIIDragAndDropTableViewController.h; sourceTree = "<group>"; };
 		33B82B111FBD824A00990C06 /* TIIDragAndDropTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIIDragAndDropTableViewController.m; sourceTree = "<group>"; };
-		33C0F1651FBDE9740093DEA8 /* TIITransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TIITransitionManager.swift; path = /Users/naomideleeuw/ios_objective_c_workshop/Students/Naomi/ObjcTextInput/ObjcTextInput/Modules/TIITransitionManager.swift; sourceTree = "<absolute>"; };
 		33F484E11FB462110043E06E /* ObjcTextInput-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjcTextInput-Bridging-Header.h"; sourceTree = "<group>"; };
 		33F484E21FB462110043E06E /* TIIUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIIUIViewController.h; sourceTree = "<group>"; };
 		33F484E31FB462110043E06E /* TIIUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIIUIViewController.m; sourceTree = "<group>"; };
@@ -64,6 +63,7 @@
 		C0B9EC771FBB15C5001168D5 /* ObjcTextInputTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjcTextInputTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B9EC791FBB15C5001168D5 /* ObjcTextInputTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjcTextInputTests.swift; sourceTree = "<group>"; };
 		C0B9EC7B1FBB15C5001168D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0DB8C2A1FC2FF6D00B5A95D /* TIITransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TIITransitionManager.swift; sourceTree = "<group>"; };
 		CBD4A5EA0EE58D68AB0E86D0 /* Pods-ObjcTextInput.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcTextInput.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjcTextInput/Pods-ObjcTextInput.release.xcconfig"; sourceTree = "<group>"; };
 		D5FF15F3A5B714098053B8D0 /* Pods_ObjcTextInput_ObjcTextInputTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjcTextInput_ObjcTextInputTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6DA1CC13809AE7A909562E9 /* Pods_ObjcTextInput.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjcTextInput.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +166,7 @@
 		C02651FD1FBB118C003D4CEF /* TextInput */ = {
 			isa = PBXGroup;
 			children = (
+				C0DB8C2A1FC2FF6D00B5A95D /* TIITransitionManager.swift */,
 				33A99F061FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift */,
 				33F484E21FB462110043E06E /* TIIUIViewController.h */,
 				33F484E31FB462110043E06E /* TIIUIViewController.m */,
@@ -181,7 +182,6 @@
 		C02651FE1FBB119F003D4CEF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				33C0F1651FBDE9740093DEA8 /* TIITransitionManager.swift */,
 				33B82B131FBD82DD00990C06 /* DragAndDrop */,
 				C02651FF1FBB11C8003D4CEF /* Posts */,
 				C02651FD1FBB118C003D4CEF /* TextInput */,
@@ -429,7 +429,7 @@
 				33F484E91FB467A10043E06E /* TIITextFieldViewController.m in Sources */,
 				33A99F071FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift in Sources */,
 				C02652011FBB1415003D4CEF /* Post.swift in Sources */,
-				33C0F1661FBDE9740093DEA8 /* TIITransitionManager.swift in Sources */,
+				C0DB8C2B1FC2FF6D00B5A95D /* TIITransitionManager.swift in Sources */,
 				33674CBA1FB5B17B0055AB23 /* TIILabelCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
