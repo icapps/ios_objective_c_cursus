@@ -70,7 +70,7 @@
                                 <rect key="frame" x="37.5" y="587" width="150" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
-                                    <segue destination="wzC-BI-QiZ" kind="custom" identifier="addNameSegue" customClass="TIICustomSegue" id="6zF-FN-UMw"/>
+                                    <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vxr-KO-pz8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmS-aC-S7c">
@@ -112,6 +112,7 @@
                     <connections>
                         <outlet property="labelCollectionView" destination="TcG-tP-I7F" id="04e-3t-xdf"/>
                         <segue destination="wzC-BI-QiZ" kind="showDetail" identifier="editNameSegue" id="y7e-Ib-7FX"/>
+                        <segue destination="wzC-BI-QiZ" kind="presentation" identifier="addNameSegue" id="unI-CL-Oxf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -186,7 +187,7 @@
                 <viewControllerPlaceholder storyboardName="TextField" id="wzC-BI-QiZ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZVl-y8-OfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1034" y="33"/>
+            <point key="canvasLocation" x="1170" y="32"/>
         </scene>
         <!--Drag And Drop Table View Controller-->
         <scene sceneID="xfM-n1-owI">
@@ -251,6 +252,6 @@
         <image name="reoderIcon" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6zF-FN-UMw"/>
+        <segue reference="unI-CL-Oxf"/>
     </inferredMetricsTieBreakers>
 </document>

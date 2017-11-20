@@ -62,6 +62,9 @@
     TIISlideInCollectionViewLayout * layout = (TIISlideInCollectionViewLayout*) self.labelCollectionView.collectionViewLayout;
     layout.translation = [[Translation alloc] initWithX:300 y:0];
 }
+- (IBAction)addButtonPressed:(id)sender {
+    [self performSegueWithIdentifier:@"addNameSegue" sender:self];
+}
 
 #pragma mark - Peek and Pop
 
@@ -83,7 +86,6 @@
 }
 
 - (void)previewingContext:(id )previewingContext commitViewController: (UIViewController *)viewControllerToCommit {
-
     [self presentViewController:viewControllerToCommit animated:YES completion:nil];
 }
 
@@ -185,10 +187,11 @@
     if ([segue.destinationViewController isKindOfClass:[TIITextFieldViewController class]]) {
         TIITextFieldViewController * destinationViewController = segue.destinationViewController;
         destinationViewController.delegate = self;
-        destinationViewController.transitioningDelegate = self.transitionManager;
       if ([segue.identifier isEqualToString:@"editNameSegue"]){
             destinationViewController.currentName = self.names[self.indexPathRow];
-        }
+      } else if ([segue.identifier isEqualToString:@"addNameSegue"]) {
+        destinationViewController.transitioningDelegate = self.transitionManager;
+      }
 
     } else if ([segue.destinationViewController isKindOfClass:[TIIUIViewController class]]) {
         TIIUIViewController * destinationViewController = segue.destinationViewController;

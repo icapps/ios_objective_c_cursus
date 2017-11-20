@@ -11,7 +11,6 @@
 		33A99F071FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A99F061FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift */; };
 		33B82B121FBD824A00990C06 /* TIIDragAndDropTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B82B111FBD824A00990C06 /* TIIDragAndDropTableViewController.m */; };
 		33C0F1661FBDE9740093DEA8 /* TIITransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0F1651FBDE9740093DEA8 /* TIITransitionManager.swift */; };
-		33C0F16A1FC2C1B30093DEA8 /* TIICustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C0F1691FC2C1B30093DEA8 /* TIICustomSegue.m */; };
 		33F484E41FB462110043E06E /* TIIUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F484E31FB462110043E06E /* TIIUIViewController.m */; };
 		33F484E61FB464EB0043E06E /* TextField.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F484E51FB464EB0043E06E /* TextField.storyboard */; };
 		33F484E91FB467A10043E06E /* TIITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F484E81FB467A10043E06E /* TIITextFieldViewController.m */; };
@@ -46,8 +45,6 @@
 		33B82B101FBD824A00990C06 /* TIIDragAndDropTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIIDragAndDropTableViewController.h; sourceTree = "<group>"; };
 		33B82B111FBD824A00990C06 /* TIIDragAndDropTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIIDragAndDropTableViewController.m; sourceTree = "<group>"; };
 		33C0F1651FBDE9740093DEA8 /* TIITransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TIITransitionManager.swift; path = /Users/naomideleeuw/ios_objective_c_workshop/Students/Naomi/ObjcTextInput/ObjcTextInput/Modules/TIITransitionManager.swift; sourceTree = "<absolute>"; };
-		33C0F1681FC2C1B30093DEA8 /* TIICustomSegue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIICustomSegue.h; sourceTree = "<group>"; };
-		33C0F1691FC2C1B30093DEA8 /* TIICustomSegue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIICustomSegue.m; sourceTree = "<group>"; };
 		33F484E11FB462110043E06E /* ObjcTextInput-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjcTextInput-Bridging-Header.h"; sourceTree = "<group>"; };
 		33F484E21FB462110043E06E /* TIIUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIIUIViewController.h; sourceTree = "<group>"; };
 		33F484E31FB462110043E06E /* TIIUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIIUIViewController.m; sourceTree = "<group>"; };
@@ -185,8 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				33C0F1651FBDE9740093DEA8 /* TIITransitionManager.swift */,
-				33C0F1681FC2C1B30093DEA8 /* TIICustomSegue.h */,
-				33C0F1691FC2C1B30093DEA8 /* TIICustomSegue.m */,
 				33B82B131FBD82DD00990C06 /* DragAndDrop */,
 				C02651FF1FBB11C8003D4CEF /* Posts */,
 				C02651FD1FBB118C003D4CEF /* TextInput */,
@@ -432,7 +427,6 @@
 				C02651FB1FBB08B1003D4CEF /* PostService.swift in Sources */,
 				C01701781FB45F1200F41277 /* AppDelegate.swift in Sources */,
 				33F484E91FB467A10043E06E /* TIITextFieldViewController.m in Sources */,
-				33C0F16A1FC2C1B30093DEA8 /* TIICustomSegue.m in Sources */,
 				33A99F071FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift in Sources */,
 				C02652011FBB1415003D4CEF /* Post.swift in Sources */,
 				33C0F1661FBDE9740093DEA8 /* TIITransitionManager.swift in Sources */,
