@@ -29,9 +29,10 @@ De tutorial kan je online vinden. Al is hij wat oud. Ik heb de code aangepast en
 
 * Tutorial: http://mathewsanders.com/animated-transitions-in-swift/
 * Custom menu
-	* interactive transition: https://github.com/doozMen/Interactive-Transition-Swift-Tutorial
+	* Interactive transition: 
+		* https://github.com/doozMen/Interactive-Transition-Swift-Tutorial
 	* Non interactive but interesting transition:
-	* https://github.com/doozMen/Custom-Menu-Transition-Swift-Tutorial
+		* https://github.com/doozMen/Custom-Menu-Transition-Swift-Tutorial
 
 ## EXTRA
 
