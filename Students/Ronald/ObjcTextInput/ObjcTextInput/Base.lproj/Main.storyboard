@@ -13,57 +13,50 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TIIUIViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TIIUIViewController" id="BYZ-38-t0r" customClass="TIIUIViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TcG-tP-I7F">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="557"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <collectionViewLayout key="collectionViewLayout" id="adZ-Zc-rPN" customClass="MyCustomFlowLayout">
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="horizontalInset">
-                                            <integer key="value" value="15"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="verticalInset">
-                                            <integer key="value" value="15"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="maximumItemWidth">
-                                            <integer key="value" value="375"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="minimumItemWidth">
-                                            <integer key="value" value="375"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="itemHeight">
-                                            <integer key="value" value="50"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </collectionViewLayout>
+                                <rect key="frame" x="0.0" y="64" width="375" height="449"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewLayout key="collectionViewLayout" id="1Gf-OQ-Lwp" customClass="TIISlideInCollectionViewLayout" customModule="ObjcTextInput" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="nameCell" id="pnX-mE-ArI" customClass="TIILabelCollectionViewCell">
-                                        <rect key="frame" x="-1" y="0.0" width="377" height="47"/>
+                                        <rect key="frame" x="-0.5" y="0.0" width="376" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="377" height="47"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxi-7R-0os" customClass="TIILabel">
-                                                    <rect key="frame" x="0.0" y="13.5" width="377" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxi-7R-0os">
+                                                    <rect key="frame" x="0.0" y="15" width="376" height="20.5"/>
+                                                    <color key="backgroundColor" red="0.31477683495153885" green="0.93532509260729191" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drag_handler" translatesAutoresizingMaskIntoConstraints="NO" id="flf-Sx-8kL">
+                                                    <rect key="frame" x="336" y="10" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="J4A-XY-WAl"/>
+                                                        <constraint firstAttribute="height" constant="30" id="Oe6-sb-KRk"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.96078431369999995" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.94117647059999998" green="0.51087081674839874" blue="0.89186590410753186" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="flf-Sx-8kL" secondAttribute="trailing" constant="10" id="K6X-MJ-V4t"/>
                                             <constraint firstItem="lxi-7R-0os" firstAttribute="centerX" secondItem="pnX-mE-ArI" secondAttribute="centerX" id="b63-Ek-7TZ"/>
                                             <constraint firstItem="lxi-7R-0os" firstAttribute="centerY" secondItem="pnX-mE-ArI" secondAttribute="centerY" id="fx0-nK-c2L"/>
+                                            <constraint firstItem="flf-Sx-8kL" firstAttribute="centerY" secondItem="pnX-mE-ArI" secondAttribute="centerY" id="iHA-J3-Taw"/>
                                             <constraint firstItem="lxi-7R-0os" firstAttribute="width" secondItem="pnX-mE-ArI" secondAttribute="width" id="yau-V7-RkC"/>
                                         </constraints>
-                                        <size key="customSize" width="377" height="47"/>
+                                        <size key="customSize" width="376" height="50"/>
                                         <connections>
+                                            <outlet property="dragHandlerImage" destination="flf-Sx-8kL" id="uzb-9b-Ziv"/>
                                             <outlet property="textLabel" destination="lxi-7R-0os" id="djw-fj-anP"/>
                                         </connections>
                                     </collectionViewCell>
@@ -74,28 +67,46 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Cd-64-y7z">
-                                <rect key="frame" x="0.0" y="587" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="543" width="375" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
-                                    <segue destination="wzC-BI-QiZ" kind="presentation" identifier="addNameSegue" id="6zF-FN-UMw"/>
+                                    <action selector="goToEdit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c7O-yi-SDR"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XBT-5a-tR7">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="MrU-2d-07M">
+                                        <barButtonItem key="leftBarButtonItem" title="Edit" id="ZCD-Z2-gC9">
+                                            <connections>
+                                                <action selector="editTableView:" destination="BYZ-38-t0r" id="vf5-dB-Oxt"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Cd-64-y7z" firstAttribute="top" secondItem="TcG-tP-I7F" secondAttribute="bottom" constant="30" id="2zc-Z0-OLK"/>
+                            <constraint firstItem="XBT-5a-tR7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5qP-fh-fBC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="XBT-5a-tR7" secondAttribute="top" id="AnT-V4-v0Z"/>
                             <constraint firstItem="6Cd-64-y7z" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Mdf-hR-lJF"/>
-                            <constraint firstItem="TcG-tP-I7F" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NaQ-Zj-hGy"/>
                             <constraint firstItem="6Cd-64-y7z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Np5-e7-aiY"/>
                             <constraint firstItem="TcG-tP-I7F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SPR-M6-Z9U"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6Cd-64-y7z" secondAttribute="bottom" constant="50" id="U2T-Yw-drY"/>
+                            <constraint firstItem="TcG-tP-I7F" firstAttribute="top" secondItem="XBT-5a-tR7" secondAttribute="bottom" id="mi0-MD-8qj"/>
+                            <constraint firstItem="XBT-5a-tR7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v9G-VM-4wd"/>
                             <constraint firstItem="TcG-tP-I7F" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="whM-Px-E0c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="labelCollectionView" destination="TcG-tP-I7F" id="04e-3t-xdf"/>
                         <segue destination="wzC-BI-QiZ" kind="showDetail" identifier="editNameSegue" id="y7e-Ib-7FX"/>
+                        <segue destination="wzC-BI-QiZ" kind="presentation" identifier="addNameSegue" id="kB1-Ny-FDp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -111,7 +122,10 @@
             <point key="canvasLocation" x="670" y="33"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="drag_handler" width="256" height="256"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6zF-FN-UMw"/>
+        <segue reference="kB1-Ny-FDp"/>
     </inferredMetricsTieBreakers>
 </document>

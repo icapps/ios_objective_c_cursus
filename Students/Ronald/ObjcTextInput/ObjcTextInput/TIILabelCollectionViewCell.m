@@ -7,20 +7,20 @@
 //
 
 #import "TIILabelCollectionViewCell.h"
-#import "TIILabel.h"
 
-@interface TIILabelCollectionViewCell ()
-    @property (weak, nonatomic) IBOutlet TIILabel *textLabel;
+@interface TIILabelCollectionViewCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *dragHandlerImage;
+
 @end
-
 @implementation TIILabelCollectionViewCell
 
--(void)awakeFromNib {
-    [super awakeFromNib];
+-(void)configureWithString:(NSString *)textValue andDragHandler:(BOOL)isEditable {
+    self.textLabel.text = textValue;
+    [self.dragHandlerImage setHidden:!isEditable];
 }
 
--(void)configureCell: (NSString *) text {
-    self.textLabel.text = text;
-}
+
 
 @end

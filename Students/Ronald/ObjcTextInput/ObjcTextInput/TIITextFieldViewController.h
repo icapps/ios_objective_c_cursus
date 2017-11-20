@@ -11,7 +11,7 @@
 @class TIITextFieldViewController;
 
 @protocol EditingValueFinishedDelegate
-@required 
+
 - (void) editingValueFinished:(NSString*) value isNewName:(BOOL) isNew;
 
 @end

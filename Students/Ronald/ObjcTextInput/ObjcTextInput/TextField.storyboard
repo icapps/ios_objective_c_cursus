@@ -14,13 +14,13 @@
         <!--Text Field View Controller-->
         <scene sceneID="Gsu-hc-RUH">
             <objects>
-                <viewController id="66K-RV-6iV" customClass="TIITextFieldViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TIITextFieldViewController" id="66K-RV-6iV" customClass="TIITextFieldViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RNa-4S-afO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dyh-cb-yf2">
-                                <rect key="frame" x="37.5" y="328.5" width="300" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter text here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dyh-cb-yf2">
+                                <rect key="frame" x="37.5" y="332.5" width="300" height="22"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>

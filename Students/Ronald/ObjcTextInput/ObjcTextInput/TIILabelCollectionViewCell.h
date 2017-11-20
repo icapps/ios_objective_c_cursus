@@ -10,6 +10,6 @@
 
 @interface TIILabelCollectionViewCell : UICollectionViewCell
 
--(void)configureCell: (NSString *) text;
+-(void) configureWithString: (NSString*) textValue andDragHandler:(BOOL)isEditable;
 
 @end
