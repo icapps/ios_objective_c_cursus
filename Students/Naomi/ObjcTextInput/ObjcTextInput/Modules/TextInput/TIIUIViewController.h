@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "TIITextFieldViewController.h"
 
-@interface TIIUIViewController : UIViewController <EditingValueFinishedDelegate, UICollectionViewDataSource>
+@interface TIIUIViewController : UIViewController <EditingValueFinishedDelegate, UICollectionViewDataSource, UIViewControllerPreviewingDelegate>
+
+@property (nonatomic) BOOL showPosts;
 
 @end
