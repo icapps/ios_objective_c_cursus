@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -108,7 +107,7 @@
         <!--Change Text View Controller-->
         <scene sceneID="4yo-dl-qbi">
             <objects>
-                <viewController id="9H1-QZ-Jfg" customClass="TIIChangeTextViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TIIChangeTextViewController" id="9H1-QZ-Jfg" customClass="TIIChangeTextViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="opz-eE-Cz8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
