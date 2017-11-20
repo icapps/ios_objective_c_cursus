@@ -70,7 +70,7 @@
                                 <rect key="frame" x="0.0" y="543" width="375" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
-                                    <segue destination="wzC-BI-QiZ" kind="presentation" identifier="addNameSegue" id="6zF-FN-UMw"/>
+                                    <action selector="goToEdit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c7O-yi-SDR"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XBT-5a-tR7">
@@ -106,6 +106,7 @@
                     <connections>
                         <outlet property="labelCollectionView" destination="TcG-tP-I7F" id="04e-3t-xdf"/>
                         <segue destination="wzC-BI-QiZ" kind="showDetail" identifier="editNameSegue" id="y7e-Ib-7FX"/>
+                        <segue destination="wzC-BI-QiZ" kind="presentation" identifier="addNameSegue" id="kB1-Ny-FDp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -125,6 +126,6 @@
         <image name="drag_handler" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6zF-FN-UMw"/>
+        <segue reference="kB1-Ny-FDp"/>
     </inferredMetricsTieBreakers>
 </document>
