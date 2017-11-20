@@ -66,6 +66,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView performDropWithCoordinator:(id<UITableViewDropCoordinator>)coordinator {
+
     NSIndexPath *destinationIndexPath = [[NSIndexPath alloc] init];
     if (coordinator.destinationIndexPath) {
         destinationIndexPath = coordinator.destinationIndexPath;
@@ -73,7 +74,8 @@
         destinationIndexPath = [NSIndexPath indexPathForRow:[self.dragAndDropTableview numberOfRowsInSection:0] inSection:0];
     }
 
-    [coordinator.session loadObjectsOfClass:NSString.self completion:^(NSArray<NSString*> * items) {
+    [coordinator.session loadObjectsOfClass:NSString.self
+                                 completion:^(NSArray<NSString*> * items) {
         NSMutableArray<NSIndexPath*> *indexpaths = [[NSMutableArray alloc] init];
         [items enumerateObjectsUsingBlock:^(NSString * item, NSUInteger index, BOOL  *stop) {
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(destinationIndexPath.row + index) inSection:destinationIndexPath.section];
