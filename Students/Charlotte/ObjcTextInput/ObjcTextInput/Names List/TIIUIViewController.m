@@ -12,11 +12,12 @@
 #import "TIIViewModel.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 
-@interface TIIUIViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDragDelegate,UICollectionViewDropDelegate,TextDelegate>
+@interface TIIUIViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDragDelegate,UICollectionViewDropDelegate,UIViewControllerPreviewingDelegate,TextDelegate>
 @property (nonatomic, weak) IBOutlet UICollectionView * collectionView;
 @property (nonatomic, strong) TIIViewModel * viewModel;
 @property (assign, nonatomic) BOOL isEditing;
 @property (nonatomic, strong) UILongPressGestureRecognizer * longPressGesture;
+@property (nonatomic, strong) id previewingContext;
 @end
 
 @implementation TIIUIViewController
@@ -36,6 +37,10 @@
     [self.collectionView addGestureRecognizer:self.longPressGesture];
 
     [self.collectionView reloadData];
+    
+    if([self isForceTouchAvailable]) {
+        self.previewingContext = [self registerForPreviewingWithDelegate:self sourceView:self.view];
+    }
 }
 
 #pragma mark - UILongPressGesture
@@ -195,6 +200,43 @@
     }
 }
 
+#pragma mark - UIViewControllerPreviewingDelegate
+
+-(BOOL)isForceTouchAvailable {
+    BOOL isForceTouchAvailable = NO;
+    
+    if([self.traitCollection respondsToSelector:@selector(forceTouchCapability)]) {
+        isForceTouchAvailable = self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable;
+    }
+    
+    return isForceTouchAvailable;
+}
+
+-(UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location {
+    CGPoint cellPosition = [self.collectionView convertPoint:location fromView:self.view];
+    NSIndexPath * indexPath = [self.collectionView indexPathForItemAtPoint:cellPosition];
+    
+    if(indexPath) {
+        TIILabelCollectionViewCell * cell = [self.collectionView cellForItemAtIndexPath:indexPath];
+        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        TIIChangeTextViewController * previewController = [storyboard instantiateViewControllerWithIdentifier:@"TIIChangeTextViewController"];
+        
+        previewController.originalText = [self.viewModel objectForIndexPath:indexPath];
+        previewController.itemIndex = indexPath;
+        
+        previewingContext.sourceRect = [self.view convertRect:cell.frame fromView:self.collectionView];
+        
+        return previewController;
+    }
+    
+    return nil;
+}
+
+-(void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit {
+    TIIChangeTextViewController * changeTextViewController = viewControllerToCommit;
+    changeTextViewController.delegate = self;
+    [self presentViewController:changeTextViewController animated:YES completion:nil];
+}
 
 @end
 
