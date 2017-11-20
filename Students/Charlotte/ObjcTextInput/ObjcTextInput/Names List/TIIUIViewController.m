@@ -10,8 +10,9 @@
 #import "TIIChangeTextViewController.h"
 #import "TIILabelCollectionViewCell.h"
 #import "TIIViewModel.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface TIIUIViewController () <UICollectionViewDataSource,UICollectionViewDelegate,TextDelegate>
+@interface TIIUIViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDragDelegate,UICollectionViewDropDelegate,TextDelegate>
 @property (nonatomic, weak) IBOutlet UICollectionView * collectionView;
 @property (nonatomic, strong) TIIViewModel * viewModel;
 @property (assign, nonatomic) BOOL isEditing;
@@ -25,6 +26,9 @@
     // Do any additional setup after loading the view.
     
     self.viewModel = [[TIIViewModel alloc] initWithDefaultConfiguration];
+    
+    self.collectionView.dragDelegate = self;
+    self.collectionView.dropDelegate = self;
     
     self.isEditing = NO;
     
@@ -132,4 +136,89 @@
     }
 }
 
+#pragma mark - UICollectionViewDragDelegate
+
+-(NSArray<UIDragItem *> *)collectionView:(UICollectionView *)collectionView
+            itemsForBeginningDragSession:(id<UIDragSession>)session
+                             atIndexPath:(NSIndexPath *)indexPath {
+    NSMutableArray <UIDragItem *> * dragItems = [[NSMutableArray alloc] init];
+    
+    NSItemProvider * itemProvider = [[NSItemProvider alloc] init];
+    
+    UIDragItem * dragItem = [[UIDragItem alloc] initWithItemProvider:itemProvider];
+    NSData * dataToSend = [[self.viewModel objectForIndexPath:indexPath] dataUsingEncoding:NSUTF8StringEncoding];
+    
+    
+    [itemProvider registerDataRepresentationForTypeIdentifier:(NSString *) kUTTypePlainText
+                                                   visibility:(NSItemProviderRepresentationVisibilityAll)
+                                                  loadHandler:^NSProgress * _Nullable(void (^ _Nonnull completionHandler)(NSData * _Nullable, NSError * _Nullable)) {
+                                                      completionHandler(dataToSend, nil);
+                                                      return nil;
+    }];
+    [dragItems addObject:dragItem];
+    
+    return dragItems;
+}
+
+#pragma mark - UICollectionViewDropDelegate
+
+-(void)collectionView:(UICollectionView *)collectionView performDropWithCoordinator:(id<UICollectionViewDropCoordinator>)coordinator {
+    if(coordinator.items) {
+       
+        for(id<UICollectionViewDropItem> item in coordinator.items) {
+            if(item.sourceIndexPath) {
+                // TODO: Update viewModel, test drag and return
+                [self.collectionView performBatchUpdates:^{
+                    [self.collectionView deleteItemsAtIndexPaths:@[item.sourceIndexPath]];
+                    [self.collectionView insertItemsAtIndexPaths:@[coordinator.destinationIndexPath]];
+                } completion:^(BOOL finished) {
+                    [coordinator dropItem:item toItemAtIndexPath:coordinator.destinationIndexPath];
+                }];
+            } else if(item.dragItem.localObject) {
+                [self.viewModel addObject:item.dragItem.localObject];
+                NSIndexPath * lastIndexPath = [NSIndexPath indexPathForRow:self.viewModel.numberOfItems-1 inSection:0];
+                NSArray * lastIndexPaths = @[lastIndexPath];
+                [self.viewModel.names insertObject:item.dragItem.localObject atIndex:lastIndexPath.row];
+                [self.collectionView insertItemsAtIndexPaths:lastIndexPaths];
+            } else {
+                [item.dragItem.itemProvider loadObjectOfClass:NSString.self
+                                            completionHandler:^(NSString * item, NSError * _Nullable error) {
+                   dispatch_async(dispatch_get_main_queue(), ^{
+                        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(coordinator.destinationIndexPath.row) inSection:coordinator.destinationIndexPath.section];
+                        [self.viewModel.names insertObject:item atIndex:indexPath.row];
+                        [self.collectionView insertItemsAtIndexPaths:@[indexPath]];
+                    });
+                }];
+            }
+            
+        }
+    }
+}
+
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

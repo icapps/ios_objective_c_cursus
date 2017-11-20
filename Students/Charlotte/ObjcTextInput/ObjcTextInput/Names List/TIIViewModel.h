@@ -14,6 +14,7 @@
 @property (nonatomic, readonly) NSInteger numberOfItems;
 - (id)initWithDefaultConfiguration;
 - (NSString *)objectForIndexPath: (NSIndexPath *) indexPath;
+- (NSString *)objectForIndex: (NSInteger) index;
 - (void)swapObjectAtIndexPath: (NSIndexPath *) sourceIndexPath withObjectAtIndexPath: (NSIndexPath *) destinationIndexPath;
 - (void)addObject: (NSString *) newName;
 - (void)replaceObjectAtIndexPath: (NSIndexPath *) indexPath newName: (NSString *) newName;

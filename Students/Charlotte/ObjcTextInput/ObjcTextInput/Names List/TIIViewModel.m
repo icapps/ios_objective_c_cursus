@@ -33,8 +33,17 @@
 }
 
 - (NSString *)objectForIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row < self.names.count && indexPath.row >= 0) {
+    return [self objectForIndex:indexPath.row];
+    /*if (indexPath.row < self.names.count && indexPath.row >= 0) {
         return self.names[indexPath.row];
+    } else {
+        return nil;
+    }*/
+}
+
+- (NSString *)objectForIndex:(NSInteger)index {
+    if (index < self.names.count && index >= 0) {
+        return self.names[index];
     } else {
         return nil;
     }
