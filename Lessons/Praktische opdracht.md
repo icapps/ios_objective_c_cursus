@@ -29,10 +29,21 @@ De tutorial kan je online vinden. Al is hij wat oud. Ik heb de code aangepast en
 
 * Tutorial: http://mathewsanders.com/animated-transitions-in-swift/
 * Custom menu
-	* Interactive transition: 
+	* Interactive transition:
 		* https://github.com/doozMen/Interactive-Transition-Swift-Tutorial
 	* Non interactive but interesting transition:
 		* https://github.com/doozMen/Custom-Menu-Transition-Swift-Tutorial
+
+### Tip voor transitie
+Doe het in stappen:
+
+1. Maak transitie custom zodat je presenting en presented view alle twee in de presentation container hebt na de transitie
+2. Animeer de alpha waarde (niet de transitie die we willen maar goede test)
+3. Probeer alpha waarde interactief te veranderen.
+4. Focus nu op veranderen alpha animatie naar genie animatie:
+	1. animeer piek klein vierkant naar een groot vierkant
+	2. verplaats klein vierkant naar plus positie en animeer open en verplaats terug naar center
+	3. *extra*: Animeer vierkant open in een driehoek open om het genie effect te krijgen.
 
 ## EXTRA
 
