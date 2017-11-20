@@ -21,4 +21,5 @@
 @property (nonatomic, weak) id<TextDelegate> delegate;
 @property (nonatomic, strong) NSString * text;
 @property (nonatomic, assign) NSIndexPath * itemIndex;
+@property (nonatomic, assign) NSString * originalText;
 @end
