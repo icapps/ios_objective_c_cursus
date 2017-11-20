@@ -20,28 +20,15 @@ import UIKit
         let fromView = transitionContext.view(forKey: UITransitionContextViewKey.from)!
         let toView = transitionContext.view(forKey: UITransitionContextViewKey.to)!
 
-        let offScreenRight = CGAffineTransform(translationX: container.frame.width, y: 0)
-        let offScreenLeft = CGAffineTransform(translationX: -container.frame.width, y: 0)
-
-        if (self.presenting){
-            toView.transform = offScreenRight
-           } else {
-            toView.transform = offScreenLeft
-            }
-
-        container.addSubview(toView)
         container.addSubview(fromView)
+        container.addSubview(toView)
 
         let duration = self.transitionDuration(using: transitionContext)
 
-        UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.8, options: UIViewAnimationOptions.curveEaseIn, animations: {
-            if (self.presenting){
-                fromView.transform = offScreenLeft
-            } else {
-                fromView.transform = offScreenRight
-            }
-            toView.transform = .identity
+        toView.alpha = 0.0
 
+        UIView.animate(withDuration: duration, animations: {
+            toView.alpha = 1.0
         }, completion: { finished in
             transitionContext.completeTransition(true)
         })
