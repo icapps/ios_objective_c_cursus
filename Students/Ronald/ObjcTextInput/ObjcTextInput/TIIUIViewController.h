@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "TIITextFieldViewController.h"
 
-@interface TIIUIViewController : UIViewController <EditingValueFinishedDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UIViewControllerPreviewingDelegate, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate>
+@interface TIIUIViewController : UIViewController <EditingValueFinishedDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UIViewControllerPreviewingDelegate>
 
 @end

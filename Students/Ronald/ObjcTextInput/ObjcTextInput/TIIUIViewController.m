@@ -18,6 +18,7 @@
 @property UILongPressGestureRecognizer *longPress;
 @property (nonatomic) BOOL isEditable;
 @property BOOL presenting;
+@property (nonatomic,strong) MenuTransitionManager * transitionManager;
 
 @property (nonatomic, strong) id previewingContext;
 
@@ -27,6 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.transitionManager = [[MenuTransitionManager alloc] init];
+    self.transitionManager.fromViewController = self;
     self.names = [@[@"Ronald",@"Charlotte",@"Stijn"] mutableCopy];
     self.longPress = [[UILongPressGestureRecognizer alloc]
                          initWithTarget:self
@@ -64,6 +67,9 @@
     [self performSegueWithIdentifier:@"addNameSegue" sender:self];
 }
 
+-(IBAction)exitSegue:(UIStoryboardSegue *)segue {
+    
+}
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.destinationViewController isKindOfClass:[TIITextFieldViewController class]]) {
@@ -72,8 +78,8 @@
       if ([segue.identifier isEqualToString:@"editNameSegue"]){
             destinationViewController.currentName = self.names[self.indexPathRow];
       } else if ([segue.identifier isEqualToString:@"addNameSegue"]) {
-          
-          destinationViewController.transitioningDelegate = self;
+          destinationViewController.transitioningDelegate = self.transitionManager;
+          self.transitionManager.toViewController = destinationViewController;
       }
     }
 }
@@ -123,6 +129,8 @@
 -(void)handleLongPress:(UILongPressGestureRecognizer*)sender{
     switch(sender.state) {
         case UIGestureRecognizerStateBegan:{
+            self.isEditable = YES;
+          //  [self.labelCollectionView reloadData];
             CGPoint selectedPoint = [sender locationInView: self.labelCollectionView];
             NSIndexPath * selectedIndexPath = [self.labelCollectionView indexPathForItemAtPoint:selectedPoint];
             [self.labelCollectionView beginInteractiveMovementForItemAtIndexPath:selectedIndexPath];
@@ -192,61 +200,4 @@
         }
     }
 }
-
-- (void)animateTransition:(nonnull id<UIViewControllerContextTransitioning>)transitionContext {
-    // get reference to our fromView, toView and the container view that we should perform the transition in
-    
-    UIView * container = transitionContext.containerView;
-    
-    UIView * fromView =[transitionContext viewForKey:UITransitionContextFromViewKey];
-    UIView * toView = [transitionContext viewForKey:UITransitionContextToViewKey];
-    
-    CGAffineTransform offScreenRight = CGAffineTransformMakeTranslation(container.frame.size.width, 0);
-    CGAffineTransform offScreenLeft = CGAffineTransformMakeTranslation(-container.frame.size.width, 0);
-
-    if (self.presenting) {
-        toView.transform = offScreenRight;
-    } else {
-        toView.transform = offScreenLeft;
-    }
-    
-    // add the both views to our view controller
-    [container addSubview:toView];
-    [container addSubview:fromView];
-    
-    // get the duration of the animation
-    NSTimeInterval duration = [self transitionDuration:transitionContext];
-    
-    // perform the animation!
-    // for this example, just slid both fromView and toView to the left at the same time
-    // meaning fromView is pushed off the screen and toView slides into view
-    // we also use the block animation usingSpringWithDamping for a little bounce
-    
-    [UIView animateWithDuration:duration delay:0.0 usingSpringWithDamping:0.5 initialSpringVelocity:0.8 options:0 animations:^{
-        if (self.presenting) {
-            fromView.transform = offScreenLeft;
-        } else {
-            fromView.transform = offScreenRight;
-        }
-
-        toView.transform = CGAffineTransformIdentity;
-    } completion:^(BOOL finished) {
-        [transitionContext completeTransition:YES];
-    }];
-}
-
-- (NSTimeInterval)transitionDuration:(nullable id<UIViewControllerContextTransitioning>)transitionContext {
-    return 0.5;
-}
-
--(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
-    self.presenting = YES;
-    return self;
-}
-
--(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
-    self.presenting = NO;
-    return self;
-}
-
 @end

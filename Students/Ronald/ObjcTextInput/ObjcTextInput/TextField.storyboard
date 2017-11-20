@@ -45,9 +45,11 @@
                     </view>
                     <connections>
                         <outlet property="valueTextField" destination="Dyh-cb-yf2" id="f15-MT-1YA"/>
+                        <segue destination="kJu-26-jmx" kind="unwind" identifier="dismissController" unwindAction="exitSegue:" id="Kmq-he-PDU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16I-Dn-Psg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kJu-26-jmx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-38" y="4"/>
         </scene>
