@@ -70,7 +70,7 @@
                                 <rect key="frame" x="37.5" y="587" width="150" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
-                                    <segue destination="wzC-BI-QiZ" kind="presentation" identifier="addNameSegue" id="6zF-FN-UMw"/>
+                                    <segue destination="wzC-BI-QiZ" kind="custom" identifier="addNameSegue" customClass="TIICustomSegue" id="6zF-FN-UMw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmS-aC-S7c">
@@ -251,6 +251,6 @@
         <image name="reoderIcon" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="y7e-Ib-7FX"/>
+        <segue reference="6zF-FN-UMw"/>
     </inferredMetricsTieBreakers>
 </document>

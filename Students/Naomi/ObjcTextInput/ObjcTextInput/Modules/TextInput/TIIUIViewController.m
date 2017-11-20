@@ -20,6 +20,7 @@
 @property (nonatomic, strong) PostService * service;
 @property (nonatomic, strong) id previewContext;
 @property (nonatomic) BOOL canEdit;
+@property (nonatomic, strong) TIITransitionManager *transitionManager;
 
 @end
 
@@ -28,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.service = [[PostService alloc] init];
+    self.transitionManager = [[TIITransitionManager alloc] init];
     self.canEdit = NO;
 
     UIPasteConfiguration * config = [[UIPasteConfiguration alloc]init];
@@ -176,11 +178,14 @@
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     return CGSizeMake(width, 50);
 }
+//
+//-(void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.destinationViewController isKindOfClass:[TIITextFieldViewController class]]) {
         TIITextFieldViewController * destinationViewController = segue.destinationViewController;
         destinationViewController.delegate = self;
+        destinationViewController.transitioningDelegate = self.transitionManager;
       if ([segue.identifier isEqualToString:@"editNameSegue"]){
             destinationViewController.currentName = self.names[self.indexPathRow];
         }
