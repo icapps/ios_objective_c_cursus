@@ -21,3 +21,10 @@ class Post: NSObject, Codable {
     }
 
 }
+
+extension Post {
+
+    @objc func foo () {
+
+    }
+}

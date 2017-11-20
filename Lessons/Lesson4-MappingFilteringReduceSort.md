@@ -1,55 +1,52 @@
 # Lesson 4: Mapping, filtering, reduce, sort…
 > Previous: [Lesson 3: Protocols and Bridging](bear://x-callback-url/open-note?id=06F79FE9-4A48-46E5-BAB0-3D111EA5947F-74998-00003292A1E8E08B)  
-
-#Programming/Objective-C/Mapping&Filtering
-
+> Next: [Lesson 5: Bridging](bear://x-callback-url/open-note?id=F7A57C55-7B50-47A0-A88B-23BB4FE5F477-6928-00001225859E2F76)  
+- - - -
 1. Mapping
 2. Filtering
 3. Reduce
 4. Sort
 5. Lazy
 6. QUEUE
-
-**For Mapping, filtering, reduce**
-Objective-C has no language support. This only came when Swift came out.
-Code examples come form: [Lottie Dropper](https://github.com/icapps/ios_lottie_dropper)
-
+For Mapping, filtering, reduce Objective-C has no language support. This only came when Swift came out.
+- - - -
 ## Mapping the Objective-C way
 ```objective-c
-- (NSArray<NSString *> *)fileNames {
-	NSMutableArray <NSString *> *mapped = [NSMutableArray arrayWithCapacity:[self.entries count]];
-	[self.entries enumerateObjectsUsingBlock:^(DBFILESMetadata * obj, NSUInteger idx, BOOL *stop) {
-		[mapped addObject:obj.name];
+- (NSArray<NSString *> *)mapEntries: (NSArray <Post*> *) entries {
+	NSMutableArray <NSString *> *mapped = [NSMutableArray arrayWithCapacity:[entries count]];
+	[self.entries enumerateObjectsUsingBlock:^(Post * obj, NSUInteger idx, BOOL *stop) {
+		[mapped addObject:obj.title];
 	}];
 	return mapped;
 }
 ```
-
+- - - -
 ## Filter
 ```objective-c
 NSArray *filteredArray = [array filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id object, NSDictionary *bindings) {
     return [object shouldIKeepYou];  // Return YES for each object you want in filteredArray.
 }]];
 ```
+- - - -
 ## Reduce
 There is no alternative.
 Challenge: Why don’t you find, make one!
+- - - -
 ## Sort
-Also this is rather *nasty*in Objective-C. There are many options of which non is as readable as in swift `array.sort {$0 < $1}` translates to:
+Also this is rather **nasty**in Objective-C. There are many options of which non is as readable as in swift `array.sort {$0 < $1}` translates to:
 
 ```objective-c
-- (NSArray<DropboxDetailViewModel *> *)fileDetails {
-// assume mapped is array of DropboxDetailViewModel's.
-	NSComparisonResult (^sortBlock)(id, id) = ^(DropboxDetailViewModel * obj1, DropboxDetailViewModel * obj2)
+- (NSArray<NSString *> *)sortedStrings {
+	NSComparisonResult (^sortBlock)(id, id) = ^(NSString * obj1, NSString * obj2)
 	{
-		return [[obj1 fileName] compare: [obj2 fileName]];
+		return [obj1 compare: obj2];
 	};
 	return [mapped sortedArrayUsingComparator:sortBlock];
 }
 ```
-
+- - - -
 ## Lazy
-**Does not exist in Objective-C**
+Does not exist in Objective-C
 
 But you can do it in code.
 
@@ -66,9 +63,9 @@ But you can do it in code.
 	return _client;
 }
 ```
-
+- - - -
 ## QUEUE
-You have GCD. Grand central dispatch. This is a relatively complex API in `C` . You can also use `NSOperation` 
+You have GCD. Grand central dispatch. This is a relatively complex API in `C` . You can also use `NSOperation`
 ### GCD
 [Dispatch Queue Apple Documentation](https://developer.apple.com/library/content/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationQueues/OperationQueues.html)
 #### Back to main
@@ -85,8 +82,10 @@ You have GCD. Grand central dispatch. This is a relatively complex API in `C` . 
        });
 ```
 ### NSOperation
-![](Lesson%204:%20Mapping,%20filtering,%20reduce,%20sort%E2%80%A6/NSOperation%20dependent%20ques.png)
+![](Lesson4-MappingFilteringReduceSort/NSOperation%20dependent%20ques.png)
+
 [Operation - Foundation | Apple Developer Documentation](https://developer.apple.com/reference/foundation/operation)
+
 #### Back to main
 ```objective-c
 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
@@ -98,26 +97,26 @@ You have GCD. Grand central dispatch. This is a relatively complex API in `C` . 
 ```objective-c
 NSOperationQueue * backgroundQUEUE [[NSOperationQueue alloc] init];
 [backgroundQUEUE setName: @"Background QUEUE"];
-NSBlockOperation * backgroundOperation = [[NSBlockOperation alloc] init]; 
+NSBlockOperation * backgroundOperation = [[NSBlockOperation alloc] init];
 [backgroundOperation addExecutionBlock: {
 	// Perform background operation.
 }];
 [backgroundQUEUE addOperation: backgroundOperation];
 [backgroundQUEUE start];
-``` 
+```
 #### Extra: Dependencies
 You can use a `NSBlockOperation` to do something like promises in other languages.
 [addDependency(_:) - Operation | Apple Developer Documentation](https://developer.apple.com/reference/foundation/operation/1412859-adddependency)
 ```objective-c
-NSBlockOperation * backgroundOperation = [[NSBlockOperation alloc] init]; 
+NSBlockOperation * backgroundOperation = [[NSBlockOperation alloc] init];
 [backgroundOperation addExecutionBlock: {
 	NSLog(@"Operation 1 done");
 }];
-NSBlockOperation * backgroundOperation2 = [[NSBlockOperation alloc] init]; 
+NSBlockOperation * backgroundOperation2 = [[NSBlockOperation alloc] init];
 [backgroundOperation2 addExecutionBlock: {
 		NSLog(@"Operation 3 done");
 }];
-NSBlockOperation * finalOperation = [[NSBlockOperation alloc] init]; 
+NSBlockOperation * finalOperation = [[NSBlockOperation alloc] init];
 [background setName: @"Final"];
 [background addExecutionBlock: {
 		NSLog(@"Operation 3 done");
@@ -132,8 +131,11 @@ NSBlockOperation * finalOperation = [[NSBlockOperation alloc] init];
 [backgroundQUEUE start];
 ```
 After Operation 1 & 2 are finished the finalOperation will be executed. Both operation 1&2 can be fired in parallel and asynchronous.
+- - - -
 ## Conclusion
 * Mapping, filtering, reduce, sort is much more complex or even impossible in Objective-C
 * Lazy is a concept used in Objective-C but not supported by the language like in Swift
 * QUEUE’s are more handy then the cumbersome C like api of GCD.
+- - - -
+> Previous: [Lesson 3: Protocols and Bridging](bear://x-callback-url/open-note?id=06F79FE9-4A48-46E5-BAB0-3D111EA5947F-74998-00003292A1E8E08B)  
 > Next: [Lesson 5: Bridging](bear://x-callback-url/open-note?id=F7A57C55-7B50-47A0-A88B-23BB4FE5F477-6928-00001225859E2F76)  

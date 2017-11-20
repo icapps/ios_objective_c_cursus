@@ -1,8 +1,9 @@
 # Side note: MVC
-> previous:  [Lesson 3: Protocols and Bridging](bear://x-callback-url/open-note?id=06F79FE9-4A48-46E5-BAB0-3D111EA5947F-74998-00003292A1E8E08B)  
-#Programming/Objective-c
 
-Dependency & reusable code
+# Programming/Objective-c
+
+> Dependency & reusable code
+
 `Cocoa` het framework waarmee jullie iOS applicaties maken steunt hevig op het principe van MVC. Dit betekend dat:
 
 **M** -> geeft data aan **V** -> die het dan controleert -> **C** en het op het scherm plaats.
@@ -13,7 +14,7 @@ In het geval van meerdere **V** wordt dat wat moeilijker. Dat deel wordt nooit u
 
 ### Voorbeeld: EditProfileViewController
 
-Hier staat in code: 
+Hier staat in code:
 ```swift
 class EditProfileViewController: UIViewController{    
     let viewModel = EditProfileViewModel() // This prevents flexible data handling
@@ -23,7 +24,8 @@ class EditProfileViewController: UIViewController{
 Hierdoor kan deze viewController enkel een profile tonen van 1 user. Bij multiple user gaat dit al *kapot*.
 
 ## Use of ViewModels
-* Een ViewModel is een View op **M** die specifiek is voor die view. 
+
+* Een ViewModel is een View op **M** die specifiek is voor die view.
 * Een ViewModel heeft best maar 1 taak. Geen 2. Als je er meer nodig hebt, gebruik dan meer ViewModellen.
 
 ### Voorbeeld: EditProfileViewModel
@@ -32,25 +34,25 @@ Hierdoor kan deze viewController enkel een profile tonen van 1 user. Bij multipl
 class EditProfileViewModel: LanguageViewModel, UserAPI {
     let editProfileTitleLabel = "edit_profile_title"
     let profileUsernameLabel = "profile_username"
-    
+
     let changePictureButtonLabel = "profile_change_picture_button"
     let cancelButtonLabel = "cancel"
-    
+
     let cameraPhotoLibraryLabel = "camera_photo_library"
     let cameraTakePhotoLabel = "camera_take_photo"
-    
+
     let cameraErrorDescription = "camera_error"
     let cameraErrorTitle = "error"
-    
+
     var user: UserInfoResult?
-    var newProfilePic: String = "" 
+    var newProfilePic: String = ""
     var newUsername: String = ""
-    
+
     // MARK: - Translations (UIAlertController)
-    
+
     let alertControllerGeneralServerErrorTitle: String = "server_error_title"
     let alertControllerGeneralServerErrorText: String = "server_error_text"
-    
+
     let alertControllerSuccessTitle: String = "edit_profile_success_title"
     let alertControllersSuccessText: String = "edit_profile_success_text"
 
@@ -62,7 +64,7 @@ Je zet al een mark waar het eigenlijk ergens ander hoeft.
 ```swift
 enum EditProfileError: String {
 	case server_error_title
-	case 
+	case
 // ... more
 }
 ```
@@ -74,7 +76,7 @@ class GraphCollectionViewCell: UICollectionViewCell {
 }
 ```
 
-Een Cell displayed details van een lijst van **M** die gecontrolleerd **C** worden in een **V** die een `TableViewController` of een `CollectionViewController` kan zijn. 
+Een Cell displayed details van een lijst van **M** die gecontrolleerd **C** worden in een **V** die een `TableViewController` of een `CollectionViewController` kan zijn.
 
 Typisch heeft een cell dan een methode:
 
@@ -90,7 +92,7 @@ func setup(_ viewModel: DetailViewModel) {
 ### Voorbeeld: GraphCollectionViewCell
 Het is onduidelijk wat deze class doet. Taken die het moet doen
 
-1. 2 hoogtes tonen *Morning* *Afternoon* 
+1. 2 hoogtes tonen *Morning* *Afternoon*
 2. Datum tonen -> Dag van de week
 Hiervoor is geen heel profile nodig. Enkel die twee zijn voldoende
 
@@ -123,5 +125,3 @@ class GraphCollectionViewCell: UICollectionViewCell {
 }
 
 ```
-
-> Go back: [Lesson 3: Protocols and Bridging](bear://x-callback-url/open-note?id=06F79FE9-4A48-46E5-BAB0-3D111EA5947F-74998-00003292A1E8E08B)  
