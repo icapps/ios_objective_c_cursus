@@ -15,7 +15,7 @@
         <scene sceneID="Gsu-hc-RUH">
             <objects>
                 <viewController id="66K-RV-6iV" customClass="TIITextFieldViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RNa-4S-afO">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="RNa-4S-afO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="37.5" y="328.5" width="300" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTe-10-17g">
                                 <rect key="frame" x="313" y="20" width="37" height="30"/>
@@ -34,6 +34,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.078431372550000003" green="0.80000000000000004" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Dyh-cb-yf2" firstAttribute="width" secondItem="RNa-4S-afO" secondAttribute="width" multiplier="0.8" id="1IY-Na-MKA"/>
                             <constraint firstItem="T8i-CR-eH0" firstAttribute="trailing" secondItem="cTe-10-17g" secondAttribute="trailing" constant="25" id="BqG-Ay-mWk"/>
@@ -42,14 +43,20 @@
                             <constraint firstItem="Dyh-cb-yf2" firstAttribute="centerX" secondItem="T8i-CR-eH0" secondAttribute="centerX" id="t8I-3v-HVu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T8i-CR-eH0"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="EaL-eR-vW5" appends="YES" id="n7w-4U-Qdh"/>
+                        </connections>
                     </view>
                     <connections>
-                        <outlet property="panGesture" destination="EaL-eR-vW5" id="gGp-Jy-4fL"/>
                         <outlet property="valueTextField" destination="Dyh-cb-yf2" id="f15-MT-1YA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16I-Dn-Psg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="EaL-eR-vW5"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="EaL-eR-vW5">
+                    <connections>
+                        <action selector="didPan:" destination="66K-RV-6iV" id="Weg-Nc-qjO"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-38" y="4"/>
         </scene>

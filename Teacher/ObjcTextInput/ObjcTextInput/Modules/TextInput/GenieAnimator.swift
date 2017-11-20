@@ -9,12 +9,14 @@
 import UIKit
 
 // update our class definition to include `UIViewControllerInteractiveTransitioning` as one of the protocols that this object adheres to
-class GenieAnimator: UIPercentDrivenInteractiveTransition, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate  {
+class GenieAnimator: UIPercentDrivenInteractiveTransition, UIViewControllerAnimatedTransitioning  {
 
     private var interactive = true
     private var presenting = false
     fileprivate let dismiss: () -> Void
     fileprivate let present: () -> Void
+
+    fileprivate var panGesture: UIPanGestureRecognizer?
 
    @objc init(dismiss: @escaping () -> Void, present: @escaping () -> Void) {
         self.dismiss = dismiss
@@ -32,64 +34,87 @@ class GenieAnimator: UIPercentDrivenInteractiveTransition, UIViewControllerAnima
         let fromView = transitionContext.view(forKey: UITransitionContextViewKey.from)!
         let toView = transitionContext.view(forKey: UITransitionContextViewKey.to)!
 
-        // set up from 2D transforms that we'll use in the animation
-        let π : CGFloat = 3.14159265359
+        if !interactive {
+            // set up from 2D transforms that we'll use in the animation
+            let π : CGFloat = 3.14159265359
 
-        let offScreenRight = CGAffineTransform(rotationAngle: -π/2)
-        let offScreenLeft = CGAffineTransform(rotationAngle: π/2)
+            let offScreenRight = CGAffineTransform(rotationAngle: -π/2)
+            let offScreenLeft = CGAffineTransform(rotationAngle: π/2)
 
-        // prepare the toView for the animation
-        toView.transform = self.presenting ? offScreenRight : offScreenLeft
+            // prepare the toView for the animation
+            toView.transform = self.presenting ? offScreenRight : offScreenLeft
 
-        // set the anchor point so that rotations happen from the top-left corner
-        toView.layer.anchorPoint = CGPoint(x:0, y:0)
-        fromView.layer.anchorPoint = CGPoint(x:0, y:0)
+            // set the anchor point so that rotations happen from the top-left corner
+            toView.layer.anchorPoint = CGPoint(x:0, y:0)
+            fromView.layer.anchorPoint = CGPoint(x:0, y:0)
 
-        // updating the anchor point also moves the position to we have to move the center position to the top-left to compensate
-        toView.layer.position = CGPoint(x:0, y:0)
-        fromView.layer.position = CGPoint(x:0, y:0)
+            // updating the anchor point also moves the position to we have to move the center position to the top-left to compensate
+            toView.layer.position = CGPoint(x:0, y:0)
+            fromView.layer.position = CGPoint(x:0, y:0)
 
-        // add the both views to our view controller
-        container.addSubview(toView)
-        container.addSubview(fromView)
+            // add the both views to our view controller
+            container.addSubview(toView)
+            container.addSubview(fromView)
 
-        // get the duration of the animation
-        // DON'T just type '0.5s' -- the reason why won't make sense until the next post
-        // but for now it's important to just follow this approach
-        let duration = self.transitionDuration(using: transitionContext)
+            // get the duration of the animation
+            // DON'T just type '0.5s' -- the reason why won't make sense until the next post
+            // but for now it's important to just follow this approach
+            let duration = self.transitionDuration(using: transitionContext)
 
-        // perform the animation!
-        // for this example, just slid both fromView and toView to the left at the same time
-        // meaning fromView is pushed off the screen and toView slides into view
-        // we also use the block animation usingSpringWithDamping for a little bounce
-        UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.8, options: .allowUserInteraction, animations: {
+            // perform the animation!
+            // for this example, just slid both fromView and toView to the left at the same time
+            // meaning fromView is pushed off the screen and toView slides into view
+            // we also use the block animation usingSpringWithDamping for a little bounce
+            UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.8, options: .allowUserInteraction, animations: {
 
-            // slide fromView off either the left or right edge of the screen
-            // depending if we're presenting or dismissing this view
-            fromView.transform = self.presenting ? offScreenLeft : offScreenRight
-            toView.transform = CGAffineTransform.identity
+                // slide fromView off either the left or right edge of the screen
+                // depending if we're presenting or dismissing this view
+                fromView.transform = self.presenting ? offScreenLeft : offScreenRight
+                toView.transform = CGAffineTransform.identity
 
-        }, completion: { finished in
+            }, completion: { finished in
 
-            // tell our transitionContext object that we've finished animating
-            transitionContext.completeTransition(true)
+                // tell our transitionContext object that we've finished animating
+                transitionContext.completeTransition(true)
 
-        })
+            })
+        } else {
+            // interactive
+            // set the anchor point so that rotations happen from the top-left corner
+            toView.layer.anchorPoint = CGPoint(x:0, y:0)
+            fromView.layer.anchorPoint = CGPoint(x:0, y:0)
+
+            // add the both views to our view controller
+            container.addSubview(toView)
+            container.addSubview(fromView)
+
+            // get the duration of the animation
+            // DON'T just type '0.5s' -- the reason why won't make sense until the next post
+            // but for now it's important to just follow this approach
+            let duration = self.transitionDuration(using: transitionContext)
+
+            // perform the animation!
+            // for this example, just slid both fromView and toView to the left at the same time
+            // meaning fromView is pushed off the screen and toView slides into view
+            // we also use the block animation usingSpringWithDamping for a little bounce
+            UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.8, options: .allowUserInteraction, animations: {
+
+                // updating the anchor point also moves the position to we have to move the center position to the top-left to compensate
+                toView.layer.position = CGPoint(x:0, y:0)
+                fromView.layer.position = CGPoint(x:-500, y:0)
+
+            }, completion: { finished in
+
+                // tell our transitionContext object that we've finished animating
+                transitionContext.completeTransition(true)
+
+            })
+        }
+
     }
 
     @objc override func startInteractiveTransition(_ transitionContext: UIViewControllerContextTransitioning) {
         super.startInteractiveTransition(transitionContext)
-    }
-
-    //MARK: - UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning
-
-    @objc func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return self
-    }
-
-
-    @objc func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return self
     }
 
 }
@@ -103,7 +128,10 @@ extension GenieAnimator: UIGestureRecognizerDelegate {
         handleOffstagePan(pan: panGesture)
         return true
     }
-    func handleOnstagePan(pan: UIPanGestureRecognizer){
+
+    @objc func handleOnstagePan(pan: UIPanGestureRecognizer){
+
+        self.panGesture = pan
         // how much distance have we panned in reference to the parent view?
         let translation = pan.translation(in: pan.view!)
 
@@ -145,8 +173,8 @@ extension GenieAnimator: UIGestureRecognizerDelegate {
     // pretty much the same as 'handleOnstagePan' except
     // we're panning from right to left
     // perfoming our exitSegeue to start the transition
-    func handleOffstagePan(pan: UIPanGestureRecognizer){
-
+    @objc func handleOffstagePan(pan: UIPanGestureRecognizer) {
+        self.interactive = true
         let translation = pan.translation(in: pan.view!)
         let d =  translation.x / pan.view!.bounds.width * -0.5
 

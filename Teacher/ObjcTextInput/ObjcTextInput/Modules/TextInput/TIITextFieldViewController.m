@@ -10,10 +10,9 @@
 #import "TIIUIViewController.h"
 #import "ObjcTextInput-Swift.h"
 
-@interface TIITextFieldViewController ()
+@interface TIITextFieldViewController () <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField * valueTextField;
-@property (strong, nonatomic) IBOutlet UIPanGestureRecognizer *panGesture;
 
 @end
 
@@ -21,10 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    // Dismiss and Present are the same animator so we only call this dismiss
-    GenieAnimator * animator = (GenieAnimator *) [self.transitioningDelegate animationControllerForDismissedController:self];
-    self.panGesture.delegate = animator;
 
     self.valueTextField.text = self.currentName;
 
@@ -45,6 +40,13 @@
 
 - (void) itsTimeToDismiss {
     [self closeButtonPressed:self];
+}
+
+#pragma mark: - UIGestureRecognizerDelegate
+
+- (IBAction)didPan:(UIPanGestureRecognizer *)sender {
+    GenieAnimator * animator = (GenieAnimator *) [self.transitioningDelegate animationControllerForDismissedController:self];
+    [animator handleOffstagePanWithPan: sender];
 }
 
 @end
