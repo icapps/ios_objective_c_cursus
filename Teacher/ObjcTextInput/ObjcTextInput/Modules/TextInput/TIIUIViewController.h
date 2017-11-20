@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "TIITextFieldViewController.h"
 
+static int const globalValue = 10;
+static int const * const global = &globalValue;
+
+
 @interface TIIUIViewController : UIViewController <EditingValueFinishedDelegate, UICollectionViewDataSource>
 
 @property (nonatomic) BOOL showPosts;

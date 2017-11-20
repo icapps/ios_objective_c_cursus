@@ -16,10 +16,12 @@
 		C017017D1FB45F1200F41277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C017017B1FB45F1200F41277 /* Main.storyboard */; };
 		C017017F1FB45F1200F41277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C017017E1FB45F1200F41277 /* Assets.xcassets */; };
 		C01701821FB45F1200F41277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01701801FB45F1200F41277 /* LaunchScreen.storyboard */; };
-		C02651FB1FBB08B1003D4CEF /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02651FA1FBB08B1003D4CEF /* PostService.swift */; };
-		C02652011FBB1415003D4CEF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02652001FBB1415003D4CEF /* Post.swift */; };
+		C03C16871FBDC77400B7CB77 /* GenieAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03C16861FBDC77400B7CB77 /* GenieAnimator.swift */; };
+		C03EAB7F1FBC77C400139C9E /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EAB7A1FBC77C400139C9E /* PostService.swift */; };
+		C03EAB801FBC77C400139C9E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EAB7B1FBC77C400139C9E /* Post.swift */; };
+		C03EAB821FBC77C400139C9E /* Post+Post_Service.m in Sources */ = {isa = PBXBuildFile; fileRef = C03EAB7D1FBC77C400139C9E /* Post+Post_Service.m */; };
+		C03EAB831FBC77D900139C9E /* PostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EAB7C1FBC77C400139C9E /* PostTests.swift */; };
 		C0B9EC7A1FBB15C5001168D5 /* ObjcTextInputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B9EC791FBB15C5001168D5 /* ObjcTextInputTests.swift */; };
-		C0B9EC811FBB15CE001168D5 /* PostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B9EC711FBB159C001168D5 /* PostTests.swift */; };
 		C587F04C306CAD752850D0AF /* Pods_ObjcTextInput_ObjcTextInputTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FF15F3A5B714098053B8D0 /* Pods_ObjcTextInput_ObjcTextInputTests.framework */; };
 		EEDB8667E4C72A0E11657F3C /* Pods_ObjcTextInput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6DA1CC13809AE7A909562E9 /* Pods_ObjcTextInput.framework */; };
 /* End PBXBuildFile section */
@@ -53,9 +55,12 @@
 		C017017E1FB45F1200F41277 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C01701811FB45F1200F41277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C01701831FB45F1200F41277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C02651FA1FBB08B1003D4CEF /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
-		C02652001FBB1415003D4CEF /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		C0B9EC711FBB159C001168D5 /* PostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTests.swift; sourceTree = "<group>"; };
+		C03C16861FBDC77400B7CB77 /* GenieAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GenieAnimator.swift; path = ObjcTextInput/Modules/TextInput/GenieAnimator.swift; sourceTree = SOURCE_ROOT; };
+		C03EAB7A1FBC77C400139C9E /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostService.swift; path = ObjcTextInput/Modules/Posts/Service/PostService.swift; sourceTree = SOURCE_ROOT; };
+		C03EAB7B1FBC77C400139C9E /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = ObjcTextInput/Modules/Posts/Service/Post.swift; sourceTree = SOURCE_ROOT; };
+		C03EAB7C1FBC77C400139C9E /* PostTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostTests.swift; path = ObjcTextInput/Modules/Posts/Service/PostTests.swift; sourceTree = SOURCE_ROOT; };
+		C03EAB7D1FBC77C400139C9E /* Post+Post_Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Post+Post_Service.m"; path = "ObjcTextInput/Modules/Posts/Service/Post+Post_Service.m"; sourceTree = SOURCE_ROOT; };
+		C03EAB7E1FBC77C400139C9E /* Post+Post_Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Post+Post_Service.h"; path = "ObjcTextInput/Modules/Posts/Service/Post+Post_Service.h"; sourceTree = SOURCE_ROOT; };
 		C0B9EC771FBB15C5001168D5 /* ObjcTextInputTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjcTextInputTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B9EC791FBB15C5001168D5 /* ObjcTextInputTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjcTextInputTests.swift; sourceTree = "<group>"; };
 		C0B9EC7B1FBB15C5001168D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,9 +146,11 @@
 		C02651FC1FBB116C003D4CEF /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				C02651FA1FBB08B1003D4CEF /* PostService.swift */,
-				C02652001FBB1415003D4CEF /* Post.swift */,
-				C0B9EC711FBB159C001168D5 /* PostTests.swift */,
+				C03EAB7B1FBC77C400139C9E /* Post.swift */,
+				C03EAB7E1FBC77C400139C9E /* Post+Post_Service.h */,
+				C03EAB7D1FBC77C400139C9E /* Post+Post_Service.m */,
+				C03EAB7A1FBC77C400139C9E /* PostService.swift */,
+				C03EAB7C1FBC77C400139C9E /* PostTests.swift */,
 			);
 			name = Service;
 			path = "New Group";
@@ -152,6 +159,7 @@
 		C02651FD1FBB118C003D4CEF /* TextInput */ = {
 			isa = PBXGroup;
 			children = (
+				C03C16861FBDC77400B7CB77 /* GenieAnimator.swift */,
 				33A99F061FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift */,
 				33F484E21FB462110043E06E /* TIIUIViewController.h */,
 				33F484E31FB462110043E06E /* TIIUIViewController.m */,
@@ -406,12 +414,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C03C16871FBDC77400B7CB77 /* GenieAnimator.swift in Sources */,
 				33F484E41FB462110043E06E /* TIIUIViewController.m in Sources */,
-				C02651FB1FBB08B1003D4CEF /* PostService.swift in Sources */,
+				C03EAB7F1FBC77C400139C9E /* PostService.swift in Sources */,
 				C01701781FB45F1200F41277 /* AppDelegate.swift in Sources */,
 				33F484E91FB467A10043E06E /* TIITextFieldViewController.m in Sources */,
 				33A99F071FB9F8CF009A0B3A /* TIISlideInCollectionViewLayout.swift in Sources */,
-				C02652011FBB1415003D4CEF /* Post.swift in Sources */,
+				C03EAB821FBC77C400139C9E /* Post+Post_Service.m in Sources */,
+				C03EAB801FBC77C400139C9E /* Post.swift in Sources */,
 				33674CBA1FB5B17B0055AB23 /* TIILabelCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,7 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0B9EC7A1FBB15C5001168D5 /* ObjcTextInputTests.swift in Sources */,
-				C0B9EC811FBB15CE001168D5 /* PostTests.swift in Sources */,
+				C03EAB831FBC77D900139C9E /* PostTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,7 +579,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NE8H673N63;
 				INFOPLIST_FILE = ObjcTextInput/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.icapps.ObjcTextInput;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -587,7 +599,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NE8H673N63;
 				INFOPLIST_FILE = ObjcTextInput/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.icapps.ObjcTextInput;
 				PRODUCT_NAME = "$(TARGET_NAME)";

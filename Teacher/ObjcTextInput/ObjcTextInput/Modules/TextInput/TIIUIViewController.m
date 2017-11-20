@@ -8,16 +8,18 @@
 
 #import "TIIUIViewController.h"
 #import "TIILabelCollectionViewCell.h"
+#import "Post+Post_Service.h"
 #import "ObjcTextInput-Swift.h"
 
 @import Faro;
 
-@interface TIIUIViewController ()
+@interface TIIUIViewController () <EditingValueFinishedDelegate, UIViewControllerTransitioningDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *labelCollectionView;
 @property (strong, nonatomic) NSMutableArray *names;
 @property (assign, nonatomic) NSInteger indexPathRow;
 @property (nonatomic, strong) PostService * service;
+@property (nonatomic, strong) TIITextFieldViewController * textFieldViewController;
 
 @end
 
@@ -25,6 +27,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    // const testing
+    [self testConst];
+
+    // Post or names
     self.service = [[PostService alloc] init];
 
     if (!self.showPosts) {
@@ -35,7 +42,6 @@
             NSArray <Post *>* posts = weakSelf.service.posts;
             NSMutableArray <NSString *> *mapped = [NSMutableArray arrayWithCapacity:[posts count]];
             [posts enumerateObjectsUsingBlock:^(Post * post, NSUInteger idx, BOOL *stop) {
-//                NSString * string = [NSString stringWithFormat:@"%@", ];
                 [mapped addObject:post.title];
             }];
             weakSelf.names = mapped;
@@ -47,6 +53,59 @@
 
     TIISlideInCollectionViewLayout * layout = (TIISlideInCollectionViewLayout*) self.labelCollectionView.collectionViewLayout;
     layout.translation = [[Translation alloc] initWithX:300 y:0];
+}
+
+- (void) testConst {
+
+    int value = 10;
+    int value2 = 20;
+
+    int * pointer = &value;
+    int * pointer2 = &value2;
+
+    NSLog(@"value  = %i", value);
+    NSLog(@"pointer  = %p", pointer);
+    NSLog(@"pointer value  = %i", *pointer);
+
+    NSLog(@"value 2  = %i", value2);
+    NSLog(@"pointer 2  = %p", pointer2);
+    NSLog(@"pointer 2 value  = %i", *pointer2);
+
+    // constant_pointer_to_mutable_int
+    int * const constPointer = &value;
+
+    NSLog(@"A - %i", *constPointer);
+    *constPointer = value2;
+    NSLog(@"B - %i", *constPointer);
+
+//    constPointer = pointer2; // does not compile
+
+    // mutable_pointer_to_constant_int;
+    value = 10;
+    int const * constValue = &value;
+
+    NSLog(@"C - %i", *constValue);
+    constValue = pointer2;
+    NSLog(@"D - %i", *constValue);
+
+//    *constValue = value2; // does not compile
+
+    // constant_pointer_to_constant_int;
+    int const * const constValueAndPointer = &value;
+
+    NSLog(@"E - %i", *constValueAndPointer);
+    // constValueAndPointer = pointer2; // does not compile
+    NSLog(@"F - %i", *constValueAndPointer);
+
+    // *constValueAndPointer = value2; // does not compile
+
+
+
+    // GLobals
+
+    NSLog(@"%p", global);
+    NSLog(@"%i", globalValue);
+
 }
 
 - (void) editingValueFinished:(NSString*) value isNewName:(BOOL) isNew {
@@ -70,10 +129,11 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.destinationViewController isKindOfClass:[TIITextFieldViewController class]]) {
-        TIITextFieldViewController * destinationViewController = segue.destinationViewController;
-        destinationViewController.delegate = self;
+        self.textFieldViewController = segue.destinationViewController;
+         self.textFieldViewController.editingDelegate = self;
+         self.textFieldViewController.transitioningDelegate = self;
       if ([segue.identifier isEqualToString:@"editNameSegue"]){
-            destinationViewController.currentName = self.names[self.indexPathRow];
+             self.textFieldViewController.currentName = self.names[self.indexPathRow];
         }
 
     } else if ([segue.destinationViewController isKindOfClass:[TIIUIViewController class]]) {
@@ -97,5 +157,24 @@
     return self.names.count;
 }
 
+#pragma mark: - UIViewControllerTransitioningDelegate
+
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    __weak TIIUIViewController * weakSelf = self;
+    return [[GenieAnimator alloc] initWithDismiss:^{
+        [weakSelf.textFieldViewController itsTimeToDismiss];
+    } present:^{
+        [weakSelf performSegueWithIdentifier:@"addNameSegue" sender:self];
+    }];
+}
+
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    __weak TIIUIViewController * weakSelf = self;
+    return [[GenieAnimator alloc] initWithDismiss:^{
+        [weakSelf.textFieldViewController itsTimeToDismiss];
+    } present:^{
+        [weakSelf performSegueWithIdentifier:@"addNameSegue" sender:self];
+    }];
+}
 
 @end

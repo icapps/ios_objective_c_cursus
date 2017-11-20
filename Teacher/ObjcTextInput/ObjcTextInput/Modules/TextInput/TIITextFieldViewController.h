@@ -12,6 +12,7 @@
 
 @protocol EditingValueFinishedDelegate
 
+@required
 - (void) editingValueFinished:(NSString*) value isNewName:(BOOL) isNew;
 
 @end
@@ -19,8 +20,9 @@
 
 @property (weak, nonatomic) NSString *currentName;
 
-@property (nonatomic, weak) id<EditingValueFinishedDelegate> delegate;
+@property (nonatomic, weak) id<EditingValueFinishedDelegate> editingDelegate;
 
+- (void) itsTimeToDismiss;
 @end
 
 
