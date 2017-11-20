@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l7S-JA-VQK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TGm-dh-GlU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="591"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="527"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZbP-Rx-6aD">
                                     <size key="itemSize" width="375" height="50"/>
@@ -29,7 +29,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="LabelCell" id="50P-jG-6rw" customClass="LabelCollectionViewCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="LabelCell" id="50P-jG-6rw" customClass="TIILabelCollectionViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -42,14 +42,26 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uph-aL-P7K" userLabel="Reorder Button">
+                                                    <rect key="frame" x="325" y="10" width="30" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
+                                                    </accessibility>
+                                                    <state key="normal" title="="/>
+                                                </button>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="kmf-a0-LXC" firstAttribute="centerY" secondItem="50P-jG-6rw" secondAttribute="centerY" id="7n8-wk-cav"/>
+                                            <constraint firstItem="Uph-aL-P7K" firstAttribute="centerY" secondItem="50P-jG-6rw" secondAttribute="centerY" id="HqX-yq-3Zu"/>
                                             <constraint firstItem="kmf-a0-LXC" firstAttribute="leading" secondItem="50P-jG-6rw" secondAttribute="leadingMargin" constant="4" id="gLT-eI-VoR"/>
+                                            <constraint firstItem="Uph-aL-P7K" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kmf-a0-LXC" secondAttribute="trailing" constant="10" id="thg-NP-irQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Uph-aL-P7K" secondAttribute="trailing" constant="20" id="v2r-QT-YlP"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="label" destination="kmf-a0-LXC" id="Ie9-8c-tBm"/>
+                                            <outlet property="reorderButton" destination="Uph-aL-P7K" id="Gaz-ta-bw7"/>
                                             <segue destination="9H1-QZ-Jfg" kind="presentation" identifier="Edit" id="Lnl-7c-Yoz"/>
                                         </connections>
                                     </collectionViewCell>
@@ -59,8 +71,8 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="awH-t6-8OM"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEQ-GC-ORv" userLabel="Add Button">
-                                <rect key="frame" x="172" y="607" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEQ-GC-ORv" userLabel="Add Button">
+                                <rect key="frame" x="172" y="608" width="30" height="30"/>
                                 <state key="normal" title="+"/>
                                 <connections>
                                     <segue destination="9H1-QZ-Jfg" kind="presentation" identifier="Add" id="h80-BB-zyE"/>
@@ -74,17 +86,24 @@
                             <constraint firstItem="NEQ-GC-ORv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7ow-Cr-6hQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NEQ-GC-ORv" secondAttribute="bottom" constant="29" id="Lo1-mE-bHD"/>
                             <constraint firstItem="TGm-dh-GlU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="egp-CJ-2Zb"/>
-                            <constraint firstItem="TGm-dh-GlU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jCr-01-qCG"/>
+                            <constraint firstItem="TGm-dh-GlU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="jCr-01-qCG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="w9a-Cl-vv5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="pxc-En-ArQ">
+                            <connections>
+                                <action selector="toggleEditCollectionViewMode:" destination="BYZ-38-t0r" id="lgo-7h-wbd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="TGm-dh-GlU" id="YQk-7V-H0v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61.600000000000001" y="33.733133433283363"/>
+            <point key="canvasLocation" x="400.80000000000001" y="33.733133433283363"/>
         </scene>
         <!--Change Text View Controller-->
         <scene sceneID="4yo-dl-qbi">
@@ -112,6 +131,7 @@
                         <constraints>
                             <constraint firstItem="uTF-HB-cRx" firstAttribute="top" secondItem="3ko-Ek-28O" secondAttribute="top" constant="95" id="0bE-CP-8Ks"/>
                             <constraint firstItem="uTF-HB-cRx" firstAttribute="leading" secondItem="3ko-Ek-28O" secondAttribute="leading" constant="16" id="CnY-FD-tpx"/>
+                            <constraint firstItem="Z0E-5O-AGb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="opz-eE-Cz8" secondAttribute="leading" constant="20" symbolic="YES" id="XgX-G3-IoI"/>
                             <constraint firstItem="3ko-Ek-28O" firstAttribute="trailing" secondItem="uTF-HB-cRx" secondAttribute="trailing" constant="16" id="jXw-fr-g1X"/>
                             <constraint firstItem="Z0E-5O-AGb" firstAttribute="top" secondItem="3ko-Ek-28O" secondAttribute="top" id="yo7-Y0-NTc"/>
                             <constraint firstItem="3ko-Ek-28O" firstAttribute="trailing" secondItem="Z0E-5O-AGb" secondAttribute="trailing" constant="16" id="zbL-Ew-Sni"/>
@@ -124,7 +144,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pnc-EA-cSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857" y="34"/>
+            <point key="canvasLocation" x="1196" y="33.733133433283363"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pea-Zx-mjS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l7S-JA-VQK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y8V-zS-iic">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dLu-2s-w3x"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jQN-Yl-HK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-446" y="34"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
